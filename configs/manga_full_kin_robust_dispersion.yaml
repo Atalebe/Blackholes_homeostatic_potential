@@ -1,0 +1,26 @@
+# configs/manga_full_kin_robust_dispersion.yaml
+run:
+  run_name: manga_full_kin_robust_dispersion
+  seed: 12345
+
+data:
+  state_vector_csv: outputs/tables/manga_full_kin_state_vector.csv
+
+dispersion_scaling:
+  x: logMstar_drp_elpetro
+  y_cols:
+    - phi_ifu
+    - H_raw
+    - S_raw
+  bin_start: 9.5
+  bin_stop: 11.5
+  bin_step: 0.5
+  min_bin_count: 20
+
+nulls:
+  n_perm: 2000
+  shuffle_within: host_mass_class
+
+outputs:
+  summary_csv: outputs/tables/manga_full_kin_robust_dispersion_summary.csv
+  binned_csv: outputs/tables/manga_full_kin_robust_dispersion_binned.csv

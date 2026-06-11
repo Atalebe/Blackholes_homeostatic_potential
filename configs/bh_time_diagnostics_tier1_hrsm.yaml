@@ -1,0 +1,23 @@
+run:
+  run_name: bh_time_diagnostics_tier1_hrsm
+  seed: 12345
+
+data:
+  bh_level_csv: outputs/tables/bh_time_ripeness_from_csv_tier1_hrsm.csv
+  track_phi_parquet: outputs/catalogs/bh_time_tracks_phi_from_csv_tier1_hrsm.parquet
+
+plots:
+  mass_bins:
+    - [5.5, 6.0]
+    - [6.0, 6.5]
+    - [6.5, 7.0]
+    - [7.0, 7.5]
+    - [7.5, 8.0]
+    - [8.0, 8.5]
+  top_n_extreme: 10
+
+outputs:
+  extreme_phi_csv: outputs/tables/bh_time_extreme_phi_tier1_hrsm.csv
+  extreme_ripeness_csv: outputs/tables/bh_time_extreme_ripeness_tier1_hrsm.csv
+  bin_summary_csv: outputs/tables/bh_time_bin_summary_tier1_hrsm.csv
+  figure_prefix: outputs/figures/bh_time_diagnostics_tier1_hrsm

@@ -1,0 +1,36 @@
+data:
+  runtime_table: outputs/tables/gama_sample_runtime_table.csv
+
+columns:
+  gal_id: gal_id
+  logMstar: logMstar_gama
+  SFR: SFR
+  logMbh: logMbh
+  mdot_bh: mdot_bh
+  z: z_gama
+  sigma_star: sigma_star_gama
+  h_col: OIIIB_FLUX
+  sn_col: SN
+  nq_col: NQ
+
+selection:
+  z_max: 0.1
+  host_mass_log10_min: 10.4
+  host_mass_log10_max: 11.2
+  sn_min: 3
+  nq_min: 3
+
+bh_sigma_relation:
+  a: 8.32
+  b: 5.64
+  sigma_norm_kms: 200.0
+
+class_conditioning:
+  bh_mass_bins:
+    - [6.0, 7.0]
+    - [7.0, 8.0]
+    - [8.0, 9.0]
+
+outputs:
+  summary_csv: audit_gama_oiiib_sigmaS_normalization_summary.csv
+  extreme_csv: audit_gama_oiiib_sigmaS_normalization_extreme.csv

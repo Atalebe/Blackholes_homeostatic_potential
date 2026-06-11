@@ -1,0 +1,27 @@
+run:
+  run_name: bh_time_from_csv_tier1_hrsm
+  seed: 12345
+
+data:
+  timelines_csv: data/reference/bh_time/bh_timelines_v1.csv
+  summary_csv: data/reference/bh_time/bh_summary_v1.csv
+  merger_flags_csv: data/reference/bh_time/bh_merger_flags_v1.csv
+
+selection:
+  min_track_length: 10
+  drop_infinite_lambda: true
+
+class_conditioning:
+  final_mass_bins:
+    - [5.5, 7.5]
+    - [7.5, 8.5]
+
+window:
+  q_low: 0.35
+  q_high: 0.65
+
+outputs:
+  track_catalog_out: outputs/catalogs/bh_time_tracks_from_csv_tier1_hrsm.parquet
+  track_phi_out: outputs/catalogs/bh_time_tracks_phi_from_csv_tier1_hrsm.parquet
+  ripeness_out: outputs/tables/bh_time_ripeness_from_csv_tier1_hrsm.csv
+  time_summary_out: outputs/tables/bh_time_summary_from_csv_tier1_hrsm.csv

@@ -1,0 +1,11 @@
+# configs/bh_ripeness_decoupling_audit.yaml
+data:
+  catalog_csv: outputs/tables/bh_ripeness_rankings.csv
+
+context:
+  group_cols:
+    - category
+    - final_mass_class
+
+outputs:
+  summary_csv: outputs/tables/bh_ripeness_decoupling_summary.csv

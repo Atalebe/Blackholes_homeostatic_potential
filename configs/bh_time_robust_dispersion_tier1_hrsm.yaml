@@ -1,0 +1,29 @@
+run:
+  run_name: bh_time_robust_dispersion_tier1_hrsm
+  seed: 12345
+
+data:
+  bh_level_csv: outputs/tables/bh_time_ripeness_from_csv_tier1_hrsm.csv
+
+analysis:
+  x_col: log10_mbh_final
+  y_cols:
+    - track_median_phi
+    - ripeness_bh
+  metrics:
+    - variance
+    - mad2
+    - iqr2
+  bin_start: 5.5
+  bin_stop: 8.5
+  bin_step: 0.5
+  min_bin_count: 20
+
+nulls:
+  n_perm: 2000
+  shuffle_within: category
+
+outputs:
+  summary_csv: outputs/tables/bh_time_robust_dispersion_summary.csv
+  binned_csv: outputs/tables/bh_time_robust_dispersion_binned.csv
+  figure_prefix: outputs/figures/bh_time_robust_dispersion

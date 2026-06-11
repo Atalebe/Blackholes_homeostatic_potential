@@ -1,0 +1,6 @@
+data:
+  prebuilt_csv: data/raw/obs/obs_mw_homeostasis_input_gama_dr4_v1.csv
+  rebuilt_parquet: outputs/catalogs/obs_gama_rebuilt_sigmaS.parquet
+
+outputs:
+  comparison_csv: outputs/tables/compare_gama_rebuilt_vs_prebuilt.csv

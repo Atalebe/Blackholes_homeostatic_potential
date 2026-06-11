@@ -1,0 +1,2 @@
+obs_slope,intercept,p_one_sided_negative,n_perm,n_bins_used,x_col,y_col
+2.183416911979881,-15.531307883522436,1.0,2000,4,logMstar_drp_elpetro,phi_ifu

@@ -1,0 +1,25 @@
+# configs/manga_full_age_variance_scaling.yaml
+run:
+  run_name: manga_full_age_variance_scaling
+  seed: 12345
+
+data:
+  state_vector_csv: outputs/tables/manga_full_age_state_vector.csv
+
+variance_scaling:
+  x: logMstar_drp_elpetro
+  y: phi_ifu
+  bin_start: 9.5
+  bin_stop: 11.5
+  bin_step: 0.5
+  min_bin_count: 20
+
+nulls:
+  n_perm: 2000
+  shuffle_within: global
+
+outputs:
+  variance_table_out: outputs/tables/manga_full_age_variance_scaling.csv
+  variance_summary_out: outputs/tables/manga_full_age_variance_summary.csv
+  null_slopes_out: outputs/tables/manga_full_age_null_slopes.csv
+  figure_prefix: outputs/figures/manga_full_age

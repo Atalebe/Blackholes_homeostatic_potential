@@ -1,0 +1,31 @@
+data:
+  runtime_table: outputs/tables/manga_sample_runtime_table.csv
+
+columns:
+  gal_id: gal_id
+  logMstar: logMstar_drp_elpetro
+  SFR: SFR
+  logMbh: logMbh
+  mdot_bh: mdot_bh
+  z: nsa_z
+  sigma_star: stellar_sigma_1re
+  dapqual_col: dapqual
+  drpqual_col: drp3qual
+
+selection:
+  z_max: 0.1
+  host_mass_log10_min: 10.4
+  host_mass_log10_max: 11.2
+  require_positive_sfr: true
+  require_positive_mdot_bh: true
+  require_positive_sigma: true
+  require_positive_logMstar: true
+  require_finite_logMbh: true
+  lambda0_band_low: -5.0
+  lambda0_band_high: 3.0
+  require_zero_dapqual: true
+  allow_nonzero_drpqual: true
+
+outputs:
+  audit_csv: audit_manga_rebuilt_sigmaS_rejection_steps.csv
+  marginal_csv: audit_manga_rebuilt_sigmaS_rejection_marginal.csv

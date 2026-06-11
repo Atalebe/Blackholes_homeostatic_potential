@@ -1,0 +1,29 @@
+data:
+  runtime_table: outputs/tables/manga_full_download_runtime_with_legacy_overlay.csv
+
+matching:
+  controls_per_seed: 8
+  columns:
+    - logMstar_drp_elpetro
+    - nsa_z
+    - stellar_sigma_1re
+    - dn4000_1re
+
+class_conditioning:
+  host_mass_bins:
+    - [10.0, 10.5]
+    - [10.5, 11.0]
+    - [11.0, 11.5]
+
+filler:
+  target_per_host_mass_bin: 20
+
+paths:
+  maps_root: data/external/manga/dr17/maps
+  sas_base: https://data.sdss.org/sas/dr17/manga/spectro/analysis/v3_1_1/3.1.0
+
+outputs:
+  manifest_csv: outputs/tables/manga_ifu_expanded_manifest.csv
+  summary_csv: outputs/tables/manga_ifu_expanded_manifest_summary.csv
+  bin_summary_csv: outputs/tables/manga_ifu_expanded_manifest_bin_summary.csv
+  download_script: outputs/tables/download_manga_ifu_expanded_maps.sh

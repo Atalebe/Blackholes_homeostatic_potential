@@ -1,0 +1,69 @@
+run:
+  run_name: obs_gama_rebuilt_sigmaS
+  seed: 12345
+
+data:
+  runtime_table: outputs/tables/gama_sample_runtime_table.csv
+
+columns:
+  gal_id: gal_id
+  logMstar: logMstar_gama
+  SFR: SFR
+  logMbh: logMbh
+  mdot_bh: mdot_bh
+  z: z_gama
+  sigma_star: sigma_star_gama
+  extras:
+    - SPECID
+    - SN
+    - D4000N
+    - SurfaceDensity
+  sn_col: SN
+  nq_col: NQ
+
+selection:
+  z_max: 0.1
+  host_mass_log10_min: 10.4
+  host_mass_log10_max: 11.2
+  require_positive_sfr: true
+  require_positive_mdot_bh: true
+  require_positive_sigma: true
+  require_positive_logMstar: true
+  require_finite_logMbh: true
+  lambda0_band_low: -5.0
+  lambda0_band_high: 3.0
+  sn_min: 3
+  nq_min: 3
+
+bh_sigma_relation:
+  a: 8.32
+  b: 5.64
+  sigma_norm_kms: 200.0
+
+class_conditioning:
+  bh_mass_bins:
+    - [6.0, 7.0]
+    - [7.0, 8.0]
+    - [8.0, 9.0]
+
+window:
+  q_low: 0.35
+  q_high: 0.65
+
+variance_scaling:
+  bin_start: 6.0
+  bin_stop: 9.0
+  bin_step: 1.0
+  min_bin_count: 8
+
+nulls:
+  n_perm: 2000
+
+outputs:
+  catalog_out: outputs/catalogs/obs_gama_rebuilt_sigmaS.parquet
+  window_catalog_out: outputs/catalogs/obs_gama_rebuilt_sigmaS_window.parquet
+  qc_summary_out: outputs/tables/obs_gama_rebuilt_sigmaS_qc.csv
+  variance_table_out: outputs/tables/obs_gama_rebuilt_sigmaS_variance_scaling.csv
+  variance_summary_out: outputs/tables/obs_gama_rebuilt_sigmaS_variance_summary.csv
+  null_slopes_out: outputs/tables/obs_gama_rebuilt_sigmaS_null_slopes.csv
+  figure_prefix: outputs/figures/obs_gama_rebuilt_sigmaS

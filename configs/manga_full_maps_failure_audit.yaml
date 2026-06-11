@@ -1,0 +1,9 @@
+# configs/manga_full_maps_failure_audit.yaml
+data:
+  features_csv: outputs/tables/manga_full_maps_features_merged.csv
+  runtime_csv: outputs/tables/manga_full_parent_manifest_with_maps.csv
+
+outputs:
+  summary_csv: outputs/tables/manga_full_maps_failure_audit_summary.csv
+  error_counts_csv: outputs/tables/manga_full_maps_failure_error_counts.csv
+  compare_csv: outputs/tables/manga_full_maps_failure_compare.csv

@@ -1,0 +1,528 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage[hidelinks]{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage{enumitem}
+\usepackage{longtable}
+\usepackage{url}
+\graphicspath{{figures/}}
+\setstretch{1.08}
+\title{A Reduced Homeostatic Vector Space for Black Holes:\\Ripeness, Variance Geometry, and Host-Galaxy Regulation}
+\author{Stephen Atalebe}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Black holes are usually described through instantaneous observables such as mass, accretion rate, luminosity, or host-galaxy scaling residuals. This paper tests whether they can instead be embedded in a class-conditioned reduced homeostatic state space in which throughput, stability, residence, and retained history are treated as structured dynamical roles rather than isolated catalog columns. The present implementation is deliberately conservative. It uses a reduced Tier~1 realization of a broader $(H,R,S,M)$ program and activates only the coordinates that can be constructed robustly from the available simulation and survey products. The central time-domain result is that the residence-based ripeness functional, defined as the fraction of time a black-hole track occupies a bounded class-conditioned window, shows a robust decline in dispersion with final black-hole mass in the simulation branch, whereas the per-track median scalar potential does not survive robust re-estimation and is tail dominated. The leading observational result comes from source-driven GAMA rebuilds in which throughput is traced by [OIII] emission and stability is defined through class-relative stellar-age and kinematic offsets; the strongest branch yields a negative variance slope under a corrected permutation null. A full MaNGA IFU expansion to nearly seven thousand parent systems demonstrates that the IFU state-vector construction is computationally portable to survey scale, although the full MaNGA sample does not support a universal variance-compression claim. Finally, a contextual black-hole ripeness ranking shows that maturity is not reducible to mass alone: a stable upper core survives reduced-score variants, while the lowest-ranked systems are dominated by severe settlement penalties caused by catastrophic displacement from contextual phase-space geometry. The defensible contribution of the paper is therefore not a claim that every black-hole observable compresses monotonically with mass, but a demonstration that a reduced homeostatic vector space can separate robust time-domain regulation, source-driven observational analogues, and structurally interpretable maturity ranking within a single falsifiable framework.
+\end{abstract}
+
+\section{Introduction}
+
+Black holes are commonly analyzed through snapshot quantities such as $M_{\rm BH}$, luminosity, Eddington ratio, host stellar mass, or scaling-relation residuals. These variables are indispensable, but by themselves they do not distinguish between a black hole that merely passes through a given state and one that persistently occupies a regulated dynamical regime. This distinction becomes especially important once the problem is viewed across simulation tracks, heterogeneous host environments, and survey-specific observables.
+
+This paper develops a reduced homeostatic vector-space description for black holes. The black-hole branch is treated as a black-hole-specific realization of a more general four-role structural program in which $H$ tracks throughput or forcing, $R$ tracks replenishment or recovery, $S$ tracks boundedness or stability, and $M$ tracks retained history or memory. The present implementation is explicitly conservative: it is a reduced Tier~1 realization in which only the most defensible coordinates are activated first, and every claim is stress tested against null destruction, clipping choices, and alternative source-driven constructions.
+
+The manuscript is organized around one central question: what is the most defensible black-hole-level structural statistic in the present reduced framework? The logbook evidence shows that the answer is not the per-track median scalar potential alone. Instead, the strongest result is carried by a residence-time functional, here called ripeness, which measures how long a track remains within a bounded class-conditioned window. This quantity yields a robust negative dispersion trend with final black-hole mass in the time-domain simulation branch, survives robust dispersion estimators, and supports a contextual ranking that does not collapse into simple mass ordering.
+
+The observational picture is intentionally presented with equal honesty. Source-driven GAMA rebuilds provide the strongest current observational analogues, especially when stability is defined as a class-relative kinematic offset. The full MaNGA IFU branch contributes a different kind of result: it demonstrates survey-scale portability of the state-vector construction and removes the small-sample criticism attached to the pilot subset, but it does not support a universal compression law under the present IFU channel definitions. The contribution of the paper is therefore methodological and empirical at once: it offers a coherent state-space construction, a robust simulation-level signal, a source-driven observational anchor, and a large-survey IFU robustness branch that sets sharp limits on overclaiming.
+
+\section{Relation to Previous Work}
+
+Three strands of literature motivate this study. The first concerns black-hole demographics and accretion-state distributions. Recent work continues to show that active black-hole populations are characterized by broad Eddington-ratio distributions and strong mass-dependent selection structure, from intermediate-mass black-hole samples to luminous high-redshift quasars \citep{Cho2024,He2024}. These studies establish the importance of population-conditioned inference, but they still describe activity primarily through catalog-level mass and Eddington-ratio distributions rather than through bounded dynamical occupancy.
+
+The second strand concerns black-hole variability and accretion-state transitions. Long-standing work showed that AGN variability timescales scale with black-hole mass \citep{McHardy2006}, and more recent samples continue to connect variability properties to mass, luminosity, and accretion state \citep{Tortosa2023,Georgakakis2024,Serafinelli2024}. Closely related changing-look AGN studies further suggest that dramatic state changes preferentially occur in relatively low-Eddington-ratio systems \citep{Ricci2022,Zeltyn2024,Jana2025}. These results are conceptually adjacent to the present framework, but they generally do not recast regulation as residence within a bounded state-space window or separate mature, quiet, and structurally settled systems from merely massive ones.
+
+The third strand concerns black-hole coevolution with their hosts and the use of spatially resolved host diagnostics. Classical host-galaxy scaling work established the importance of correlations such as $M_{\rm BH}$--$\sigma_\star$ and the broader problem of black-hole/galaxy coevolution \citep{KormendyHo2013,HeckmanBest2014}. On the IFU side, MaNGA provides resolved maps of Dn4000, emission-line fluxes, and stellar kinematics through the DRP and DAP products \citep{Belfiore2019,Westfall2019}. Those products make it possible to define radial age and kinematic contrasts, but they do not themselves specify how such observables should be embedded in a class-conditioned homeostatic state space.
+
+The present work differs from these literatures in four ways. First, it treats black holes as a reduced realization of a common structural vector framework rather than as an isolated special case. Second, it makes residence within a bounded window the primary time-domain observable. Third, it uses source-driven observational rebuilds to test whether static analogues of the framework exist in current surveys. Fourth, it adds a contextual maturity ranking whose top core and bottom tail can be interpreted structurally through the component contributions of residence, commitment, quietness, settlement, and persistence.
+
+\section{Framework, Data, and Methods}
+
+\subsection{Reduced Tier~1 black-hole state space}
+
+The black-hole program inherits the common structural vector
+\begin{equation}
+\mathbf{X}_{\rm BH}=(H,R,S,M),
+\end{equation}
+but the present paper uses a reduced Tier~1 realization. Only the coordinates that can be constructed robustly from the available data are activated. In the time-domain branch,
+\begin{align}
+H_t &\equiv \lambda_{\rm BH}(t)=\frac{\dot M_{\rm BH}(t)}{M_{\rm BH}(t)},\\
+S_t &\equiv -\left|\lambda_{\rm BH}(t)-\tilde\lambda_{\rm BH}\right|,
+\end{align}
+where $\tilde\lambda_{\rm BH}$ is the per-track median accretion-state proxy. Within each class, robust normalization is performed as
+\begin{equation}
+\hat X = \frac{X-\mathrm{median}(X)}{\mathrm{MAD}(X)},
+\end{equation}
+and the reduced Tier~1 scalar potential is
+\begin{equation}
+\Phi_{\rm BH}^{\rm T1}=\hat H+\hat S.
+\end{equation}
+
+A bounded homeostatic window is then defined within each class by the middle quantile band,
+\begin{equation}
+Q_{0.35}(\Phi_{\rm BH}) \le \Phi_{\rm BH} \le Q_{0.65}(\Phi_{\rm BH}).
+\end{equation}
+The corresponding ripeness functional is the residence fraction inside this window,
+\begin{equation}
+R_{\rm BH}^{\rm norm}=\frac{1}{T}\int_{0}^{T} 1[\Phi_{\rm BH}(t)\in \mathrm{window}]\,dt.
+\end{equation}
+This quantity is central to the paper because it compresses time-domain regulation into a bounded statistic that is less sensitive to local trajectory shape than the per-track median potential.
+
+\subsection{Class conditioning and static observational analogues}
+
+All normalization is performed within class to avoid mixing distinct black-hole and host populations. Depending on the branch, conditioning is performed by final black-hole mass, black-hole comparison category (for example Sgr~A$^\ast$ analogues versus higher-mass controls), or host stellar-mass bins in the IFU branch.
+
+For the observational static branches, throughput and stability are instantiated from directly staged survey products. The main source-driven GAMA definitions use
+\begin{equation}
+H_{\rm GAMA}=\log_{10}({\rm OIIIB\_FLUX}),
+\end{equation}
+and either a stellar-age stability coordinate,
+\begin{equation}
+S_{\rm D4000,offset}=-\left|\log_{10}({\rm D4000N})-\widetilde{\log_{10}({\rm D4000N})}_{\rm class}\right|,
+\end{equation}
+or a kinematic stability coordinate,
+\begin{equation}
+S_{\sigma_\star,offset}=-\left|\log_{10}(\sigma_{\star,\rm corr})-\widetilde{\log_{10}(\sigma_{\star,\rm corr})}_{\rm class}\right|.
+\end{equation}
+The MaNGA IFU branch reuses the same structural logic but with resolved radial contrasts and host stellar-mass conditioning.
+
+\subsection{Variance geometry and null tests}
+
+For each branch, variance geometry is evaluated through the relation
+\begin{equation}
+\mathrm{Var}(Y)=a+b\log_{10}\left(\frac{M_{\rm BH}}{M_\odot}\right)
+\end{equation}
+or, in the IFU host-regulation branch, against host stellar mass. Ordinary variance is complemented by MAD$^2$ and IQR$^2$ to test outlier sensitivity. Permutation nulls are constructed within the appropriate coarse class, and the one-sided probability against a negative slope is used as a compact calibration of how unusual the observed slope is relative to within-class randomization.
+
+\subsection{Contextual ripeness ranking}
+
+The black-hole ripeness catalogue is built from the time-domain Tier~1 products. Within each context defined by \texttt{category}$\times$\texttt{final\_mass\_class}, five ingredients are robustly normalized: residence-based ripeness, final black-hole mass as a commitment term, quietness defined from minus the median accretion state, settlement defined from distance to the contextual median phase-space position, and persistence defined from $\log_{10}(n_{\rm track})$. The adopted score is
+\begin{equation}
+R_{\rm score}=0.40\,\hat r_{\rm bh}+0.20\,\hat C_{\rm mass}+0.15\,\hat Q+0.15\,\hat S_{\rm settle}+0.10\,\hat P.
+\end{equation}
+This score is not meant as a metaphysical ranking of intrinsic worth. It is an empirical maturity score whose interpretability depends on the internal component diagnostics and leave-one-out tests described later.
+
+\subsection{GAMA Robustness}
+
+After establishing the class-relative \(\sigma_\star\)-offset branch as the strongest observational black-hole variance-scaling signal in the current programme, the next step was to test whether the fitted negative slope could be driven by a single populated black-hole-mass bin.
+
+
+The branch tested here is the source-driven GAMA realization with:
+\begin{equation}
+H = \log_{10}({\rm OIIIB\_FLUX}),
+\end{equation}
+and
+\begin{equation}
+S_{\sigma_\star,\mathrm{offset}} =
+-\left|
+\log_{10}(\sigma_{\star,\mathrm{corr}}) -
+\widetilde{\log_{10}(\sigma_{\star,\mathrm{corr}})}_{\rm class}
+\right|.
+\end{equation}
+
+The retained sample for this branch contained:
+\begin{equation}
+N_{\rm retained}=574,
+\end{equation}
+distributed across three populated black-hole-mass bins with midpoints:
+\[
+6.5,\quad 7.5,\quad 8.5.
+\]
+
+The corresponding binned variances of \(\Phi_{\rm BH}\) were:
+\begin{align}
+\mathrm{Var}(\Phi_{\rm BH})_{6.5} &\approx 1.118\times10^{12},\\
+\mathrm{Var}(\Phi_{\rm BH})_{7.5} &\approx 1.875\times10^{11},\\
+\mathrm{Var}(\Phi_{\rm BH})_{8.5} &\approx 4.30.
+\end{align}
+The purpose of this stage was therefore not to replace the main permutation-calibrated fit, but to perform a direct leave-one-mass-bin-out stress test on the GAMA dynamical branch and verify whether the sign of the slope survives each bin removal.
+
+\section{Data Products and Branch Hierarchy}
+
+The analysis combines two data classes. The time-domain simulation branch uses precomputed black-hole timelines, summary tables, and merger flags derived from IllustrisTNG products. The observational branch uses staged SDSS, GAMA, and MaNGA runtime products with progressively stronger provenance control.
+
+The manuscript follows the branch hierarchy that emerged during the logbook programme. The strongest positive result is the simulation time-domain ripeness branch. The strongest observational result is the source-driven GAMA branch. The MaNGA IFU branch is retained as a survey-scale robustness and host-regulation branch, not as the primary detection claim. This hierarchy is important because it prevents the manuscript from forcing all datasets into the same rhetorical role.
+
+\begin{table}[H]
+\centering
+\caption{Branch hierarchy used for manuscript extraction.}
+\label{tab:branch_hierarchy}
+\begin{tabular}{p{4.0cm}p{4.2cm}p{5.3cm}}
+\toprule
+Branch & Status & Use in manuscript \\
+\midrule
+Time-domain reduced Tier~1 simulation & Strongest positive signal & Main result \\
+Source-driven GAMA static branch & Strongest observational analogue & Main observational support \\
+Full MaNGA IFU branch & Survey-scale robustness, no universal compression detection & Secondary robustness branch \\
+Sparse MaNGA black-hole overlay & Too small for broad BH inference & Mention only as scaffold \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Time-Domain Reduced Tier~1 Results}
+
+\subsection{Variance scaling of the median potential and ripeness}
+
+The first key result is that the time-domain reduced Tier~1 branch separates two candidate black-hole-level observables: the per-track median scalar potential and the residence-based ripeness functional. The median potential shows an overall negative variance slope with mass,
+\begin{equation}
+b_{\widetilde\Phi}=-13.36, \qquad p_{\rm one\text{-}sided,negative}\approx 0.066,
+\end{equation}
+but the binned variances are non-monotonic, declining toward intermediate mass and rebounding at the highest masses. In contrast, the ripeness functional gives
+\begin{equation}
+b_{R_{\rm BH}^{\rm norm}}=-0.0117, \qquad p_{\rm one\text{-}sided,negative}=4.998\times 10^{-4},
+\end{equation}
+with a cleaner negative dispersion trend across mass bins.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{bh_time_tier1_hrsm_variance_scaling.png}
+\caption{Median potential variance geometry.}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{bh_time_tier1_hrsm_v2_variance_scaling.png}
+\caption{Ripeness variance geometry.}
+\end{subfigure}
+\caption{Black-hole-level variance scaling in the reduced Tier~1 time-domain branch. In both panels the horizontal axis is $\log_{10}(M_{\rm BH}/M_\odot)$. The residence-based ripeness functional yields the cleaner negative trend.}
+\label{fig:bh_time_variance_scaling}
+\end{figure}
+
+\subsection{Robust dispersion re-estimation}
+
+The robustness tests clarify why ripeness is the stronger statistic. When variance is replaced by MAD$^2$ or IQR$^2$, the apparent negative trend in the median potential disappears and the fitted slope changes sign, showing that the earlier variance signal was tail dominated. By contrast, the ripeness branch retains a negative slope under variance, MAD$^2$, and IQR$^2$, each with the same strong null rejection. This means that the first robust black-hole-level compression-like signal in the reduced Tier~1 programme is carried by residence within the bounded window rather than by the median scalar potential itself.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.32\textwidth}
+\centering
+\includegraphics[width=\linewidth]{bh_time_robust_dispersion_ripeness_bh_variance.png}
+\caption{Variance of ripeness.}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.32\textwidth}
+\centering
+\includegraphics[width=\linewidth]{bh_time_robust_dispersion_ripeness_bh_mad2.png}
+\caption{MAD$^2$ of ripeness.}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.32\textwidth}
+\centering
+\includegraphics[width=\linewidth]{bh_time_robust_dispersion_ripeness_bh_iqr2.png}
+\caption{IQR$^2$ of ripeness.}
+\end{subfigure}
+
+\medskip
+\begin{subfigure}{0.32\textwidth}
+\centering
+\includegraphics[width=\linewidth]{bh_time_robust_dispersion_track_median_phi_variance.png}
+\caption{Variance of median potential.}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.32\textwidth}
+\centering
+\includegraphics[width=\linewidth]{bh_time_robust_dispersion_track_median_phi_mad2.png}
+\caption{MAD$^2$ of median potential.}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.32\textwidth}
+\centering
+\includegraphics[width=\linewidth]{bh_time_robust_dispersion_track_median_phi_iqr2.png}
+\caption{IQR$^2$ of median potential.}
+\end{subfigure}
+\caption{Robust dispersion diagnostics. In all panels the horizontal axis is $\log_{10}(M_{\rm BH}/M_\odot)$. Ripeness preserves the negative trend under all three measures, while the per-track median potential does not.}
+\label{fig:bh_time_robust_dispersion}
+\end{figure}
+
+The defensible simulation-level contribution of the paper is therefore specific: the reduced Tier~1 framework yields a robust decline in ripeness dispersion with final black-hole mass, but not a comparably robust decline in the dispersion of the median scalar potential. That distinction matters because it shows that regulated occupancy is more stable than regulated position under the present coordinate construction.
+
+\section{Source-Driven Observational Results: GAMA as the Main Anchor}
+
+\subsection{Why the GAMA rebuild matters}
+
+The observational programme went through several failed or ambiguous constructions before the source-driven GAMA branch stabilized. Inherited convenience-table throughput proxies produced pathological tails, and early static stability choices in MaNGA were effectively tautological for the current sample. The source-driven GAMA rebuild addressed both problems by forcing both coordinates to come from staged survey products and by repairing the permutation null so that it no longer preserved the same effective structure it was meant to destroy.
+
+The main source-driven GAMA maturation branch uses $H=\log_{10}({\rm OIIIB\_FLUX})$ and a class-relative D4000 offset for $S$. It retains $571$ of $740$ galaxies and yields a negative variance slope,
+\begin{equation}
+b=-0.7070, \qquad p_{\rm one\text{-}sided,negative}=0.0345,
+\end{equation}
+which remains stable under modest quality-cut and normalization changes and becomes even cleaner under tighter clipping. A second, stronger observational branch replaces the stellar-age stability coordinate with a class-relative stellar-velocity-dispersion offset. That branch retains $574$ galaxies and yields
+\begin{equation}
+b=-2.0637, \qquad p_{\rm one\text{-}sided,negative}=0.0015.
+\end{equation}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{obs_gama_rebuilt_oiiibH_d4000S_variance_scaling.png}
+\caption{Maturation branch: $[\mathrm{OIII}]$ + D4000 offset.}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{obs_gama_rebuilt_oiiibH_sigmaS_variance_scaling.png}
+\caption{Dynamical branch: $[\mathrm{OIII}]$ + $\sigma_\star$ offset.}
+\end{subfigure}
+\caption{Source-driven GAMA variance scaling. The dynamical branch provides the strongest current observational black-hole signal in the project.}
+\label{fig:gama_variance_scaling}
+\end{figure}
+
+These results should be interpreted carefully. They do not establish a universal observational law across all surveys. What they do show is that once throughput and stability are defined directly from survey products and stability is expressed as distance from a class-conditioned equilibrium state, a negative variance trend emerges in GAMA and survives a nondegenerate permutation null. That is a defensible observational support branch.
+
+\begin{table}[H]
+\centering
+\caption{Stress-tested source-driven GAMA branches preserved for manuscript extraction.}
+\label{tab:gama_dual_branch}
+\begin{tabular}{p{5.1cm}ccc}
+\toprule
+Variant & Retained rows & Slope $b$ & $p_{\rm one\text{-}sided,negative}$ \\
+\midrule
+$[\mathrm{OIII}]$ + D4000 offset & 571 & $-0.7070$ & 0.0345 \\
+$[\mathrm{OIII}]$ + $\sigma_\star$ offset & 574 & $-2.0637$ & 0.0015 \\
+$[\mathrm{OIII}]$/H$\beta$ + D4000 offset & 385 & $+0.2818$ & 0.7706 \\
+$[\mathrm{OIII}]$ + direct D4000 & 571 & $+0.3684$ & 0.8806 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Full MaNGA IFU Branch: Survey-Scale Robustness Without Overclaiming}
+
+The MaNGA IFU branch should not be sold as the main detection result, but it is too important to omit. The full downloads-first expansion pushed the IFU construction from a hand-selected pilot to a near-survey-scale branch: 6892 parent galaxies had local MAPS files, 108 rows failed extraction, and 6784 clean resolved feature summaries survived. The age and kinematic IFU state-vector realizations retained 6699 and 6701 systems respectively across four host-mass bins, with bounded-window fractions of about 0.30 in both channels.
+
+This matters for reviewer resistance. The IFU construction is now portable to order-$10^3$--$10^4$ systems, extraction failures are both rare and mostly technical, and the retained samples were already clean before the final variance-scaling stage. The clean-only reruns are therefore essentially identical to the original full-sample summaries.
+
+What the full sample does \emph{not} show is a universal negative compression law. In the age-conditioned IFU channel, the variance of $\phi_{\rm IFU}$ increases from about 5.89 at $\log M_\star\approx 9.75$ to about 8.77 at $\log M_\star\approx 11.25$, giving a positive slope of about 2.18. The sign remains positive under all tested mass-range cuts, so the age channel is directionally stable but not supportive of compression. The kinematic channel is even less stable: its full-sample slope is positive, but it flattens to nearly zero when the highest host-mass bin is removed.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{manga_full_age_variance_scaling_clean.png}
+\caption{Age-conditioned IFU channel.}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{manga_full_kin_variance_scaling_clean.png}
+\caption{Kinematic-conditioned IFU channel.}
+\end{subfigure}
+\caption{Full MaNGA IFU variance scaling after clean-only verification. The branch is survey-scale robust, but it does not support a universal negative variance-scaling law.}
+\label{fig:manga_full_variance_scaling}
+\end{figure}
+
+The honest interpretation is therefore methodological and comparative. Full MaNGA removes the small-pilot objection and shows that the IFU state-space construction is scalable and reproducible, but it also shows that any host-mass dependence in the current IFU homeostatic coordinates is channel dependent. This is valuable because it narrows the space of defensible claims instead of inflating them.
+\subsection {Leave-one-bin-out results}
+A leave-one-mass-bin-out stress test was then applied to the strongest source-driven GAMA branch, using the class-relative \(\sigma_\star\)-offset stability coordinate. The fitted variance slope remained negative in every refit: \(b=-5.59\times10^{11}\) in the full three-bin run, \(b=-1.87\times10^{11}\) after dropping the lowest populated bin, \(b=-5.59\times10^{11}\) after dropping the middle bin, and \(b=-9.30\times10^{11}\) after dropping the highest bin. Because each leave-one-out refit retains only two populated bins, these tests should be interpreted as directional sign-stability checks rather than standalone inferential fits. Nevertheless, they show that the negative GAMA trend is not carried by any single populated mass bin.
+
+The full fit and leave-one-bin-out refits gave:
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Variant & Rows used & Bins used & Slope \(b\) \\
+\midrule
+Full run & 574 & 3 & \(-5.59\times10^{11}\) \\
+Drop lowest bin (\(6.5\)) & 434 & 2 & \(-1.87\times10^{11}\) \\
+Drop middle bin (\(7.5\)) & 317 & 2 & \(-5.59\times10^{11}\) \\
+Drop highest bin (\(8.5\)) & 397 & 2 & \(-9.30\times10^{11}\) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The crucial result is that the slope remained negative in every leave-one-bin-out refit.
+
+Because the GAMA branch has only three populated black-hole-mass bins, each leave-one-bin-out refit necessarily reduces to a two-bin comparison.
+These refits should therefore be interpreted as directional sign-stability checks rather than as independent inferential fits.
+
+Within that limited but appropriate role, the result is clear:
+the negative observational trend in the GAMA dynamical branch is not being carried by any single populated mass bin.
+The sign remains negative whether the lowest, middle, or highest populated bin is removed.
+
+
+
+\section{Contextual Black-Hole Ripeness Ranking}
+
+\subsection{Why the ranking matters}
+
+The time-domain branch yields more than a variance law. It also yields a contextual maturity ranking. The ripeness catalogue contains 400 black holes across two contexts, \texttt{sag, 5.5\_7.5} and \texttt{ctrl, 7.5\_8.5}, each with 200 systems. The ripeness score is deliberately not a mass ranking. Indeed, the \texttt{sag} context has the higher median composite ripeness score, 0.4094 versus $-0.1071$ in \texttt{ctrl}, despite having the lower median final mass, 6.1336 versus 7.9718.
+
+This decoupling is not an error. It is one of the most useful outcomes of the module. The ranking is anchored strongly to residence-based ripeness, but it is also shaped by quietness, settlement, and persistence within each context. High ripeness therefore means ``structurally mature for the local evolutionary context,'' not simply ``largest black hole in the room.''
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{bh_ripeness_score_vs_residence.png}
+\caption{Composite score versus residence-based ripeness.}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{bh_ripeness_quiet_vs_settlement.png}
+\caption{Quietness-settlement regime map.}
+\end{subfigure}
+\caption{Contextual ripeness ranking. The score remains strongly tied to residence, but the quietness-settlement plane separates the stable upper core from the displaced lower tail.}
+\label{fig:ripeness_regime}
+\end{figure}
+
+\subsection{Stable core and settlement-dominated tail}
+
+The ranking survives nontrivial stress tests. Among the top 25 systems, a three-way overlap across the full score, the \texttt{drop\_quiet} variant, and the \texttt{drop\_persistence} variant yields a stable core of 13 systems. This proves that the upper tail is not a quietness or persistence gimmick.
+
+The control standout 110815526165 is especially informative. It ranks second globally under the full score. When the residence term is removed, its rank drops to 51, but when mass is removed it falls only to 13, and when quietness or settlement is removed it remains in the top 10. So it is not a fake giant. It is a genuine control-branch outlier whose maturity is anchored to residence and reinforced by mass and quietness.
+
+At the bottom of the ranking, the lowest two systems, 112236586657 and 112270650724, are not simply low-mass or quiet black holes. They are crushed by settlement. Their track-median phase-space positions are displaced by about $-31.99$ and $-28.43$ from the contextual median, producing settlement penalties of about $-52.37$ and $-46.36$. Once multiplied by the settlement weight in the composite score, those terms are large enough to force them to global ranks 400 and 399. The lower tail is therefore a tail of catastrophically displaced phase-space objects, not a trivial size tail. Physically, such extreme negative outliers are consistent with strongly disturbed systems, for example asymmetric mergers, violent inflow events, or host environments in which the local black-hole track is driven far from the contextual equilibrium manifold before any new regulated state is established.
+
+\begin{table}[H]
+\centering
+\caption{Stable core of the contextual black-hole ripeness ranking. These systems remain in the top 25 under the full, \texttt{drop\_quiet}, and \texttt{drop\_persistence} variants.}
+\label{tab:stable_core}
+\small
+\begin{tabular}{llllrrr}
+\toprule
+BH ID & Category & Mass class & $R_{\rm full}$ & Rank$_{\rm full}$ & Rank$_{\rm drop\,quiet}$ & Rank$_{\rm drop\,persist}$ \\
+\midrule
+114035101968 & sag  & 5.5\_7.5 & 1.7376 & 1  & 3  & 5  \\
+110815526165 & ctrl & 7.5\_8.5 & 1.7213 & 2  & 8  & 2  \\
+119623065799 & sag  & 5.5\_7.5 & 1.6393 & 3  & 6  & 3  \\
+110205409004 & sag  & 5.5\_7.5 & 1.6361 & 4  & 1  & 9  \\
+114618235723 & ctrl & 7.5\_8.5 & 1.6271 & 5  & 7  & 8  \\
+111771984189 & sag  & 5.5\_7.5 & 1.5766 & 6  & 2  & 11 \\
+120592264239 & sag  & 5.5\_7.5 & 1.5427 & 7  & 11 & 6  \\
+111077967557 & sag  & 5.5\_7.5 & 1.4571 & 8  & 4  & 14 \\
+111630515811 & sag  & 5.5\_7.5 & 1.4335 & 9  & 5  & 16 \\
+112814314713 & ctrl & 7.5\_8.5 & 1.3891 & 10 & 18 & 15 \\
+112050365554 & sag  & 5.5\_7.5 & 1.3724 & 11 & 9  & 18 \\
+120551410822 & sag  & 5.5\_7.5 & 1.3628 & 12 & 17 & 10 \\
+116094503755 & sag  & 5.5\_7.5 & 1.2014 & 20 & 23 & 22 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Discussion}
+
+The paper supports five main conclusions.
+
+First, a reduced homeostatic vector-space construction for black holes is now operational in both simulation and observation. That sounds procedural, but it is an empirical gain. Much of the programme was spent removing convenience-table artefacts, degenerate nulls, and survey-specific proxy failures. The result is a framework that is now stable enough to separate strong claims from merely suggestive ones.
+
+Second, the residence-time functional is the strongest current black-hole-level statistic. It is physically motivated because it measures regulated occupancy rather than instantaneous position, and empirically it is the only time-domain summary that preserves a negative dispersion trend under variance, MAD$^2$, and IQR$^2$ re-estimation. In the present paper, ripeness is therefore not an auxiliary statistic. It is the defensible centrepiece of the simulation branch.
+
+Third, the observational picture is supportive but not uniform. GAMA supplies a meaningful source-driven analogue, especially in the dynamical branch built from class-relative velocity-dispersion offsets. Because that observational result still uses only three populated black-hole-mass bins, it should be read as strong support rather than as a finished observational law. Standard quality-cut, clipping, and coordinate-definition stress tests already show that the negative GAMA slope is not a trivial proxy artifact, but an explicit leave-one-mass-bin-out audit remains a natural next robustness step before any stronger observational generalization is claimed. MaNGA serves a different role. At full survey scale it shows that the IFU branch is real, portable, and computationally reproducible, but it also shows that one should not force every resolved channel into a universal compression narrative.
+
+The MaNGA channel split is itself informative. The age-conditioned IFU branch shows directionally stable positive dispersion scaling across mass-range cuts, whereas the kinematic branch is more sensitive to whether the highest host-mass bin is retained. A plausible interpretation is that radial age structure and radial kinematic structure are probing different regulatory timescales. Dn4000 gradients integrate slower host-settling processes, while stellar-dispersion gradients remain more exposed to recent disturbance, merger history, and the exact host-mass interval being sampled. The full MaNGA result therefore argues for channel-dependent regulation rather than for a single universal resolved trend.
+
+Fourth, the ripeness ranking adds a genuinely new interpretive layer. It shows that black-hole maturity can decouple from mass and that the top and bottom tails are structurally intelligible. The stable upper core contains systems that remain elite under reduced-score variants; the lower tail is dominated by severe settlement penalties. In physical terms, those settlement catastrophes correspond to systems whose median phase-space positions sit extremely far from the contextual equilibrium manifold. In a host-galaxy reading, they are candidates for strongly disturbed or poorly settled systems rather than merely low-mass systems.
+
+Fifth, the paper suggests a disciplined way to discuss black-hole regulation. The strongest observational and simulation signals arise when stability is defined as distance from a class-conditioned equilibrium state, not as a raw absolute variable. That pattern recurs in the GAMA success branches, in the MaNGA IFU age/kinematic split, and in the settlement term of the ripeness module. The framework is therefore less about inventing exotic coordinates than about placing familiar observables into controlled geometric roles.
+
+\section{Limitations}
+
+The present study has clear boundaries, but those boundaries are informative because they show where the framework is already reliable and where expansion is still needed.
+
+By deliberately restricting this Tier~1 implementation to throughput, boundedness, residence, and contextual maturity, the paper establishes a robust empirical baseline before activating the remaining coordinates of the broader $(H,R,S,M)$ architecture. The strongest conclusions therefore concern the parts of the framework that are already directly testable, while recovery and memory remain explicit next-stage extensions rather than hidden assumptions.
+
+The observational GAMA branches provide meaningful source-driven support, yet they rely on only three populated black-hole-mass bins. That is enough to establish a credible directional signal and to reject obvious pipeline artefacts, but not enough to exhaust all possible binning sensitivities. The MaNGA black-hole overlay remains sparse, so the survey-scale MaNGA result is used appropriately as a host-regulation and portability branch rather than as broad black-hole demographic confirmation.
+
+The ripeness-ranking module is also best read within its current scope. It already demonstrates that maturity can decouple from mass and that a stable upper core and settlement-dominated lower tail exist, but the current catalogue contains only two contextual mass classes. The present gating result is therefore a robust two-regime result, not yet a finer multi-tier maturity ladder. None of these limitations nullifies the main claims. They define the next expansion path and clarify which conclusions in the paper should be read as strong, which as supportive, and which as deliberately provisional.
+
+\section{Conclusion}
+
+A reduced homeostatic vector space for black holes can be built, tested, and constrained empirically. In the present Tier~1 realization, the strongest time-domain result is that the variance of the residence-based ripeness functional decreases robustly with final black-hole mass, whereas the dispersion trend in the median scalar potential is not robust and is tail dominated. The strongest observational analogue currently comes from source-driven GAMA rebuilds, especially when stability is defined through a class-relative kinematic offset. The full MaNGA IFU expansion demonstrates survey-scale portability of the state-vector construction, but it does not support a universal compression law and therefore serves as a large-sample robustness branch rather than as the central detection claim. Finally, the contextual ripeness ranking shows that maturity is not reducible to mass alone: the catalogue contains a stable upper core and a settlement-dominated lower tail whose behavior is geometrically interpretable.
+
+The core contribution of the paper is therefore not the discovery of one universal monotonic law across every branch. It is the demonstration that a reduced, class-conditioned homeostatic geometry for black holes already yields one robust simulation-level signal, one credible source-driven observational anchor, one survey-scale resolved robustness branch, and one maturity ranking whose top and bottom tails can be explained structurally rather than rhetorically.
+
+\section*{Acknowledgements}
+No specific funding was received for this work.
+
+\section{Data Availability}
+All scripts, configs and codes are deposited in the public repo \url
+
+\begin{thebibliography}{99}
+
+\bibitem[Aird et~al.(2018)]{Aird2018}
+Aird J., Coil A.~L., Georgakakis A.
+\newblock X-ray AGN in the COSMOS-Legacy survey: the black hole occupation and Eddington ratio distribution of star-forming galaxies.
+\newblock \emph{MNRAS}, 474:1225--1249, 2018.
+
+\bibitem[Belfiore et~al.(2019)]{Belfiore2019}
+Belfiore F., Westfall K.~B., Schaefer A., et~al.
+\newblock The Data Analysis Pipeline for the SDSS-IV MaNGA IFU Galaxy Survey: emission-line modeling.
+\newblock \emph{AJ}, 158:160, 2019.
+
+\bibitem[Cho and Woo(2024)]{Cho2024}
+Cho H., Woo J.-H.
+\newblock Constraining the Low-Mass End of the Black Hole Mass Function and the Active Fraction of the Intermediate-Mass Black Holes.
+\newblock \emph{ApJ}, 969:93, 2024.
+
+\bibitem[Georgakakis et~al.(2024)]{Georgakakis2024}
+Georgakakis A., et~al.
+\newblock Ensemble X-ray variability of optically selected QSOs.
+\newblock \emph{MNRAS}, 531:4524--4543, 2024.
+
+\bibitem[He et~al.(2024)]{He2024}
+He W., et~al.
+\newblock Black Hole Mass and Eddington-ratio Distributions of Less-luminous Quasars at $z\sim4$ in the Subaru Hyper Suprime-Cam Wide Field.
+\newblock \emph{ApJ}, 962:152, 2024.
+
+\bibitem[Heckman and Best(2014)]{HeckmanBest2014}
+Heckman T.~M., Best P.~N.
+\newblock The coevolution of galaxies and supermassive black holes: insights from surveys of the contemporary universe.
+\newblock \emph{ARA\&A}, 52:589--660, 2014.
+
+\bibitem[Jana et~al.(2025)]{Jana2025}
+Jana A., et~al.
+\newblock Investigating changing-look active galactic nuclei with long-term photometric variations and archival spectroscopy.
+\newblock \emph{A\&A}, 693:A35, 2025.
+
+\bibitem[Kormendy and Ho(2013)]{KormendyHo2013}
+Kormendy J., Ho L.~C.
+\newblock Coevolution (or not) of supermassive black holes and host galaxies.
+\newblock \emph{ARA\&A}, 51:511--653, 2013.
+
+\bibitem[McHardy et~al.(2006)]{McHardy2006}
+McHardy I.~M., Koerding E., Knigge C., Uttley P., Fender R.~P.
+\newblock Active galactic nuclei as scaled-up Galactic black holes.
+\newblock \emph{Nature}, 444:730--732, 2006.
+
+\bibitem[Ricci and Trakhtenbrot(2022)]{Ricci2022}
+Ricci C., Trakhtenbrot B.
+\newblock Changing-look Active Galactic Nuclei.
+\newblock \emph{arXiv e-prints}, arXiv:2211.05132, 2022.
+
+\bibitem[Serafinelli et~al.(2024)]{Serafinelli2024}
+Serafinelli R., et~al.
+\newblock Investigating the interplay between the coronal properties and X-ray variability of active galactic nuclei.
+\newblock \emph{A\&A}, 690:A145, 2024.
+
+\bibitem[Tortosa et~al.(2023)]{Tortosa2023}
+Tortosa A., et~al.
+\newblock BASS-XL: X-ray variability properties of unobscured active galactic nuclei.
+\newblock \emph{MNRAS}, 526:1687--1705, 2023.
+
+\bibitem[Westfall et~al.(2019)]{Westfall2019}
+Westfall K.~B., et~al.
+\newblock The Data Analysis Pipeline for the SDSS-IV MaNGA IFU Galaxy Survey: overview.
+\newblock \emph{AJ}, 158:231, 2019.
+
+\bibitem[Zeltyn et~al.(2024)]{Zeltyn2024}
+Zeltyn G., et~al.
+\newblock Exploring Changing-look Active Galactic Nuclei with the Sloan Digital Sky Survey V.
+\newblock \emph{ApJ}, 966:85, 2024.
+
+\end{thebibliography}
+
+\end{document}

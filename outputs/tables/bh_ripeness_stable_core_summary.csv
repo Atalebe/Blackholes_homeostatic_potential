@@ -1,0 +1,2 @@
+top_n,n_top_full,n_top_drop_quiet,n_top_drop_persistence,stable_core_n,stable_core_fraction_vs_top_n,overlap_full_vs_drop_quiet,overlap_full_vs_drop_persistence,overlap_drop_quiet_vs_drop_persistence
+25,25,25,25,13,0.52,20,17,13

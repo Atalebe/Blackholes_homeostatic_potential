@@ -1,0 +1,9 @@
+data:
+  features_csv: outputs/tables/manga_full_maps_features_merged.csv
+  age_state_csv: outputs/tables/manga_full_age_state_vector.csv
+  kin_state_csv: outputs/tables/manga_full_kin_state_vector.csv
+
+outputs:
+  age_state_clean_csv: outputs/tables/manga_full_age_state_vector_cleanflag.csv
+  kin_state_clean_csv: outputs/tables/manga_full_kin_state_vector_cleanflag.csv
+  summary_csv: outputs/tables/manga_full_cleanflag_summary.csv

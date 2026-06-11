@@ -1,0 +1,31 @@
+data:
+  runtime_table: outputs/tables/gama_sample_runtime_table.csv
+
+columns:
+  gal_id: gal_id
+  logMstar: logMstar_gama
+  SFR: SFR
+  logMbh: logMbh
+  mdot_bh: mdot_bh
+  z: z_gama
+  sigma_star: sigma_star_gama
+  sn_col: SN
+  nq_col: NQ
+
+selection:
+  z_max: 0.1
+  host_mass_log10_min: 10.4
+  host_mass_log10_max: 11.2
+  require_positive_sfr: true
+  require_positive_mdot_bh: true
+  require_positive_sigma: true
+  require_positive_logMstar: true
+  require_finite_logMbh: true
+  lambda0_band_low: -5.0
+  lambda0_band_high: 3.0
+  sn_min: 3
+  nq_min: 3
+
+outputs:
+  audit_csv: audit_gama_rebuilt_sigmaS_rejection_steps.csv
+  marginal_csv: audit_gama_rebuilt_sigmaS_rejection_marginal.csv

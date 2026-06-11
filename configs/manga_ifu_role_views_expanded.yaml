@@ -1,0 +1,7 @@
+data:
+  age_input: outputs/tables/manga_ifu_age_state_vector_expanded.csv
+  kin_input: outputs/tables/manga_ifu_kin_state_vector_expanded.csv
+
+outputs:
+  age_output: outputs/tables/manga_ifu_age_state_vector_expanded_roleviews.csv
+  kin_output: outputs/tables/manga_ifu_kin_state_vector_expanded_roleviews.csv

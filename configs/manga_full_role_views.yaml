@@ -1,0 +1,8 @@
+# configs/manga_full_role_views.yaml
+data:
+  age_csv: outputs/tables/manga_full_age_state_vector.csv
+  kin_csv: outputs/tables/manga_full_kin_state_vector.csv
+
+outputs:
+  age_roleviews_csv: outputs/tables/manga_full_age_roleviews.csv
+  kin_roleviews_csv: outputs/tables/manga_full_kin_roleviews.csv

@@ -1,0 +1,48 @@
+run:
+  run_name: obs_sdss_with_sigma_S
+  seed: 12345
+
+data:
+  input_table: data/external/sdss/rebuilt/sdss_bh_sigma_table.csv
+
+io:
+  format: csv
+
+columns:
+  gal_id: gal_id
+  logMstar: logMstar
+  SFR: SFR
+  logMbh: logMbh
+  mdot_bh: mdot_bh
+  z: z
+  sigma_star: sigma_star
+
+selection:
+  z_max: 0.1
+  host_mass_log10_min: 10.4
+  host_mass_log10_max: 11.2
+  require_positive_sfr: true
+  require_positive_mdot_bh: true
+  require_positive_sigma: true
+  lambda0_band_low: -5.0
+  lambda0_band_high: 3.0
+
+bh_sigma_relation:
+  a: 8.32
+  b: 5.64
+  sigma_norm_kms: 200.0
+
+class_conditioning:
+  bh_mass_bins:
+    - [5.0, 6.0]
+    - [6.0, 7.0]
+    - [7.0, 8.0]
+    - [8.0, 9.0]
+
+window:
+  q_low: 0.35
+  q_high: 0.65
+
+outputs:
+  catalog_out: outputs/catalogs/obs_sdss_static_with_sigma_S.parquet
+  window_catalog_out: outputs/catalogs/obs_sdss_static_with_sigma_S_window.parquet

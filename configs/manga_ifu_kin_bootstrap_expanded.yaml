@@ -1,0 +1,20 @@
+run:
+  run_name: manga_ifu_kin_bootstrap_expanded
+  seed: 12345
+
+data:
+  input_table: outputs/tables/manga_ifu_kin_state_vector_expanded.csv
+
+bootstrap:
+  n_boot: 5000
+  group_cols:
+    - role
+    - host_mass_class
+  metric_cols:
+    - phi_ifu
+    - H_raw
+    - S_raw
+  window_col: in_window
+
+outputs:
+  summary_csv: outputs/tables/manga_ifu_kin_bootstrap_summary_expanded.csv

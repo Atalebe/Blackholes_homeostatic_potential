@@ -1,0 +1,8 @@
+data:
+  feature_glob: outputs/tables/manga_full_maps_chunk_features/*_features.csv
+  summary_glob: outputs/tables/manga_full_maps_chunk_summaries/*_summary.csv
+
+outputs:
+  merged_features_csv: outputs/tables/manga_full_maps_features_merged.csv
+  merged_summary_csv: outputs/tables/manga_full_maps_features_merged_summary.csv
+  merged_chunk_summaries_csv: outputs/tables/manga_full_maps_chunk_summaries_merged.csv

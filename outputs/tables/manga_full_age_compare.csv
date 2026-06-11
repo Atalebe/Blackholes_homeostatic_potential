@@ -1,0 +1,7 @@
+label,obs_slope,intercept,p_one_sided_negative,p_one_sided_positive,n_perm,n_bins_used,rows_used,clean_rows_used,x_col,y_col,group_col,note
+full_all_rows,2.183416911979881,-15.531307883522436,1.0,,2000.0,4,,,logMstar_drp_elpetro,phi_ifu,,
+full_clean_only,2.18412527273828,-15.539018598599624,0.4962518740629685,,2000.0,4,,6699.0,logMstar_drp_elpetro,phi_ifu,host_mass_class,
+full_clean,2.18412527273828,-15.539018598599624,,,,4,6699.0,,,,,
+no_top_bin,2.712236911093094,-20.864144285344008,,,,3,5969.0,,,,,
+no_bottom_bin,2.4502286752278466,-18.44398074244405,,,,3,4775.0,,,,,
+middle_only,4.5667703952714085,-40.491290326231166,,,,2,4045.0,,,,,

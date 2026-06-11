@@ -1,0 +1,8 @@
+# configs/bh_intermediate_mass_class_gating.yaml
+data:
+  catalog_csv: outputs/tables/bh_ripeness_rankings.csv
+  stable_core_csv: outputs/tables/bh_ripeness_stable_core_top25.csv
+
+outputs:
+  summary_csv: outputs/tables/bh_mass_class_gating_summary.csv
+  intermediate_csv: outputs/tables/bh_intermediate_mass_class_gating.csv

@@ -1,0 +1,72 @@
+run:
+  run_name: obs_manga_rebuilt_oiiiH_d4000S
+  seed: 12345
+
+data:
+  runtime_table: outputs/tables/manga_sample_runtime_table_augmented.csv
+
+columns:
+  gal_id: gal_id
+  logMstar: logMstar_drp_elpetro
+  logMbh: logMbh
+  z: nsa_z
+  h_col: oiii5008_gflux_1re
+  s_col: dn4000_1re
+  extras:
+    - plateifu
+    - daptype
+    - drp3qual
+    - dapqual
+    - dn4000_1re
+    - oiii5008_gflux_1re
+    - ha_gflux_1re
+    - ha_gsb_1re
+  dapqual_col: dapqual
+
+selection:
+  z_max: 0.1
+  host_mass_log10_min: 10.4
+  host_mass_log10_max: 11.2
+  require_positive_logMstar: true
+  require_finite_logMbh: true
+  require_positive_h_source: true
+  require_positive_s_source: true
+  require_zero_dapqual: true
+
+h_definition:
+  mode: log10_col
+
+s_definition:
+  mode: offset_from_class_median_log10_col
+
+class_conditioning:
+  bh_mass_bins:
+    - [6.0, 7.0]
+    - [7.0, 8.0]
+    - [8.0, 9.0]
+
+window:
+  q_low: 0.35
+  q_high: 0.65
+
+normalization:
+  mad_floor: 0.001
+  clip_abs: 10.0
+
+variance_scaling:
+  bin_start: 6.0
+  bin_stop: 9.0
+  bin_step: 1.0
+  min_bin_count: 2
+
+nulls:
+  n_perm: 500
+
+outputs:
+  catalog_out: outputs/catalogs/obs_manga_rebuilt_oiiiH_d4000S.parquet
+  window_catalog_out: outputs/catalogs/obs_manga_rebuilt_oiiiH_d4000S_window.parquet
+  qc_summary_out: outputs/tables/obs_manga_rebuilt_oiiiH_d4000S_qc.csv
+  variance_table_out: outputs/tables/obs_manga_rebuilt_oiiiH_d4000S_variance_scaling.csv
+  variance_summary_out: outputs/tables/obs_manga_rebuilt_oiiiH_d4000S_variance_summary.csv
+  null_slopes_out: outputs/tables/obs_manga_rebuilt_oiiiH_d4000S_null_slopes.csv
+  figure_prefix: outputs/figures/obs_manga_rebuilt_oiiiH_d4000S

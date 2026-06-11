@@ -1,0 +1,8 @@
+# configs/bh_ripeness_sensitivity.yaml
+data:
+  catalog_csv: outputs/tables/bh_ripeness_rankings.csv
+
+outputs:
+  summary_csv: outputs/tables/bh_ripeness_sensitivity_summary.csv
+  overlap_csv: outputs/tables/bh_ripeness_sensitivity_overlap.csv
+  top_n: 25

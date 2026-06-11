@@ -1,0 +1,50 @@
+run:
+  run_name: sdss_bh_static
+  seed: 12345
+
+data:
+  dataset: sdss
+  master_catalog: data/raw/sdss/sdss_bh_master.parquet
+
+selection:
+  z_max: 0.1
+  host_mass_log10_min: 10.4
+  host_mass_log10_max: 11.2
+  require_finite_sigma: true
+  require_finite_oiii: true
+  require_positive_sfr: true
+
+class_conditioning:
+  mode: bh_mass_bins
+  bh_mass_bins:
+    - [5.0, 6.0]
+    - [6.0, 7.0]
+    - [7.0, 8.0]
+    - [8.0, 9.0]
+
+features:
+  H:
+    source: log10_lambda_edd_proxy
+  S:
+    source: log10_activity_scatter_proxy
+
+normalization:
+  method: median_mad
+
+window:
+  method: quantile
+  q_low: 0.35
+  q_high: 0.65
+
+variance_scaling:
+  min_bin_count: 30
+  fit_model: linear
+
+nulls:
+  n_perm: 2000
+  shuffle_within_class: true
+
+outputs:
+  catalog_out: outputs/catalogs/sdss_bh_static_catalog.parquet
+  summary_out: outputs/tables/sdss_bh_static_summary.csv
+  figure_prefix: outputs/figures/sdss_bh_static

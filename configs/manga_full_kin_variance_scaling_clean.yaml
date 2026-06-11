@@ -1,0 +1,22 @@
+data:
+  state_vector_csv: outputs/tables/manga_full_kin_state_vector_cleanflag.csv
+
+columns:
+  x_col: logMstar_drp_elpetro
+  y_col: phi_ifu
+  clean_flag_col: is_clean_maps_row
+
+binning:
+  bin_edges: [9.5, 10.0, 10.5, 11.0, 11.5]
+
+run:
+  n_perm: 2000
+  seed: 123
+  p_direction: negative
+  permute_within: host_mass_class
+
+outputs:
+  binned_csv: outputs/tables/manga_full_kin_variance_scaling_clean.csv
+  summary_csv: outputs/tables/manga_full_kin_variance_summary_clean.csv
+  null_csv: outputs/tables/manga_full_kin_null_slopes_clean.csv
+  figure_png: outputs/figures/manga_full_kin_variance_scaling_clean.png

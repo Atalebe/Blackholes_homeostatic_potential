@@ -1,0 +1,25 @@
+# configs/manga_full_kin_role_tests_seed_nonseed.yaml
+run:
+  run_name: manga_full_kin_role_tests_seed_nonseed
+  seed: 12345
+
+data:
+  state_vector_csv: outputs/tables/manga_full_kin_roleviews.csv
+
+role_tests:
+  role_col: role_seed_vs_nonseed
+  seed_label: seed
+  control_label: nonseed
+  stratify_by: host_mass_class
+  n_perm: 5000
+  test_columns:
+    - phi_ifu
+    - H_raw
+    - S_raw
+    - dn4000_delta_out_minus_cen
+    - oiii5008_gflux_delta_out_minus_cen
+    - ha_gflux_delta_out_minus_cen
+    - stellar_sigma_delta_out_minus_cen
+
+outputs:
+  csv: outputs/tables/manga_full_kin_role_tests_seed_nonseed.csv

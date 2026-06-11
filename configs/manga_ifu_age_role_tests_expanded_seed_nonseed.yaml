@@ -1,0 +1,24 @@
+run:
+  run_name: manga_ifu_age_role_tests_expanded_seed_nonseed
+  seed: 12345
+
+data:
+  input_table: outputs/tables/manga_ifu_age_state_vector_expanded_roleviews.csv
+
+tests:
+  role_col: role_seed_vs_nonseed
+  seed_label: seed
+  control_label: nonseed
+  stratify_by: host_mass_class
+  n_perm: 5000
+  columns:
+    - phi_ifu
+    - H_raw
+    - S_raw
+    - dn4000_delta_out_minus_cen
+    - oiii5008_gflux_delta_out_minus_cen
+    - ha_gflux_delta_out_minus_cen
+    - stellar_sigma_delta_out_minus_cen
+
+outputs:
+  summary_csv: outputs/tables/manga_ifu_age_role_tests_expanded_seed_nonseed.csv

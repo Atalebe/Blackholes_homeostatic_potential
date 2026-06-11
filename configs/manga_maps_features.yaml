@@ -1,0 +1,6 @@
+data:
+  manifest_csv: outputs/tables/manga_ifu_pilot_manifest.csv
+
+outputs:
+  features_csv: outputs/tables/manga_ifu_pilot_features.csv
+  summary_csv: outputs/tables/manga_ifu_pilot_features_summary.csv

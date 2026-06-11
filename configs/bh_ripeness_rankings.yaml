@@ -1,0 +1,27 @@
+# configs/bh_ripeness_rankings.yaml
+data:
+  input_csv: outputs/tables/bh_time_ripeness_from_csv_tier1_hrsm.csv
+
+context:
+  group_cols:
+    - category
+    - final_mass_class
+
+normalization:
+  mad_floor: 0.1
+
+weights:
+  ripeness_bh: 0.40
+  commitment_mass: 0.20
+  quiet_quietness: 0.15
+  settlement_phi: 0.15
+  persistence_tracks: 0.10
+
+outputs:
+  catalog_csv: outputs/tables/bh_ripeness_rankings.csv
+  summary_csv: outputs/tables/bh_ripeness_summary_by_context.csv
+  top_csv: outputs/tables/bh_ripeness_top_global.csv
+  bottom_csv: outputs/tables/bh_ripeness_bottom_global.csv
+  correlations_csv: outputs/tables/bh_ripeness_correlations.csv
+  top_n: 20
+  bottom_n: 20

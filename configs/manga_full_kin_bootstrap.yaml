@@ -1,0 +1,20 @@
+# configs/manga_full_kin_bootstrap.yaml
+run:
+  run_name: manga_full_kin_bootstrap
+  seed: 12345
+
+data:
+  state_vector_csv: outputs/tables/manga_full_kin_state_vector.csv
+
+bootstrap:
+  role_col: role
+  mass_col: host_mass_class
+  summary_columns:
+    - phi_ifu
+    - H_raw
+    - S_raw
+  window_col: in_window
+  n_boot: 5000
+
+outputs:
+  csv: outputs/tables/manga_full_kin_bootstrap_summary.csv

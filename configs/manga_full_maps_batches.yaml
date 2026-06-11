@@ -1,0 +1,19 @@
+data:
+  parent_manifest: outputs/tables/manga_full_parent_manifest.csv
+
+paths:
+  maps_root: data/external/manga/dr17/maps
+  sas_base: https://data.sdss.org/sas/dr17/manga/spectro/analysis/v3_1_1/3.1.0
+
+batching:
+  chunk_size: 500
+
+outputs:
+  master_manifest_csv: outputs/tables/manga_full_parent_manifest_with_maps.csv
+  batch_summary_csv: outputs/tables/manga_full_maps_batches_summary.csv
+  chunk_manifest_dir: outputs/tables/manga_full_maps_chunk_manifests
+  chunk_config_dir: outputs/tables/manga_full_maps_chunk_configs
+  chunk_feature_dir: outputs/tables/manga_full_maps_chunk_features
+  chunk_summary_dir: outputs/tables/manga_full_maps_chunk_summaries
+  download_script: outputs/tables/download_manga_full_maps.sh
+  extract_script: outputs/tables/run_manga_full_maps_extraction.sh

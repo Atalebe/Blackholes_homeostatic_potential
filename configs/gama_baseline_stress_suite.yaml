@@ -1,0 +1,98 @@
+run:
+  run_name: gama_baseline_stress_suite
+  seed: 12345
+
+data:
+  runtime_table: outputs/tables/gama_sample_runtime_table.csv
+
+selection:
+  z_max: 0.1
+  host_mass_log10_min: 10.4
+  host_mass_log10_max: 11.2
+  sn_min: 3
+  nq_min: 3
+
+class_conditioning:
+  bh_mass_bins:
+    - [6.0, 7.0]
+    - [7.0, 8.0]
+    - [8.0, 9.0]
+
+window:
+  q_low: 0.35
+  q_high: 0.65
+
+normalization:
+  mad_floor: 0.001
+  clip_abs: 10.0
+
+variance_scaling:
+  x: logMbh
+  y: phi_bh
+  bin_start: 6.0
+  bin_stop: 9.0
+  bin_step: 1.0
+  min_bin_count: 8
+
+nulls:
+  n_perm: 2000
+
+variants:
+  - name: baseline_oiiibH_d4000offsetS
+    h_kind: log10_col
+    h_col: OIIIB_FLUX
+    s_kind: offset_from_class_median_log10_col
+    s_col: D4000N
+
+  - name: stricter_SN5_NQ4
+    h_kind: log10_col
+    h_col: OIIIB_FLUX
+    s_kind: offset_from_class_median_log10_col
+    s_col: D4000N
+    sn_min: 5
+    nq_min: 4
+
+  - name: stricter_SN10_NQ4
+    h_kind: log10_col
+    h_col: OIIIB_FLUX
+    s_kind: offset_from_class_median_log10_col
+    s_col: D4000N
+    sn_min: 10
+    nq_min: 4
+
+  - name: clip5_baseline
+    h_kind: log10_col
+    h_col: OIIIB_FLUX
+    s_kind: offset_from_class_median_log10_col
+    s_col: D4000N
+    clip_abs: 5.0
+
+  - name: madfloor_0p01
+    h_kind: log10_col
+    h_col: OIIIB_FLUX
+    s_kind: offset_from_class_median_log10_col
+    s_col: D4000N
+    mad_floor: 0.01
+
+  - name: oiiib_over_hb_H
+    h_kind: log10_ratio
+    h_col_num: OIIIB_FLUX
+    h_col_den: HB_FLUX
+    s_kind: offset_from_class_median_log10_col
+    s_col: D4000N
+
+  - name: direct_d4000_S
+    h_kind: log10_col
+    h_col: OIIIB_FLUX
+    s_kind: direct_log10_col
+    s_col: D4000N
+
+  - name: sigmaoffsetS
+    h_kind: log10_col
+    h_col: OIIIB_FLUX
+    s_kind: offset_from_class_median_log10_col
+    s_col: sigma_star_gama
+
+outputs:
+  summary_csv: outputs/tables/gama_baseline_stress_suite_summary.csv
+  binned_csv: outputs/tables/gama_baseline_stress_suite_binned.csv

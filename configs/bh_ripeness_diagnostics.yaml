@@ -1,0 +1,17 @@
+# configs/bh_ripeness_diagnostics.yaml
+data:
+  catalog_csv: outputs/tables/bh_ripeness_rankings.csv
+
+context:
+  group_cols:
+    - category
+    - final_mass_class
+
+outputs:
+  context_top_csv: outputs/tables/bh_ripeness_top_by_context.csv
+  context_bottom_csv: outputs/tables/bh_ripeness_bottom_by_context.csv
+  class_summary_csv: outputs/tables/bh_ripeness_class_summary.csv
+  rank_overlap_csv: outputs/tables/bh_ripeness_rank_overlap.csv
+  top_n: 10
+  bottom_n: 10
+  overlap_n: 25

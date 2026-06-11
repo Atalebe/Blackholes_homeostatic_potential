@@ -1,0 +1,56 @@
+run:
+  run_name: tng300_tier1_static
+  seed: 12345
+
+data:
+  subhalo_catalog: data/raw/tng/subhalo_snapshot_99.parquet
+  bh_catalog: data/raw/tng/bh_snapshot_99.parquet
+
+columns:
+  join_key: subhalo_id
+  bh_id: bh_id
+  bh_mass: bh_mass
+  bhmar: bh_accretion_rate
+  mstar: stellar_mass
+  mhalo: halo_mass
+  sfr: sfr
+  s_raw: null
+
+selection:
+  host_mass_log10_min: 10.4
+  host_mass_log10_max: 11.2
+  halo_mass_log10_min: 11.7
+  halo_mass_log10_max: 12.7
+  require_positive_sfr: true
+  require_positive_bhmar: true
+
+class_conditioning:
+  bh_mass_bins:
+    - [5.0, 6.0]
+    - [6.0, 7.0]
+    - [7.0, 8.0]
+    - [8.0, 9.0]
+
+window:
+  q_low: 0.35
+  q_high: 0.65
+
+variance_scaling:
+  bin_start: 5.0
+  bin_stop: 9.0
+  bin_step: 0.5
+  min_bin_count: 20
+
+nulls:
+  n_perm: 2000
+
+outputs:
+  base_catalog_out: outputs/catalogs/tng300_static_base.parquet
+  phi_catalog_out: outputs/catalogs/tng300_static_phi.parquet
+  window_catalog_out: outputs/catalogs/tng300_static_window.parquet
+  variance_table_out: outputs/tables/tng300_variance_scaling.csv
+  variance_summary_out: outputs/tables/tng300_variance_summary.csv
+  null_slopes_out: outputs/tables/tng300_null_slopes.csv
+  null_summary_out: outputs/tables/tng300_null_summary.csv
+  class_summary_out: outputs/tables/tng300_class_summary.csv
+  figure_prefix: outputs/figures/tng300_static

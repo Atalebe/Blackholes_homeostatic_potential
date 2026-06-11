@@ -1,0 +1,11 @@
+summary_inputs:
+  - csv: outputs/tables/manga_full_age_variance_summary.csv
+    label: full_all_rows
+  - csv: outputs/tables/manga_full_age_variance_summary_clean.csv
+    label: full_clean_only
+
+sensitivity_inputs:
+  - csv: outputs/tables/manga_full_age_sensitivity_summary.csv
+
+outputs:
+  compare_csv: outputs/tables/manga_full_age_compare.csv

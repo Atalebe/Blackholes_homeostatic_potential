@@ -1,0 +1,24 @@
+data:
+  features_csv: outputs/tables/manga_full_maps_features_merged.csv
+  runtime_csv: outputs/tables/manga_full_parent_manifest.csv
+
+class_conditioning:
+  host_mass_bins:
+    - [9.5, 10.0]
+    - [10.0, 10.5]
+    - [10.5, 11.0]
+    - [11.0, 11.5]
+
+normalization:
+  mad_floor: 0.001
+  clip_abs: 10.0
+
+window:
+  q_low: 0.35
+  q_high: 0.65
+
+outputs:
+  age_catalog_csv: outputs/tables/manga_full_age_state_vector.csv
+  age_summary_csv: outputs/tables/manga_full_age_state_vector_summary.csv
+  kin_catalog_csv: outputs/tables/manga_full_kin_state_vector.csv
+  kin_summary_csv: outputs/tables/manga_full_kin_state_vector_summary.csv

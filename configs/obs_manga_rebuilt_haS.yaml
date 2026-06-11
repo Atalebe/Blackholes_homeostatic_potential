@@ -1,0 +1,71 @@
+run:
+  run_name: obs_manga_rebuilt_haS
+  seed: 12345
+
+data:
+  runtime_table: outputs/tables/manga_sample_runtime_table.csv
+
+columns:
+  gal_id: gal_id
+  logMstar: logMstar_drp_elpetro
+  SFR: SFR
+  logMbh: logMbh
+  mdot_bh: mdot_bh
+  z: nsa_z
+  s_col: ha_gsb_1re
+  extras:
+    - plateifu
+    - daptype
+    - drp3qual
+    - dapqual
+    - ha_gflux_1re
+    - ha_gsb_1re
+    - stellar_sigma_1re
+  dapqual_col: dapqual
+
+selection:
+  z_max: 0.1
+  host_mass_log10_min: 10.4
+  host_mass_log10_max: 11.2
+  require_positive_sfr: true
+  require_positive_mdot_bh: true
+  require_positive_logMstar: true
+  require_positive_s_source: true
+  require_finite_logMbh: true
+  lambda0_band_low: -5.0
+  lambda0_band_high: 3.0
+  require_zero_dapqual: true
+
+h_definition:
+  mode: lambda0
+
+s_definition:
+  mode: offset_from_class_median_log10_col
+
+class_conditioning:
+  bh_mass_bins:
+    - [6.0, 7.0]
+    - [7.0, 8.0]
+    - [8.0, 9.0]
+
+window:
+  q_low: 0.35
+  q_high: 0.65
+
+variance_scaling:
+  bin_start: 6.0
+  bin_stop: 9.0
+  bin_step: 1.0
+  min_bin_count: 2
+
+nulls:
+  n_perm: 500
+
+outputs:
+  catalog_out: outputs/catalogs/obs_manga_rebuilt_haS.parquet
+  window_catalog_out: outputs/catalogs/obs_manga_rebuilt_haS_window.parquet
+  qc_summary_out: outputs/tables/obs_manga_rebuilt_haS_qc.csv
+  variance_table_out: outputs/tables/obs_manga_rebuilt_haS_variance_scaling.csv
+  variance_summary_out: outputs/tables/obs_manga_rebuilt_haS_variance_summary.csv
+  null_slopes_out: outputs/tables/obs_manga_rebuilt_haS_null_slopes.csv
+  figure_prefix: outputs/figures/obs_manga_rebuilt_haS

@@ -1,0 +1,23 @@
+data:
+  features_csv: outputs/tables/manga_ifu_expanded_features.csv
+  runtime_csv: outputs/tables/manga_full_download_runtime_with_legacy_overlay.csv
+
+class_conditioning:
+  host_mass_bins:
+    - [10.0, 10.5]
+    - [10.5, 11.0]
+    - [11.0, 11.5]
+
+normalization:
+  mad_floor: 0.001
+  clip_abs: 10.0
+
+window:
+  q_low: 0.35
+  q_high: 0.65
+
+outputs:
+  age_catalog_csv: outputs/tables/manga_ifu_age_state_vector_expanded.csv
+  age_summary_csv: outputs/tables/manga_ifu_age_state_vector_summary_expanded.csv
+  kin_catalog_csv: outputs/tables/manga_ifu_kin_state_vector_expanded.csv
+  kin_summary_csv: outputs/tables/manga_ifu_kin_state_vector_summary_expanded.csv

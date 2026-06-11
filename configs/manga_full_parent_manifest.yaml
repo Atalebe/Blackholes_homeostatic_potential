@@ -1,0 +1,21 @@
+data:
+  runtime_table: outputs/tables/manga_full_download_runtime_with_legacy_overlay.csv
+
+selection:
+  require_dapqual_zero: true
+  z_max: 0.15
+  host_mass_log10_min: 9.5
+  host_mass_log10_max: 11.5
+  require_finite_sigma: true
+
+class_conditioning:
+  host_mass_bins:
+    - [9.5, 10.0]
+    - [10.0, 10.5]
+    - [10.5, 11.0]
+    - [11.0, 11.5]
+
+outputs:
+  manifest_csv: outputs/tables/manga_full_parent_manifest.csv
+  summary_csv: outputs/tables/manga_full_parent_manifest_summary.csv
+  counts_csv: outputs/tables/manga_full_parent_manifest_counts.csv

@@ -1,0 +1,15 @@
+# configs/bh_ripeness_regime_plots.yaml
+data:
+  catalog_csv: outputs/tables/bh_ripeness_rankings.csv
+  stable_core_csv: outputs/tables/bh_ripeness_stable_core_top25.csv
+  settlement_summary_csv: outputs/tables/bh_settlement_residual_summary.csv
+
+focus:
+  bh_ids:
+    - "110815526165"
+    - "114035101968"
+    - "112270650724"
+    - "112236586657"
+
+outputs:
+  figure_dir: outputs/figures/bh_ripeness_regime

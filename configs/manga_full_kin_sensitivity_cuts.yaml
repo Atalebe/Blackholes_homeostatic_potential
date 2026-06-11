@@ -1,0 +1,28 @@
+# configs/manga_full_kin_sensitivity_cuts.yaml
+data:
+  state_vector_csv: outputs/tables/manga_full_kin_state_vector_cleanflag.csv
+
+columns:
+  x_col: logMstar_drp_elpetro
+  y_col: phi_ifu
+
+binning:
+  bin_edges: [9.5, 10.0, 10.5, 11.0, 11.5]
+
+cuts:
+  - label: full_clean
+    require_clean: true
+  - label: no_top_bin
+    require_clean: true
+    mass_max: 11.0
+  - label: no_bottom_bin
+    require_clean: true
+    mass_min: 10.0
+  - label: middle_only
+    require_clean: true
+    mass_min: 10.0
+    mass_max: 11.0
+
+outputs:
+  summary_csv: outputs/tables/manga_full_kin_sensitivity_summary.csv
+  binned_csv: outputs/tables/manga_full_kin_sensitivity_binned.csv

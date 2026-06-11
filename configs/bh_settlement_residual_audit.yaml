@@ -1,0 +1,16 @@
+# configs/bh_settlement_residual_audit.yaml
+data:
+  catalog_csv: outputs/tables/bh_ripeness_rankings.csv
+
+focus:
+  bh_ids:
+    - "112270650724"
+    - "112236586657"
+  ranks:
+    - 399
+    - 400
+
+outputs:
+  focus_csv: outputs/tables/bh_settlement_focus_rows.csv
+  context_csv: outputs/tables/bh_settlement_context_audit.csv
+  summary_csv: outputs/tables/bh_settlement_residual_summary.csv

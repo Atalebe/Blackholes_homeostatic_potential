@@ -1,0 +1,19 @@
+run:
+  run_name: gama_leave_one_bin_out_sigmaoffsetS
+  seed: 12345
+
+data:
+  window_catalog_csv_or_parquet: outputs/catalogs/obs_gama_rebuilt_oiiibH_sigmaS_window.parquet
+
+variance_scaling:
+  x: logMbh
+  y: phi_bh
+  bin_start: 6.0
+  bin_stop: 9.0
+  bin_step: 1.0
+  min_bin_count: 8
+
+outputs:
+  summary_csv: outputs/tables/gama_leave_one_bin_out_sigmaoffsetS_summary.csv
+  binned_csv: outputs/tables/gama_leave_one_bin_out_sigmaoffsetS_binned.csv
+  figure_png: outputs/figures/gama_leave_one_bin_out_sigmaoffsetS.png

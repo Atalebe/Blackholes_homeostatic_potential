@@ -1,0 +1,31 @@
+run:
+  run_name: tng300_time_tracks
+  seed: 12345
+
+data:
+  bh_details: data/raw/tng/bh_details.parquet
+
+columns:
+  bh_id: bh_id
+  time: t
+  bh_mass: bh_mass
+  bhmar: bh_accretion_rate
+  s_t_raw: null
+
+selection:
+  min_track_length: 10
+
+class_conditioning:
+  final_mass_bins:
+    - [5.5, 7.5]
+    - [7.5, 8.5]
+
+window:
+  q_low: 0.35
+  q_high: 0.65
+
+outputs:
+  track_catalog_out: outputs/catalogs/tng300_time_tracks.parquet
+  track_phi_out: outputs/catalogs/tng300_time_tracks_phi.parquet
+  ripeness_out: outputs/tables/tng300_ripeness.csv
+  time_summary_out: outputs/tables/tng300_time_summary.csv

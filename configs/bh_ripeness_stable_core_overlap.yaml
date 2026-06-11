@@ -1,0 +1,18 @@
+# configs/bh_ripeness_stable_core_overlap.yaml
+data:
+  catalog_csv: outputs/tables/bh_ripeness_rankings.csv
+
+run:
+  top_n: 25
+
+weights:
+  ripeness_bh: 0.40
+  commitment_mass: 0.20
+  quiet_quietness: 0.15
+  settlement_phi: 0.15
+  persistence_tracks: 0.10
+
+outputs:
+  stable_core_csv: outputs/tables/bh_ripeness_stable_core_top25.csv
+  summary_csv: outputs/tables/bh_ripeness_stable_core_summary.csv
+  membership_csv: outputs/tables/bh_ripeness_stable_core_membership.csv

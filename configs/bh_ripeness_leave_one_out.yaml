@@ -1,0 +1,22 @@
+# configs/bh_ripeness_leave_one_out.yaml
+data:
+  catalog_csv: outputs/tables/bh_ripeness_rankings.csv
+
+weights:
+  ripeness_bh: 0.40
+  commitment_mass: 0.20
+  quiet_quietness: 0.15
+  settlement_phi: 0.15
+  persistence_tracks: 0.10
+
+focus:
+  bh_ids:
+    - "110815526165"
+    - "114035101968"
+    - "112236586657"
+    - "112270650724"
+
+outputs:
+  summary_csv: outputs/tables/bh_ripeness_leave_one_out_summary.csv
+  focus_csv: outputs/tables/bh_ripeness_leave_one_out_focus.csv
+  top_n: 25

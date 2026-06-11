@@ -1,0 +1,24 @@
+run:
+  run_name: manga_ifu_kin_variance_scaling
+  seed: 12345
+
+data:
+  input_table: outputs/tables/manga_ifu_kin_state_vector.csv
+
+variance_scaling:
+  x: logMstar_drp_elpetro
+  y: phi_ifu
+  bin_start: 10.0
+  bin_stop: 11.5
+  bin_step: 0.25
+  min_bin_count: 3
+
+nulls:
+  n_perm: 2000
+  shuffle_within: global
+
+outputs:
+  variance_table_out: outputs/tables/manga_ifu_kin_variance_scaling.csv
+  variance_summary_out: outputs/tables/manga_ifu_kin_variance_summary.csv
+  null_slopes_out: outputs/tables/manga_ifu_kin_null_slopes.csv
+  figure_prefix: outputs/figures/manga_ifu_kin
