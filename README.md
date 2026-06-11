@@ -82,7 +82,18 @@ This means the archival snapshot is intended as a reproducibility package for th
 
 ## Citation
 
-If you use this archive, cite both:
+If you use this repository, the archived reproducibility snapshot, or manuscript-supporting outputs, please cite:
 
-- the Zenodo DOI: 10.5281/zenodo.20635940
-- the GitHub repository: Atalebe/Blackholes_homeostatic_potential
+**Stephen Atalebe.** *Blackholes Homeostatic Potential: reproducibility snapshot for reduced Tier 1 black hole HRSM, ripeness, GAMA observational anchor, and full MaNGA IFU robustness.* Zenodo. Version `bh-homeostasis-manuscript-snapshot-2026-05-29-v2`. DOI: **10.5281/zenodo.20635940**
+
+### BibTeX
+
+@software{atalebe_blackholes_homeostatic_potential_2026,
+  author       = {Atalebe, Stephen},
+  title        = {Blackholes Homeostatic Potential},
+  version      = {bh-homeostasis-manuscript-snapshot-2026-05-29-v2},
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.20635940},
+  url          = {https://doi.org/10.5281/zenodo.20635940}
+}
