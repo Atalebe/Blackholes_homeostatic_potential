@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software or the archived reproducibility snapshot, please cite it as below."
+title: "Blackholes Homeostatic Potential"
+version: "bh-homeostasis-manuscript-snapshot-2026-05-29-v2"
+doi: 10.5281/zenodo.20635940
+date-released: 2026-05-29
+type: software
+authors:
+  - family-names: "Atalebe"
+    given-names: "Stephen"
+    email: "satalebe@gmail.com"
+repository-code: "https://github.com/Atalebe/Blackholes_homeostatic_potential"
+url: "https://doi.org/10.5281/zenodo.20635940"
+abstract: >
+  Reproducibility snapshot for reduced Tier 1 black hole HRSM analyses,
+  including time-domain black hole ripeness, source-driven GAMA observational
+  branches, full MaNGA IFU robustness analyses, and contextual black hole
+  ripeness ranking.
+keywords:
+  - black holes
+  - AGN variability
+  - homeostatic vector space
+  - HRSM
+  - ripeness
+  - IllustrisTNG
+  - GAMA
+  - MaNGA
+  - IFU spectroscopy
+  - variance scaling
+license: "MIT"
