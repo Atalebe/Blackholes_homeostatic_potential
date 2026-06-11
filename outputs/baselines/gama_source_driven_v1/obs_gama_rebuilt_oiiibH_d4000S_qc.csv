@@ -1,0 +1,2 @@
+input_rows,retained_rows,retained_fraction,h_mode,s_mode,mad_floor,clip_abs
+740,571,0.7716216216216216,log10_col,offset_from_class_median_log10_col,0.001,10.0

@@ -39,3 +39,9 @@ outputs/figures/*
 !outputs/figures/gama_leave_one_bin_out_sigmaoffsetS.png
 !outputs/figures/obs_gama_rebuilt_oiiibH_d4000S_variance_scaling.png
 !outputs/figures/bh_ripeness_regime/
+
+# large catalog artifacts should stay local, not in git
+outputs/catalogs/*.parquet
+outputs/baselines/**/*.parquet
+
+# keep only frozen small manuscript-facing tables/figures already explicitly tracked

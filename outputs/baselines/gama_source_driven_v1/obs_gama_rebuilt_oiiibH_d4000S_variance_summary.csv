@@ -1,0 +1,2 @@
+obs_slope,intercept,p_one_sided_negative,n_perm,n_bins_used,x_col,y_col
+-0.707035532794472,8.89905164523002,0.034482758620689655,2000,3,logMbh,phi_bh
