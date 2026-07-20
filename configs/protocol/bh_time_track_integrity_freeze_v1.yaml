@@ -1,0 +1,31 @@
+schema_version: 1
+run_id: BH-TIME-TRACK-INTEGRITY-FREEZE-003
+
+data:
+  track_parquet: outputs/catalogs/bh_time_tracks_phi_from_csv_tier1_hrsm.parquet
+  ripeness_source: src/core/ripeness.py
+
+columns:
+  id: bh_id
+  time: t
+  phi: phi_bh
+  low: phi_window_low
+  high: phi_window_high
+  membership: in_window_t
+
+source_audit:
+  function_name: compute_residence_fraction
+
+tolerances:
+  residence_difference: 1.0e-12
+
+cadence:
+  dt_cv_warning: 1.0
+
+exposure:
+  short_span_fraction_of_median: 0.10
+  min_rows_warning: 100
+
+outputs:
+  root: outputs/protocol/time_track_integrity
+  paper_root: paper/protocol_audit

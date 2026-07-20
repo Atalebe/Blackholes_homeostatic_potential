@@ -1,0 +1,4 @@
+check_id,code_formula,manuscript_formula,verdict,binding_action
+tng_stability,-abs(lambda_bh_t - lambda_bh_med_track),-abs(lambda_bh(t) - track median lambda_bh),pass,none
+gama_d4000_stability,-abs(log10(D4000N) - class median),-abs(log10(D4000N) - class median),pass,retain bounded only
+gama_sigma_stability,-abs(logMbh - predicted logMbh(sigma_star)),-abs(log10(sigma_star) - class median log10(sigma_star)),fail_nonconcordant,quarantine branch and remove positive manuscript claim

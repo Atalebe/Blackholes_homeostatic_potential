@@ -1,0 +1,8 @@
+{
+  "collapsed_mass_classes": 2,
+  "null_rejected": false,
+  "p_one_sided_negative": 0.8860569715142429,
+  "positive_manuscript_claim_allowed": false,
+  "total_mass_classes": 3,
+  "verdict": "quarantined_numeric_and_target_construction"
+}

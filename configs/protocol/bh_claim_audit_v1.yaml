@@ -1,0 +1,178 @@
+schema_version: 1
+audit_id: BH-PROTOCOL-AUDIT-001
+branch_id: black-hole-reduced-tier1
+protocol_version: HRSM executable proxy admission v6
+manuscript_title: "A Reduced Homeostatic Vector Space for Black Holes: Ripeness, Variance Geometry, and Host-Galaxy Regulation"
+output_root: outputs/protocol
+paper_output_root: paper/protocol_audit
+scan_roots:
+  - configs
+  - src
+  - scripts
+  - outputs/tables
+  - outputs/catalogs
+  - outputs/logs
+  - paper
+text_extensions: [.py, .yaml, .yml, .json, .csv, .tsv, .tex, .md, .txt, .log]
+hash_extensions: [.py, .yaml, .yml, .json, .csv, .tsv, .tex, .md, .txt, .log, .pdf, .png]
+effective_unit_candidates:
+  - bh_id
+  - black_hole_id
+  - subhalo_id
+  - host_id
+  - fof_id
+  - merger_tree_id
+  - tree_id
+  - environment_id
+  - simulation_id
+  - mass_bin
+numeric_quarantine:
+  extreme_absolute_value: 10000000000.0
+  near_zero_scale: 1.0e-12
+  ignore_column_regex: '(?i)(^id$|_id$|hash|seed|timestamp|year|count|rows|n_)'
+claims:
+  - claim_id: BH-C01
+    short_name: reduced_state_space_operational
+    attempted_headline: A reduced black-hole state space is operational.
+    allowed_headline: A reduced black-hole projection is operational in the tested simulation and survey branches.
+    forbidden_headline: A full four-coordinate black-hole HRSM space has been established.
+    base_verdict: allowed_bounded
+    evidence_globs:
+      - configs/bh_time_*tier1_hrsm*.yaml
+      - outputs/tables/**/*tier1*
+    required_any_tokens: [ripeness, tier1]
+  - claim_id: BH-C02
+    short_name: h_axis_is_reserve
+    attempted_headline: Specific black-hole accretion rate is an admitted H reserve coordinate.
+    allowed_headline: Specific accretion rate is used provisionally as a forcing or throughput coordinate.
+    forbidden_headline: Specific accretion rate has been validated as adaptive reserve.
+    base_verdict: unresolved_axis_identity
+    evidence_globs:
+      - src/core/state_vector.py
+      - configs/bh_time_*tier1_hrsm*.yaml
+    required_any_tokens: [mdot, accretion, lambda]
+  - claim_id: BH-C03
+    short_name: stability_is_equilibrium_distance
+    attempted_headline: S measures distance from a class-conditioned equilibrium.
+    allowed_headline: S is an equilibrium-distance coordinate only where code, configuration, and equation use a concordant residual construction.
+    forbidden_headline: Every current S construction measures equilibrium distance.
+    base_verdict: audit_required
+    evidence_globs:
+      - src/core/state_vector.py
+      - src/obs/**/*.py
+      - src/sim/**/*.py
+      - paper/**/*.tex
+    required_any_tokens: [stability, offset, residual]
+  - claim_id: BH-C04
+    short_name: hs_is_two_coordinate_geometry
+    attempted_headline: The Tier 1 potential is a two-coordinate homeostatic geometry.
+    allowed_headline: The Tier 1 composite is exploratory until redundancy and noise-matched effective dimensionality are audited.
+    forbidden_headline: H and S are independent homeostatic axes.
+    base_verdict: blocked_pending_dimensionality
+    evidence_globs:
+      - outputs/tables/**/*dimensionality*
+      - outputs/tables/**/*axis*audit*
+    required_any_tokens: [effective_dim, deff, dimensionality]
+  - claim_id: BH-C05
+    short_name: tng_ripeness_variance_declines
+    attempted_headline: Ripeness dispersion declines robustly with final black-hole mass.
+    allowed_headline: In the frozen TNG Tier 1 branch, residence-based ripeness has a negative dispersion slope under the declared estimators, subject to provenance, effective-unit, and construction-null caps.
+    forbidden_headline: Black holes universally converge toward one homeostatic state as mass increases.
+    base_verdict: allowed_bounded
+    evidence_globs:
+      - configs/bh_time_robust_dispersion_tier1_hrsm.yaml
+      - configs/bh_time_variance_scaling_tier1_hrsm*.yaml
+      - outputs/tables/**/*ripeness*
+      - outputs/tables/**/*robust*dispersion*
+    required_any_tokens: [ripeness, mad, iqr, variance]
+  - claim_id: BH-C06
+    short_name: median_potential_compression
+    attempted_headline: Median-potential dispersion declines robustly with mass.
+    allowed_headline: The ordinary-variance median-potential trend is tail dominated and fails robust re-estimation.
+    forbidden_headline: Median potential provides a robust compression law.
+    base_verdict: rejected_negative_result
+    evidence_globs:
+      - outputs/tables/**/*robust*dispersion*
+      - outputs/tables/**/*variance*scaling*
+    required_any_tokens: [median, mad, iqr]
+  - claim_id: BH-C07
+    short_name: gama_d4000_directional_support
+    attempted_headline: The GAMA D4000-offset branch provides observational support.
+    allowed_headline: The GAMA D4000-offset branch is a directional, three-bin, resolution-limited observational analogue.
+    forbidden_headline: GAMA establishes a universal observational black-hole compression law.
+    base_verdict: allowed_bounded
+    evidence_globs:
+      - configs/obs_gama_rebuilt_oiiibH_d4000S.yaml
+      - outputs/tables/**/*gama*d4000*
+    required_any_tokens: [d4000, oiiib]
+  - claim_id: BH-C08
+    short_name: gama_sigma_strongest_observational
+    attempted_headline: The GAMA sigma-star branch is the strongest observational black-hole result.
+    allowed_headline: The GAMA sigma-star construction is numerically quarantined pending clean reconstruction and target-side independence checks.
+    forbidden_headline: The quarantined sigma-star slope is confirmatory evidence.
+    base_verdict: numeric_quarantine
+    evidence_globs:
+      - configs/audit_gama_*sigmaS*.yaml
+      - configs/obs_gama_*sigmaS*.yaml
+      - outputs/tables/**/*gama*sigma*
+    required_any_tokens: [sigma, normalization, audit]
+  - claim_id: BH-C09
+    short_name: manga_universal_compression
+    attempted_headline: The MaNGA IFU branch supports universal variance compression.
+    allowed_headline: MaNGA demonstrates survey-scale portability but refuses a universal compression law.
+    forbidden_headline: MaNGA confirms universal black-hole homeostatic compression.
+    base_verdict: rejected_negative_result
+    evidence_globs:
+      - configs/manga_full_*variance_scaling*.yaml
+      - outputs/tables/**/*manga*variance*
+    required_any_tokens: [manga, variance]
+  - claim_id: BH-C10
+    short_name: ripeness_score_is_maturity
+    attempted_headline: The weighted ripeness score is a validated black-hole maturity scale.
+    allowed_headline: The score is an exploratory contextual ranking whose component and rank stability can be audited.
+    forbidden_headline: The score measures intrinsic black-hole maturity.
+    base_verdict: exploratory
+    evidence_globs:
+      - configs/bh_ripeness_*.yaml
+      - outputs/catalogs/**/*ripeness*
+      - outputs/tables/**/*ripeness*
+    required_any_tokens: [rank, score, settlement]
+  - claim_id: BH-C11
+    short_name: settlement_outliers_are_disturbed
+    attempted_headline: Extreme settlement outliers are violently disturbed black holes.
+    allowed_headline: Extreme settlement outliers are candidates for independent merger and host-disturbance validation.
+    forbidden_headline: Settlement residuals alone prove violent disturbance.
+    base_verdict: interpretive_only
+    evidence_globs:
+      - configs/bh_settlement_residual_audit.yaml
+      - outputs/tables/**/*settlement*
+    required_any_tokens: [settlement, residual]
+  - claim_id: BH-C12
+    short_name: memory_coordinate_active
+    attempted_headline: The present paper activates retained-history coordinate M.
+    allowed_headline: Memory remains unactivated until a frozen generator ladder survives admitted finite augmentations and time-order nulls.
+    forbidden_headline: Residence fraction is itself proof of dynamical memory.
+    base_verdict: forbidden_not_attempted
+    evidence_globs:
+      - configs/protocol/bh_memory_generator_ladder_v1.yaml
+      - outputs/protocol/adjudication/**/*memory*
+    required_any_tokens: [augmentation_manifest, memory_verdict]
+  - claim_id: BH-C13
+    short_name: recoverability_coordinate_active
+    attempted_headline: The present paper activates recoverability coordinate R.
+    allowed_headline: Recoverability remains unactivated until an information-time-valid R predicts an independent later recovery event.
+    forbidden_headline: Post-event return time is automatically a predictive recoverability coordinate.
+    base_verdict: forbidden_not_attempted
+    evidence_globs:
+      - configs/protocol/bh_recoverability_generator_ladder_v1.yaml
+      - outputs/protocol/adjudication/**/*recoverability*
+    required_any_tokens: [information_time, recovery_verdict]
+  - claim_id: BH-C14
+    short_name: full_black_hole_hrsm
+    attempted_headline: A full black-hole HRSM space has been established.
+    allowed_headline: The current evidence supports at most a reduced Tier 1 projection while R and M remain future tests.
+    forbidden_headline: All four HRSM coordinates are empirically active in black holes.
+    base_verdict: forbidden_not_attempted
+    evidence_globs:
+      - outputs/protocol/adjudication/bh_joint_hrsm_adjudication.json
+    required_any_tokens: [joint_hrsm_verdict]

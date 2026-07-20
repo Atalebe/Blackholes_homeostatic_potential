@@ -1,0 +1,4 @@
+group,n_rows,pearson,spearman,mutual_information_nats,effective_dim_correlation,max_s_reconstruction_error,same_measurement_channel,axis_independence_verdict
+ALL,1000000,0.4116279498151374,0.16109182023604998,0.24389997325740642,1.7102238314373597,0.0,True,blocked_same_channel
+5.5_7.5,439747,0.3756693783572502,0.11167901170884355,0.2122615852301814,1.7526525579625134,0.0,True,blocked_same_channel
+7.5_8.5,560253,0.51897599539621,0.19607208163748377,0.3744280588442573,1.575626837942381,0.0,True,blocked_same_channel

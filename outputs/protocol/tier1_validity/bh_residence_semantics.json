@@ -1,0 +1,18 @@
+{
+  "implementation_mode": "right_interval_time_weighted",
+  "left_interval_time_weighted": 0.1,
+  "manuscript_integral_concordant": true,
+  "observed": 0.9,
+  "probe_membership": [
+    1,
+    0,
+    1
+  ],
+  "probe_times": [
+    0.0,
+    1.0,
+    10.0
+  ],
+  "right_interval_time_weighted": 0.9,
+  "row_fraction": 0.6666666666666666
+}

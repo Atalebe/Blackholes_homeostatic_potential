@@ -1,0 +1,77 @@
+schema_version: 1
+run_id: BH-TIER1-VALIDITY-FREEZE-002
+protocol_version: HRSM executable proxy admission v6
+seed: 12345
+
+data:
+  track_phi_parquet: outputs/catalogs/bh_time_tracks_phi_from_csv_tier1_hrsm.parquet
+  bh_level_csv: outputs/tables/bh_time_ripeness_from_csv_tier1_hrsm.csv
+  sigma_normalization_summary: outputs/tables/audit_gama_oiiib_sigmaS_normalization_summary.csv
+  sigma_variance_summary: outputs/tables/obs_gama_rebuilt_oiiibH_sigmaS_variance_summary.csv
+  manuscript_tex: paper/manuscript_snapshot/main.tex
+  time_source: src/sim/05_extract_bh_time_from_csv_tier1_hrsm.py
+  gama_source: src/obs/22_build_rebuilt_static_with_custom_HS.py
+  ripeness_source: src/core/ripeness.py
+
+axis_audit:
+  group_col: final_mass_class
+  id_col: bh_id
+  h_raw_col: H_t_raw
+  s_raw_col: S_t_raw
+  h_hat_col: H_hat
+  s_hat_col: S_hat
+  phi_col: phi_bh
+  track_median_col: lambda_bh_med_track
+  max_rows: 1000000
+  mi_bins: 20
+  reconstruction_tolerance: 1.0e-12
+
+residence_audit:
+  time_col: t
+  category_col: category
+  mass_col: log10_mbh_final
+  min_bin_count: 20
+  bin_start: 5.5
+  bin_stop: 8.5
+  bin_step: 0.5
+  window_widths: [0.20, 0.30, 0.40, 0.50]
+  primary_window_width: 0.30
+  coordinate_variants: [phi_bh, H_hat, S_hat]
+  residence_modes: [row, left_endpoint, right_endpoint]
+  metrics: [variance, mad2, iqr2]
+  n_perm_screen: 2000
+  cadence_difference_warn: 0.05
+
+sigma_quarantine:
+  mad_floor: 0.001
+  alpha: 0.05
+
+dependence_bridge:
+  scan_roots:
+    - data/reference/bh_time
+    - data/raw/tng
+    - outputs/catalogs
+    - outputs/tables
+  id_candidates:
+    - bh_id
+    - subhalo_id
+    - host_id
+    - fof_id
+    - group_id
+    - merger_tree_id
+    - tree_id
+    - environment_id
+    - simulation_id
+  id_aliases:
+    bh_id: [bh_id, bhid, blackhole_id, blackholeid]
+    subhalo_id: [subhalo_id, subhaloid, subfind_id, subfindid]
+    host_id: [host_id, hostid, subhalogrnr, subhalo_grnr]
+    fof_id: [fof_id, fofid, group_id, groupid, groupnr, grnr]
+    merger_tree_id: [merger_tree_id, mergertreeid, tree_id, treeid, treerootid, tree_root_id]
+    environment_id: [environment_id, environmentid]
+    simulation_id: [simulation_id, simulationid, simulation, run_id]
+  max_csv_bytes: 268435456
+
+outputs:
+  root: outputs/protocol/tier1_validity
+  paper_root: paper/protocol_audit

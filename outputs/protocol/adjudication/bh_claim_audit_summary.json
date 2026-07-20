@@ -1,0 +1,19 @@
+{
+  "audit_id": "BH-PROTOCOL-AUDIT-001",
+  "claim_verdict_counts": {
+    "allowed_bounded": 3,
+    "audit_required": 1,
+    "blocked_pending_dimensionality": 1,
+    "exploratory": 1,
+    "forbidden_not_attempted": 3,
+    "interpretive_only": 1,
+    "numeric_quarantine": 1,
+    "rejected_negative_result": 2,
+    "unresolved_axis_identity": 1
+  },
+  "effective_unit_inventory_rows": 19,
+  "manifest_sha256": "f45c3679f4cb7fa16467b5a1990d81f4e79d2a95b0f6d759eece3e51b51ce699",
+  "next_stage_authorized": false,
+  "next_stage_condition": "Review closing contract and freeze unresolved remediations before adding R/M generators.",
+  "numeric_quarantine_flags": 65
+}

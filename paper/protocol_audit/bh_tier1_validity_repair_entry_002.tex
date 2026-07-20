@@ -1,0 +1,24 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,longtable}
+\begin{document}
+\section*{Logbook Entry 002: Tier 1 Validity Repair and Pre-Memory Gate}
+\textbf{Run ID:} BH-TIER1-VALIDITY-REPAIR-001\\
+\textbf{Manifest SHA-256:} \texttt{8daa7dec6443d640fd32124fdea8fbb1f9a117be67189d16febb6e149c4a3d0a}
+\subsection*{Purpose}
+This entry audits the reduced Tier 1 layer before recoverability or memory generators are activated.
+\subsection*{Formula concordance}
+\begin{tabular}{lll}\toprule Check & Verdict & Action \\\midrule
+tng\_stability & pass & none \\
+gama\_d4000\_stability & pass & retain bounded only \\
+gama\_sigma\_stability & fail\_nonconcordant & quarantine branch and remove positive manuscript claim \\
+\bottomrule\end{tabular}
+\subsection*{Binding findings}
+Residence implementation mode: other\_or\_weighted.\\
+Irregular-cadence tracks: 395 of 400.\\
+Tier 1 axis verdict: blocked\_same\_channel.\\
+GAMA sigma verdict: quarantined\_numeric\_and\_target\_construction.\\
+Dependence bridge verdict: no\_explicit\_bh\_dependency\_bridge.
+\subsection*{Adjudication}
+The TNG ripeness association remains bounded. The GAMA sigma branch is quarantined. Occupancy is order-invariant and cannot itself activate memory. R and M fitting remain blocked until the validity remediations and dependence bridge are frozen.
+\end{document}

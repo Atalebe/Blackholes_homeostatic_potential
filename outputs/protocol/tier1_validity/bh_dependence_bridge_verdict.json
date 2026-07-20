@@ -1,0 +1,11 @@
+{
+  "bridge_rows": 0,
+  "candidate_artifacts": 193,
+  "conflicting_bh_dependency_assignments": 0,
+  "coverage_fraction": 0.0,
+  "covered_bh_ids": 0,
+  "dependency_columns": [],
+  "expected_bh_ids": 400,
+  "forbidden_assumption": "bh_id equals subhalo_id",
+  "verdict": "no_explicit_bh_dependency_bridge"
+}

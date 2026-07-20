@@ -1,0 +1,2190 @@
+{
+  "audit_id": "BH-PROTOCOL-AUDIT-001",
+  "config": "configs/protocol/bh_claim_audit_v1.yaml",
+  "config_sha256": "ca0d7c6e5acccb5da63fbaeb70cfaea9cad515452b53edd2803cb1efd311b7ca",
+  "counts": {
+    "claims": 14,
+    "effective_unit_rows": 19,
+    "numeric_flags": 65,
+    "table_files": 247,
+    "text_files": 432
+  },
+  "generated_utc": "2026-07-19T22:32:16+00:00",
+  "git": {
+    "branch": "main",
+    "commit": "a417d2d3b10adf997b0c683fae8c3e3365429bb3",
+    "tag_exact": null,
+    "worktree_dirty": true
+  },
+  "input_hashes": [
+    {
+      "bytes": 653,
+      "path": "configs/audit_gama_oiiib_sigmaS_normalization.yaml",
+      "sha256": "95986009c3635747dcc3522092f2dede1d3cd428425c9d09bb3dab462c6330f7"
+    },
+    {
+      "bytes": 682,
+      "path": "configs/audit_gama_rebuilt_sigmaS.yaml",
+      "sha256": "d613e3f99d0406d5933b38aba98ee9a56a287242aaee801d7054f111cbce0b55"
+    },
+    {
+      "bytes": 749,
+      "path": "configs/audit_manga_rebuilt_sigmaS.yaml",
+      "sha256": "f9ee8ec47b4d1b131cc9b0f9c68116688582f028d916d05a405dcc5350c19984"
+    },
+    {
+      "bytes": 324,
+      "path": "configs/bh_intermediate_mass_class_gating.yaml",
+      "sha256": "7754e7c63d3b2d0747f6a74f85eb479c9ab77c02687da503caac1849e3a8308f"
+    },
+    {
+      "bytes": 661,
+      "path": "configs/bh_ripeness_component_audit.yaml",
+      "sha256": "7151de612e155b32a1bdb42322ce46eaf85537d02ac2f6e33ee13d0d6ab7a074"
+    },
+    {
+      "bytes": 242,
+      "path": "configs/bh_ripeness_decoupling_audit.yaml",
+      "sha256": "87e524c801ad08fddd8a07ad3e20c0df4f134868087e5fbda6a41c90c99bd74d"
+    },
+    {
+      "bytes": 481,
+      "path": "configs/bh_ripeness_diagnostics.yaml",
+      "sha256": "5ba18a91904d06096e358a48cb5453f2e5e7060f78381512bc826bebd9ebd33e"
+    },
+    {
+      "bytes": 486,
+      "path": "configs/bh_ripeness_leave_one_out.yaml",
+      "sha256": "aed00beb2e0b41e3a38f9387cb3c5243f4b8ef383cd80050bcd006f9c775edd3"
+    },
+    {
+      "bytes": 667,
+      "path": "configs/bh_ripeness_rankings.yaml",
+      "sha256": "801d88cc7533b51f3d3f15a4676dc66a763aeae61d79fde3e54a6b866413aed5"
+    },
+    {
+      "bytes": 406,
+      "path": "configs/bh_ripeness_regime_plots.yaml",
+      "sha256": "75cc711c5f02a79d523ff9f04cc673e284491196aadf70db3d23e6923418a2db"
+    },
+    {
+      "bytes": 254,
+      "path": "configs/bh_ripeness_sensitivity.yaml",
+      "sha256": "cd463d00890038139c992fce72202dbe7b8666b5b05b6df55ddb397e86ee3a4a"
+    },
+    {
+      "bytes": 470,
+      "path": "configs/bh_ripeness_stable_core_overlap.yaml",
+      "sha256": "681349add9575862f45accf3221202dcf5fdd3ea8e0d462c7823ac2113ae1c2e"
+    },
+    {
+      "bytes": 388,
+      "path": "configs/bh_settlement_residual_audit.yaml",
+      "sha256": "01b8f437c2f90926c4226c03e883f8a03782d11638fe61c92609f4d6ea0edc75"
+    },
+    {
+      "bytes": 660,
+      "path": "configs/bh_time_diagnostics_tier1_hrsm.yaml",
+      "sha256": "6a0295236bbb6408a4a2d3eba72733b62dcf29fad544ce9f4de40ffe7abddd7f"
+    },
+    {
+      "bytes": 688,
+      "path": "configs/bh_time_from_csv.yaml",
+      "sha256": "1ffbb48db3a4b8f69cc5e0a6408db8f06023e1bba2b5857747c3cbac0a713089"
+    },
+    {
+      "bytes": 743,
+      "path": "configs/bh_time_from_csv_tier1_hrsm.yaml",
+      "sha256": "146d06067c85ac6df1f7918e1f0d637f521b93abd38fca0eaea7411889560098"
+    },
+    {
+      "bytes": 604,
+      "path": "configs/bh_time_robust_dispersion_tier1_hrsm.yaml",
+      "sha256": "7dfbd31768e4f3ea8d64a56c5a29db504dbd60c3fd680671cdf241500ac97c68"
+    },
+    {
+      "bytes": 614,
+      "path": "configs/bh_time_variance_scaling_tier1_hrsm.yaml",
+      "sha256": "1e56d62e758b337fd06238b82caa150cf9f583fb3c3b0ab79ec637d28da86a85"
+    },
+    {
+      "bytes": 621,
+      "path": "configs/bh_time_variance_scaling_tier1_hrsm_v2.yaml",
+      "sha256": "baa66cc96aab58dce1be681a435fb3998a23cba7bc7cd32b8e6dbb2638a4f806"
+    },
+    {
+      "bytes": 224,
+      "path": "configs/compare_gama_rebuilt_vs_prebuilt.yaml",
+      "sha256": "74abc6e27ddbd7a8ec393dac9562249af9ff9412965b67343a5fbded672bf85a"
+    },
+    {
+      "bytes": 223,
+      "path": "configs/compare_manga_rebuilt_vs_prebuilt.yaml",
+      "sha256": "440b0889f7eafd8b2870257a98793749db83226ac9ce792e088a897114927153"
+    },
+    {
+      "bytes": 1912,
+      "path": "configs/gama_baseline_stress_suite.yaml",
+      "sha256": "4430b1137347654abde19fd55a048aa45c9c04c587a815938f508363cc30501b"
+    },
+    {
+      "bytes": 1201,
+      "path": "configs/gama_lambda0_sensitivity_sigmaS.yaml",
+      "sha256": "e31711c9a812b20540618ff5529758d2eda6c83c9701dd67ff2874df4853bf38"
+    },
+    {
+      "bytes": 515,
+      "path": "configs/gama_leave_one_bin_out_sigmaoffsetS.yaml",
+      "sha256": "47457e5f3144d5ab9bf8c0d5836e5355644ec5e9c85f63ffa0dbbb9ee3453c3b"
+    },
+    {
+      "bytes": 392,
+      "path": "configs/manga_full_age_bootstrap.yaml",
+      "sha256": "77152c33c712fd118b4605143e79f55170d63b0ab83146411d1eba5388412236"
+    },
+    {
+      "bytes": 345,
+      "path": "configs/manga_full_age_compare.yaml",
+      "sha256": "cfb01a465d6a8dcc565d16e7934b907718843d681a87dab2f0d373277ddb47bd"
+    },
+    {
+      "bytes": 566,
+      "path": "configs/manga_full_age_robust_dispersion.yaml",
+      "sha256": "5f752649b898dfbe2382a3ef9a2445505b5acd5fb202dfcd00a9e217c7ed0f8e"
+    },
+    {
+      "bytes": 609,
+      "path": "configs/manga_full_age_role_tests_seed_nonseed.yaml",
+      "sha256": "2df578ea43f8aaae5f0917beddd11a8ccf5e8ab3bc60e4f9af44deb4af5520f4"
+    },
+    {
+      "bytes": 657,
+      "path": "configs/manga_full_age_sensitivity_cuts.yaml",
+      "sha256": "2acc7e57fa5658c1a62f55d3f9670ddad1650126c70f233e534cd19b2d557007"
+    },
+    {
+      "bytes": 631,
+      "path": "configs/manga_full_age_variance_scaling.yaml",
+      "sha256": "7ce4470bbf9cd01832e23dcd55f73373615eccb40788c2ea0f82be7f7ab457c9"
+    },
+    {
+      "bytes": 609,
+      "path": "configs/manga_full_age_variance_scaling_clean.yaml",
+      "sha256": "b079d666a29a299d069accade63ea3fb46a3f92c46047f57a29c74bc0ad24a31"
+    },
+    {
+      "bytes": 434,
+      "path": "configs/manga_full_attach_clean_flags.yaml",
+      "sha256": "1c0ae5e0b4d5cd855c308b06f9d9be66757ab410ec6647d3dfe508df2effda62"
+    },
+    {
+      "bytes": 628,
+      "path": "configs/manga_full_ifu_state_vectors.yaml",
+      "sha256": "029e43f3c1a66bada57d95a304dc02980fc93251382503ba3b54188e0a9a3f31"
+    },
+    {
+      "bytes": 392,
+      "path": "configs/manga_full_kin_bootstrap.yaml",
+      "sha256": "39708f4dbd47683013667756d9dbad75dafc6bd9fb788be38083e0e0253495a7"
+    },
+    {
+      "bytes": 345,
+      "path": "configs/manga_full_kin_compare.yaml",
+      "sha256": "cf633b1f7f601d080d1b5dc8c52e436c9cefa52840bc61f1cd05b328c1d087d5"
+    },
+    {
+      "bytes": 566,
+      "path": "configs/manga_full_kin_robust_dispersion.yaml",
+      "sha256": "668a39932f3cba8b6c8c878caaf57823f4fd9c8f23fc0159233668d6a2d16619"
+    },
+    {
+      "bytes": 609,
+      "path": "configs/manga_full_kin_role_tests_seed_nonseed.yaml",
+      "sha256": "778d5fa8cb09b3b7efe6b58cf19301f5acb85879a73baa6bb927b8b21dcca13a"
+    },
+    {
+      "bytes": 657,
+      "path": "configs/manga_full_kin_sensitivity_cuts.yaml",
+      "sha256": "1ae8ffbfd66906f068a601cbbba3b7d7e572d65de13544ec920f2e944a772864"
+    },
+    {
+      "bytes": 631,
+      "path": "configs/manga_full_kin_variance_scaling.yaml",
+      "sha256": "60e0e9b47313eab153e6b42116a4c6cf595ba2d444b24c7c931233a113c41a82"
+    },
+    {
+      "bytes": 609,
+      "path": "configs/manga_full_kin_variance_scaling_clean.yaml",
+      "sha256": "98fe0b3ae204bd15722743211de7ebe1d5c38eabca3ddb37b8bdb46869fab4a2"
+    },
+    {
+      "bytes": 789,
+      "path": "configs/manga_full_maps_batches.yaml",
+      "sha256": "76c064615b476074ce5750145fe7de4e4fe7c7c5d1ef36268ce18daf4375b161"
+    },
+    {
+      "bytes": 413,
+      "path": "configs/manga_full_maps_failure_audit.yaml",
+      "sha256": "4f30599f42807dea2c4fdb6b9125cb52627ea1333fd3435af3d0c798878c0023"
+    },
+    {
+      "bytes": 413,
+      "path": "configs/manga_full_maps_merge.yaml",
+      "sha256": "a66caa4684ae59a3bf3a414b5dee3d11643fbfa409cb9c813ee78bb4cda784a4"
+    },
+    {
+      "bytes": 551,
+      "path": "configs/manga_full_parent_manifest.yaml",
+      "sha256": "745c2dee685a977f3c948eda2654cdaa388593ee16b55081948371cb44ddfc12"
+    },
+    {
+      "bytes": 299,
+      "path": "configs/manga_full_role_views.yaml",
+      "sha256": "663fc36239c8e2d32cb724a0e2d93100de4adbd93963571b8dce8d04258863b3"
+    },
+    {
+      "bytes": 350,
+      "path": "configs/manga_ifu_age_bootstrap.yaml",
+      "sha256": "759e505d157e397e3ca64bf3c18a627ae7d52a9973e0af923a267aa4bf6b7b1a"
+    },
+    {
+      "bytes": 377,
+      "path": "configs/manga_ifu_age_bootstrap_expanded.yaml",
+      "sha256": "3d5a5ced289bee2ecf0a45b7d6181899faa18ab898ecae691ce95d7e1f9204b3"
+    },
+    {
+      "bytes": 555,
+      "path": "configs/manga_ifu_age_robust_dispersion.yaml",
+      "sha256": "a92044ff32a783c8e78a7fa4dc7683ff2747dc275a9a957901aab2fa746771d6"
+    },
+    {
+      "bytes": 591,
+      "path": "configs/manga_ifu_age_robust_dispersion_expanded.yaml",
+      "sha256": "7b59b8c752de57930e2a6254afab2295fb307dfef91ba8a8cdd747ee15a920d8"
+    },
+    {
+      "bytes": 506,
+      "path": "configs/manga_ifu_age_role_tests.yaml",
+      "sha256": "f92db8266a95d8c173b85ea9e7bcbeee22219f671f95d1ad71f6cb59b1bff7fe"
+    },
+    {
+      "bytes": 559,
+      "path": "configs/manga_ifu_age_role_tests_expanded_seed_control.yaml",
+      "sha256": "59f3b16c80a43564dcf733079f4d0951c73a6ed8111f08eff0fc9fa7b7907ab4"
+    },
+    {
+      "bytes": 585,
+      "path": "configs/manga_ifu_age_role_tests_expanded_seed_nonseed.yaml",
+      "sha256": "c3ad2480549b16913ac742b511f975dcfd318486ab05e58c0d559e3a53d42755"
+    },
+    {
+      "bytes": 574,
+      "path": "configs/manga_ifu_age_variance_scaling.yaml",
+      "sha256": "f9f1bdfdedc95775f83654bdf885b99ffbb3a6689b9a3eafdfc87dfba7caff19"
+    },
+    {
+      "bytes": 628,
+      "path": "configs/manga_ifu_age_variance_scaling_expanded.yaml",
+      "sha256": "41ce9402a7c447a8201a6a9686e8fb5a6273c8a7e0a27a4640bc50a4e62ef157"
+    },
+    {
+      "bytes": 772,
+      "path": "configs/manga_ifu_expanded_manifest.yaml",
+      "sha256": "c4a19681034cfb56853cc620b08feaacb7d1d957adca51fdf801fd1b93a24d4f"
+    },
+    {
+      "bytes": 350,
+      "path": "configs/manga_ifu_kin_bootstrap.yaml",
+      "sha256": "819f98a0d02cef08d85f4b2e3e74ed6c9c56d768b2f839b9e007fa0b09f4a971"
+    },
+    {
+      "bytes": 377,
+      "path": "configs/manga_ifu_kin_bootstrap_expanded.yaml",
+      "sha256": "3fc4483bb37d747fbe4981d955efb5ba420be90892ae4875c74f7a231f339c47"
+    },
+    {
+      "bytes": 555,
+      "path": "configs/manga_ifu_kin_robust_dispersion.yaml",
+      "sha256": "1e0bf21030b3b1c7e4124f7654e8ddd0fa6740ae91551f709b43daac107c9359"
+    },
+    {
+      "bytes": 591,
+      "path": "configs/manga_ifu_kin_robust_dispersion_expanded.yaml",
+      "sha256": "a9ddbfe210d09aae2f06e8ff22173e8a7a2c774f6a642dcdd06802582f91c694"
+    },
+    {
+      "bytes": 506,
+      "path": "configs/manga_ifu_kin_role_tests.yaml",
+      "sha256": "3e3032bb3c0e443d1e0846b85b65a69a7a66a88647858e79268afd878d9d7d9e"
+    },
+    {
+      "bytes": 559,
+      "path": "configs/manga_ifu_kin_role_tests_expanded_seed_control.yaml",
+      "sha256": "c3d59d1ed531be68075fc232bb7489e2a1deebed893e8e48662a1ea1e10550e6"
+    },
+    {
+      "bytes": 585,
+      "path": "configs/manga_ifu_kin_role_tests_expanded_seed_nonseed.yaml",
+      "sha256": "7a240d4e4b93e4ef3cf1a6e7406a52a4741435bc31e9b5461a4b05c5fb4001c8"
+    },
+    {
+      "bytes": 574,
+      "path": "configs/manga_ifu_kin_variance_scaling.yaml",
+      "sha256": "37d427b299e5d03f19c1b84f9d18a9b59fb08c105e6b4b6ebab0474fafb71b00"
+    },
+    {
+      "bytes": 628,
+      "path": "configs/manga_ifu_kin_variance_scaling_expanded.yaml",
+      "sha256": "c975dfa4a4d227b81375d328eb6928361a133ab260bf33b5c29dec5c242effa3"
+    },
+    {
+      "bytes": 532,
+      "path": "configs/manga_ifu_pilot_manifest.yaml",
+      "sha256": "3ae87872fafd32b10563229135a92cd20492e8b42bb0f477f3413ebf0d0a2542"
+    },
+    {
+      "bytes": 310,
+      "path": "configs/manga_ifu_role_views_expanded.yaml",
+      "sha256": "53e5602d807531ac3a5741bfd94761cdf36c5f56db338e54fcf45601b73150db"
+    },
+    {
+      "bytes": 620,
+      "path": "configs/manga_ifu_state_vectors.yaml",
+      "sha256": "d7d11fa47def85b2bc355974dfbcfdfe5b473d7916a4c30b6ea23f9ef9b71518"
+    },
+    {
+      "bytes": 659,
+      "path": "configs/manga_ifu_state_vectors_expanded.yaml",
+      "sha256": "7d1dd1d25132994100536d84057fc79b715c6382dce8c91ac1a5a90f6c706cba"
+    },
+    {
+      "bytes": 203,
+      "path": "configs/manga_maps_features.yaml",
+      "sha256": "f2d09d6114e38333bf2c599707179ab973c28a6d5905de399d04a991a003c70b"
+    },
+    {
+      "bytes": 212,
+      "path": "configs/manga_maps_features_expanded.yaml",
+      "sha256": "d0d1e5772a4aec6242d94b46bab99ed0c59bd9d71827acf58e24ff67e3244dec"
+    },
+    {
+      "bytes": 893,
+      "path": "configs/obs_gama_from_csv.yaml",
+      "sha256": "3801482fda57043aa186874e162a3d00cbaca772b5c8f4bdb9de3c77617527ed"
+    },
+    {
+      "bytes": 974,
+      "path": "configs/obs_gama_from_csv_coarse.yaml",
+      "sha256": "78190d25e8268710b79c57cf0bbfe0cc1f55b7142df6db539e09deb3463fd0b8"
+    },
+    {
+      "bytes": 1584,
+      "path": "configs/obs_gama_rebuilt_oiiibH_d4000S.yaml",
+      "sha256": "283796c3ac8d94f6c3e72467a8771efb377fd57926c5d3ac63f10fe0cd9df517"
+    },
+    {
+      "bytes": 1652,
+      "path": "configs/obs_gama_rebuilt_oiiibH_sigmaS.yaml",
+      "sha256": "9186737880888737100e1d12578db6dff403eeb37793bab1642516c36bb2eb66"
+    },
+    {
+      "bytes": 1483,
+      "path": "configs/obs_gama_rebuilt_sigmaS.yaml",
+      "sha256": "2ab119a31645a844f15bce2cdefc3365587d9515fceee434b74f10b23da4fd72"
+    },
+    {
+      "bytes": 853,
+      "path": "configs/obs_gama_with_sigma_S_template.yaml",
+      "sha256": "50cd25b69160366a12090d46fe4ba8b41fcc247d19cc8d0436aa04bec8a86d59"
+    },
+    {
+      "bytes": 944,
+      "path": "configs/obs_manga_from_csv.yaml",
+      "sha256": "f74e348fa6904897bfd1701e2dafe0c48888a597c3f255dcdf8ea972279f7cc6"
+    },
+    {
+      "bytes": 1466,
+      "path": "configs/obs_manga_rebuilt_d4000S.yaml",
+      "sha256": "7ef7c1974b733eac72c53473ac0d5199197bd8d838ca37cd3e56b94a3350503d"
+    },
+    {
+      "bytes": 1555,
+      "path": "configs/obs_manga_rebuilt_haS.yaml",
+      "sha256": "75496ad1338b2a171300875b2ae3f87f9e12f436e162d2b2358a879c76a696b2"
+    },
+    {
+      "bytes": 1629,
+      "path": "configs/obs_manga_rebuilt_oiiiH_d4000S.yaml",
+      "sha256": "1e385121c172f217b200bd63b3100f8efdf76c69dabb09f40e044b723044de29"
+    },
+    {
+      "bytes": 1557,
+      "path": "configs/obs_manga_rebuilt_sigmaS.yaml",
+      "sha256": "4cd9f281f88689a7fc0950cf9448a593b035080ccbb5595163e5bcd98229ab92"
+    },
+    {
+      "bytes": 939,
+      "path": "configs/obs_sdss_from_csv.yaml",
+      "sha256": "fc22a9a62fa1e2d09c7a0e5067eb4f77b7b50412c076c315bb5a78c1acdeab2d"
+    },
+    {
+      "bytes": 865,
+      "path": "configs/obs_sdss_with_sigma_S_template.yaml",
+      "sha256": "21c1e449a6f56821fb393558991c518efe0f7a7a34e8d2c65f40aa5799ba3a0c"
+    },
+    {
+      "bytes": 9122,
+      "path": "configs/protocol/bh_claim_audit_v1.yaml",
+      "sha256": "ca0d7c6e5acccb5da63fbaeb70cfaea9cad515452b53edd2803cb1efd311b7ca"
+    },
+    {
+      "bytes": 897,
+      "path": "configs/sdss_bh_static.yaml",
+      "sha256": "f94373fab382344503a38726fda047e82f85a051a1e2c28082217b2bce8833df"
+    },
+    {
+      "bytes": 1326,
+      "path": "configs/tng300_tier1_static.yaml",
+      "sha256": "299d5a297a198aaa00292335f7487ba80ee5d8985fd94ccdd4ed2979f6bfa1a8"
+    },
+    {
+      "bytes": 597,
+      "path": "configs/tng300_time_tracks.yaml",
+      "sha256": "37efe91d2ea8ea8b2639a938cb1bf388f6ca3c31fefa95141c90775d85759b0f"
+    },
+    {
+      "bytes": 3804,
+      "path": "outputs/tables/audit_gama_oiiib_sigmaS_normalization_extreme.csv",
+      "sha256": "77344809f4285395506f3b0f0895d446a1e27fa66d3914feb0f346e2e41a03fc"
+    },
+    {
+      "bytes": 499,
+      "path": "outputs/tables/audit_gama_oiiib_sigmaS_normalization_summary.csv",
+      "sha256": "b3267bf0efad321e32e250fe154e1fe08e1eeaa5c01ee50e86693f0890d61ba1"
+    },
+    {
+      "bytes": 622,
+      "path": "outputs/tables/audit_gama_rebuilt_sigmaS_rejection_marginal.csv",
+      "sha256": "8f668e6bfb6ef768b4bc708425b4e9620f8dea0146051b73350a4b4f94822960"
+    },
+    {
+      "bytes": 720,
+      "path": "outputs/tables/audit_gama_rebuilt_sigmaS_rejection_steps.csv",
+      "sha256": "338bf03d3dad10bf33e6d8bb6af5139b68401420f8996fe03634aab7b47b9743"
+    },
+    {
+      "bytes": 494,
+      "path": "outputs/tables/audit_manga_rebuilt_sigmaS_rejection_marginal.csv",
+      "sha256": "a4e615ae824d73a1d38d0756fa56882c164095c72cd6d770f4a1bc51430e21b5"
+    },
+    {
+      "bytes": 475,
+      "path": "outputs/tables/audit_manga_rebuilt_sigmaS_rejection_steps.csv",
+      "sha256": "fc6b7277ee8ed1d630e19d39f40aede4f27c846042d6f7aa0335249314bf271b"
+    },
+    {
+      "bytes": 144,
+      "path": "outputs/tables/bh_intermediate_mass_class_gating.csv",
+      "sha256": "e51ceef4d0c34aba7141dc31626159ea6519a63f72fc48bdf5d53790b7719ba6"
+    },
+    {
+      "bytes": 293,
+      "path": "outputs/tables/bh_mass_class_gating_summary.csv",
+      "sha256": "eb089e2c1ae7d7e46ce43aff1133c32462fb1691ec2878ea0f369c7cda878428"
+    },
+    {
+      "bytes": 7429,
+      "path": "outputs/tables/bh_ripeness_bottom_by_context.csv",
+      "sha256": "b956ae800c0e283194ea2503d4956e0504d5908c426f4b2c4556f40434852ae8"
+    },
+    {
+      "bytes": 5066,
+      "path": "outputs/tables/bh_ripeness_bottom_component_audit.csv",
+      "sha256": "6897f16c9945fa228ccc7d5eb07597d240df549f4136c900fd93b1634152fe20"
+    },
+    {
+      "bytes": 7399,
+      "path": "outputs/tables/bh_ripeness_bottom_global.csv",
+      "sha256": "9dd6967888c2bc3a1089e19f43e9a4c1d73cf8a2f5285bbca2472a64012674de"
+    },
+    {
+      "bytes": 513,
+      "path": "outputs/tables/bh_ripeness_class_summary.csv",
+      "sha256": "49e30bdacefe6f7b7aeb3f8d53e3c9d6e2f48befd822d761b59f9504acecb0cc"
+    },
+    {
+      "bytes": 582,
+      "path": "outputs/tables/bh_ripeness_component_summary.csv",
+      "sha256": "f6e4821b601d2b868b8448313a5d4b6798969a873d160eef1ab10a1c7265aaac"
+    },
+    {
+      "bytes": 364,
+      "path": "outputs/tables/bh_ripeness_correlations.csv",
+      "sha256": "bb3149613348805d8e6418681a1633298f6f83a37ae906ea0c3cce6632fa0b18"
+    },
+    {
+      "bytes": 649,
+      "path": "outputs/tables/bh_ripeness_decoupling_summary.csv",
+      "sha256": "8bd368e31812cf5ab38bf9d25e7c8ec9465954f0c9e281bb210c37883e2c2d8a"
+    },
+    {
+      "bytes": 1247,
+      "path": "outputs/tables/bh_ripeness_focus_component_audit.csv",
+      "sha256": "a00edf005d23baf0eb2301efa34609ab65f46fd74b0fcebfb6bf2633b81ad8f9"
+    },
+    {
+      "bytes": 899,
+      "path": "outputs/tables/bh_ripeness_leave_one_out_focus.csv",
+      "sha256": "4138daeae2ee63c1260c61b41d8799199103b368d4220b8249e1e7c499f2381e"
+    },
+    {
+      "bytes": 465,
+      "path": "outputs/tables/bh_ripeness_leave_one_out_summary.csv",
+      "sha256": "cbd8167506b163c1e52359743499c2d09bd9130f001a04a212b39b4552d8ece2"
+    },
+    {
+      "bytes": 120,
+      "path": "outputs/tables/bh_ripeness_rank_overlap.csv",
+      "sha256": "38fb2dfda3317d1257e60f4326461784464e56e110ddebd3bd1976ed855ce5fd"
+    },
+    {
+      "bytes": 145809,
+      "path": "outputs/tables/bh_ripeness_rankings.csv",
+      "sha256": "87087a6d2b318aabb9c971e3f229e694b1957576f92f765a683a5d286738ec21"
+    },
+    {
+      "bytes": 186,
+      "path": "outputs/tables/bh_ripeness_sensitivity_overlap.csv",
+      "sha256": "aa6a9abee5b22076521fef9a83e89485fa6600d2e15ffb7455bf362f829fcbb3"
+    },
+    {
+      "bytes": 518,
+      "path": "outputs/tables/bh_ripeness_sensitivity_summary.csv",
+      "sha256": "95298a7422b3cacd2f5591b34f7aed79aa18d561ebf158db7e3d4ca63b50b2d7"
+    },
+    {
+      "bytes": 47755,
+      "path": "outputs/tables/bh_ripeness_stable_core_membership.csv",
+      "sha256": "90ed2d895cea33244ebff650508e1a5d646c34ff5feee068adc00e67b31ebada"
+    },
+    {
+      "bytes": 229,
+      "path": "outputs/tables/bh_ripeness_stable_core_summary.csv",
+      "sha256": "f46e80368fdb0fc648585d08ff03c3ea8d3a1e503643da5ffa00fd7332ba4768"
+    },
+    {
+      "bytes": 1614,
+      "path": "outputs/tables/bh_ripeness_stable_core_top25.csv",
+      "sha256": "d793ca027b51bfa724a6d86384a794365fa2ce9ea21baf3a31cd34febc060746"
+    },
+    {
+      "bytes": 429,
+      "path": "outputs/tables/bh_ripeness_summary_by_context.csv",
+      "sha256": "76718d8f94a1b356575fcd4552e44a8db321ef793bc777906cbe8c3894f87840"
+    },
+    {
+      "bytes": 7566,
+      "path": "outputs/tables/bh_ripeness_top_by_context.csv",
+      "sha256": "699fbe5b42dcbabf1ee38bf795634c0656643b8df874c5a2409d90980edcb95f"
+    },
+    {
+      "bytes": 5250,
+      "path": "outputs/tables/bh_ripeness_top_component_audit.csv",
+      "sha256": "bfe4e56943fdbabeabd4c93044972e3e2bbdbd1615040256ddec35d7e854a060"
+    },
+    {
+      "bytes": 7618,
+      "path": "outputs/tables/bh_ripeness_top_global.csv",
+      "sha256": "ab4faf006092eedeec99332497fa55f0c7cb738e40b9ceefb4fed2a4da704d93"
+    },
+    {
+      "bytes": 1421,
+      "path": "outputs/tables/bh_settlement_context_audit.csv",
+      "sha256": "de5d5ae34ce5a21308cd87faa968972ed03bdeb57f0f90f0f06996bb16f75b5b"
+    },
+    {
+      "bytes": 1049,
+      "path": "outputs/tables/bh_settlement_focus_rows.csv",
+      "sha256": "6a7ed2e51900f023c425512a6b37cdead65550235d91d46dc56311e0348454b4"
+    },
+    {
+      "bytes": 323,
+      "path": "outputs/tables/bh_settlement_residual_summary.csv",
+      "sha256": "7919c1dd418be18b85620c433cb93cd47b1ea0fc8cef56ee0709c4e424a7b49c"
+    },
+    {
+      "bytes": 811,
+      "path": "outputs/tables/bh_time_bin_summary_tier1_hrsm.csv",
+      "sha256": "c8d5a23001338eb1277c3c913c47965159ec4b41a19b5d48a6c3d158d1689c91"
+    },
+    {
+      "bytes": 3545,
+      "path": "outputs/tables/bh_time_extreme_phi_tier1_hrsm.csv",
+      "sha256": "906f4fbe06b4cb0ea766bacc68aa356648fed90f2d2ecf93da31685716aac74c"
+    },
+    {
+      "bytes": 3554,
+      "path": "outputs/tables/bh_time_extreme_ripeness_tier1_hrsm.csv",
+      "sha256": "244eea6c8dc099bc1b0e883a71b15717b14363045f0b1e6e156af0d35e91e51e"
+    },
+    {
+      "bytes": 38692,
+      "path": "outputs/tables/bh_time_null_slopes_tier1_hrsm.csv",
+      "sha256": "5543f3697fe5f3328b402bd0ed0cc6fe4f5f58cb727f2f7f9554279d3c419108"
+    },
+    {
+      "bytes": 44971,
+      "path": "outputs/tables/bh_time_null_slopes_tier1_hrsm_v2.csv",
+      "sha256": "0374b2907c5d9b57398a02075dbbba6faf5ad004f07dab9c62c13af996dd7b23"
+    },
+    {
+      "bytes": 44868,
+      "path": "outputs/tables/bh_time_ripeness_from_csv.csv",
+      "sha256": "073091dd5735ddd4c93a0deefe423d252832a72a5c83cc77c3205bd0e620773c"
+    },
+    {
+      "bytes": 60593,
+      "path": "outputs/tables/bh_time_ripeness_from_csv_tier1_hrsm.csv",
+      "sha256": "755b51201c5e22a291ea0f4dcf3b8f4085003d09603b43bca3a642aa9140125f"
+    },
+    {
+      "bytes": 1858,
+      "path": "outputs/tables/bh_time_robust_dispersion_binned.csv",
+      "sha256": "98d4f2ff6c4274bf7b84092e146d9e34cf7fb7449dd700c64c393a2d0fc99e15"
+    },
+    {
+      "bytes": 582,
+      "path": "outputs/tables/bh_time_robust_dispersion_summary.csv",
+      "sha256": "b3f66689d093203ad116ef471c53189d2e602d552edf2c54d10c1e291d1c6d32"
+    },
+    {
+      "bytes": 499,
+      "path": "outputs/tables/bh_time_summary_from_csv.csv",
+      "sha256": "8bf84d84596b71f22acd9f89705044a909f3cbd795f59233770064ca4bf83ac0"
+    },
+    {
+      "bytes": 593,
+      "path": "outputs/tables/bh_time_summary_from_csv_tier1_hrsm.csv",
+      "sha256": "5103ddfc616c3817424c7c2d0e1320b5cfceca1ee0562f4aaba699d796452e42"
+    },
+    {
+      "bytes": 189,
+      "path": "outputs/tables/bh_time_variance_scaling_tier1_hrsm.csv",
+      "sha256": "da928437d00494969c193e75d2e08a84869b9e74f3824cd3a0b1dc8604372b46"
+    },
+    {
+      "bytes": 197,
+      "path": "outputs/tables/bh_time_variance_scaling_tier1_hrsm_v2.csv",
+      "sha256": "628014bde6f1b265cd1e4c2ac968aacae55909ae6d5af2cca6d3334dbcc0ac3a"
+    },
+    {
+      "bytes": 192,
+      "path": "outputs/tables/bh_time_variance_summary_tier1_hrsm.csv",
+      "sha256": "60e84e7066a9d3c0e64bff0c66b91e6fad1b81471c09de8dc87e2846dc90b451"
+    },
+    {
+      "bytes": 194,
+      "path": "outputs/tables/bh_time_variance_summary_tier1_hrsm_v2.csv",
+      "sha256": "f5598763952ce49ad695d58c9ae12cd6eb2d0f624245d4eb29582d894f646fb2"
+    },
+    {
+      "bytes": 5243,
+      "path": "outputs/tables/compare_gama_rebuilt_vs_prebuilt.csv",
+      "sha256": "ff9b6d2fab36bbf01165b1d415326d1ad9ad7f3a67a9d979126b7172ce9e729a"
+    },
+    {
+      "bytes": 1534,
+      "path": "outputs/tables/compare_manga_rebuilt_vs_prebuilt.csv",
+      "sha256": "36e153afa7dd97cffeebe24a4cc044b5855b6809b7bef635e2d05bf973b98ffc"
+    },
+    {
+      "bytes": 1176,
+      "path": "outputs/tables/gama_baseline_stress_suite_binned.csv",
+      "sha256": "ad7a72be3ffc4b46de686cac2cb5d135cc3bedfd11cad9005def7e9288c0558a"
+    },
+    {
+      "bytes": 1291,
+      "path": "outputs/tables/gama_baseline_stress_suite_summary.csv",
+      "sha256": "03a3e743f1e2752950df9a77798cd3421201f035f4f38ce99939a3d28abd808a"
+    },
+    {
+      "bytes": 3880,
+      "path": "outputs/tables/gama_download_inventory.csv",
+      "sha256": "340dd21048be21897d310023eb22968973f462b72adb73ecaec3d74313bc9767"
+    },
+    {
+      "bytes": 34310,
+      "path": "outputs/tables/gama_env_matched.csv",
+      "sha256": "58a7adbcc3f1709936d4b205a124d94b1dfca7d9cb572e0700029b64b97f7215"
+    },
+    {
+      "bytes": 149395,
+      "path": "outputs/tables/gama_gauss_best.csv",
+      "sha256": "c113e685267985fb86793060e36d3fdfd4c4cbb7421b1d5cba691604de3e9290"
+    },
+    {
+      "bytes": 262175,
+      "path": "outputs/tables/gama_gauss_matched.csv",
+      "sha256": "a885c55bb5637b23d7367a69766af3cbbffee2788fa72a6d1dc6048b1bc93953"
+    },
+    {
+      "bytes": 558,
+      "path": "outputs/tables/gama_lambda0_sensitivity_sigmaS_binned.csv",
+      "sha256": "e47089878a0b7d0339857885491e5b899e28b3c023bf026e0077430ddabd6891"
+    },
+    {
+      "bytes": 663,
+      "path": "outputs/tables/gama_lambda0_sensitivity_sigmaS_summary.csv",
+      "sha256": "760a8dba6340acf82c4b0c4508e94ccd6601b20698fcfd519fc6f4ece53dc75c"
+    },
+    {
+      "bytes": 412,
+      "path": "outputs/tables/gama_leave_one_bin_out_sigmaoffsetS_binned.csv",
+      "sha256": "e8db7eed7f54580730b97d43d6a922896a3fd1c1b1ab9e3f15aae0c4d624b469"
+    },
+    {
+      "bytes": 253580,
+      "path": "outputs/tables/gama_leave_one_bin_out_sigmaoffsetS_nulls.csv",
+      "sha256": "3b8870001889d52b86bf7a4f7f8976d51f93498721629fc06c59aa1f2e42f257"
+    },
+    {
+      "bytes": 285,
+      "path": "outputs/tables/gama_leave_one_bin_out_sigmaoffsetS_summary.csv",
+      "sha256": "6fca7ccd0102f87ba1e79fdb880ad9a583b8c2ba0ea43fc51ea5d581048330f8"
+    },
+    {
+      "bytes": 66024,
+      "path": "outputs/tables/gama_mass_matched.csv",
+      "sha256": "15248961f89c4e447a7d049c7bd81e224f44b4c38b9f53f41ea15e8492910465"
+    },
+    {
+      "bytes": 114,
+      "path": "outputs/tables/gama_runtime_match_summary.csv",
+      "sha256": "421b1961ea21255cf503291268e3341c27de55a06d50226a8f91f7ec485b2847"
+    },
+    {
+      "bytes": 373305,
+      "path": "outputs/tables/gama_sample_runtime_table.csv",
+      "sha256": "b2198f14e6e0056dad2559e3ca626f45665e2f25efc25ea3d35f488f6a7344b6"
+    },
+    {
+      "bytes": 65844,
+      "path": "outputs/tables/gama_sigma_best.csv",
+      "sha256": "a453fb3ba9749e2da1d09ef15d388fa1aa40621edca6e8b9e8b016cdbdaf2230"
+    },
+    {
+      "bytes": 118621,
+      "path": "outputs/tables/gama_sigma_matched.csv",
+      "sha256": "a7bfc3a084b034c017e81e36750a25ff3efb58e629e33301ff35585c11c7f6dd"
+    },
+    {
+      "bytes": 3557,
+      "path": "outputs/tables/gama_table_audit.csv",
+      "sha256": "1681fb4db8c2b5c60c6b43452b2fa1021711846b4d3bce082a50fc265d8e6825"
+    },
+    {
+      "bytes": 701,
+      "path": "outputs/tables/manga_cube_manifest.csv",
+      "sha256": "31b5d86807ae5befcc8e6617c9d3328a22f2c14e21296c4fc102d6a9614174e2"
+    },
+    {
+      "bytes": 139,
+      "path": "outputs/tables/manga_dap_channel_map.csv",
+      "sha256": "0cb2ac92f66b1e33410fc4bc3a6bca02555f815b7e31fcea7447a05d9e88038f"
+    },
+    {
+      "bytes": 536916,
+      "path": "outputs/tables/manga_dap_channels_full.csv",
+      "sha256": "5f4cffa26102a7a4d6edfc6572eba05249558ddee210ea63a90c925cf4105cef"
+    },
+    {
+      "bytes": 821,
+      "path": "outputs/tables/manga_download_check.csv",
+      "sha256": "8fe50f37f7517cdc574baaa09706fe9ede592c52a478456ac31fe1b511d020f3"
+    },
+    {
+      "bytes": 126,
+      "path": "outputs/tables/manga_download_check_summary.csv",
+      "sha256": "a72990699e83957b1128d2ad111de2bf610dda2b05173ddb8aa6ad53d310cbb8"
+    },
+    {
+      "bytes": 1701,
+      "path": "outputs/tables/manga_full_age_bootstrap_summary.csv",
+      "sha256": "5a6c4b8b5617eab4ff822a7b4b6430f0085a51db0b9596156a821d50ec2afe9f"
+    },
+    {
+      "bytes": 643,
+      "path": "outputs/tables/manga_full_age_compare.csv",
+      "sha256": "bf65cf8a793e4973e52bd6565d46444360f6f5036236979ae2130d02dda29eeb"
+    },
+    {
+      "bytes": 40163,
+      "path": "outputs/tables/manga_full_age_null_slopes.csv",
+      "sha256": "aa0be2adb402898ff098ae43cf6c26eeebb4a3b1ee8a6c07ba516a9c14df1810"
+    },
+    {
+      "bytes": 36111,
+      "path": "outputs/tables/manga_full_age_null_slopes_clean.csv",
+      "sha256": "47b9aacd1f316fab8afc12b29fbdcbf4a6ef823f29a78381bd142e5b937a31a6"
+    },
+    {
+      "bytes": 1590,
+      "path": "outputs/tables/manga_full_age_robust_dispersion_binned.csv",
+      "sha256": "6230da9551f17d6261c782f30a8a768c193a90b848dc4c589e5fa372e3ce0c4d"
+    },
+    {
+      "bytes": 713,
+      "path": "outputs/tables/manga_full_age_robust_dispersion_summary.csv",
+      "sha256": "4c25144636730c2b0b8de33f5a9b3d2aa2842c674a429a3b467a3d6bcc7b3b46"
+    },
+    {
+      "bytes": 1158,
+      "path": "outputs/tables/manga_full_age_role_tests_seed_nonseed.csv",
+      "sha256": "f33a80a40c4248319b8e1ed1115f1d38ece12523c2c6f0f17c3677b295257627"
+    },
+    {
+      "bytes": 5697796,
+      "path": "outputs/tables/manga_full_age_roleviews.csv",
+      "sha256": "454a8cac33dacd9915beaee126b306f31d6f2abd4aa9aae656dab8dc4a1e0efd"
+    },
+    {
+      "bytes": 507,
+      "path": "outputs/tables/manga_full_age_sensitivity_binned.csv",
+      "sha256": "717b65586b8a011a4b0f1ff53e7747abc83cf7417856235fa352b1a2c51ec5f9"
+    },
+    {
+      "bytes": 285,
+      "path": "outputs/tables/manga_full_age_sensitivity_summary.csv",
+      "sha256": "cbad1d566ca56c2461b6803d841657bd50cff2107b0c60703e4fe385f81f1541"
+    },
+    {
+      "bytes": 5666135,
+      "path": "outputs/tables/manga_full_age_state_vector.csv",
+      "sha256": "e18b2ff7f3401609cbc284b4438d6b791a1a777c9053dc8125b3c971d5512d63"
+    },
+    {
+      "bytes": 5677720,
+      "path": "outputs/tables/manga_full_age_state_vector_cleanflag.csv",
+      "sha256": "57242d45ee3f92230972931a2cb432597f8a7726e595154ee0f6f6d0b3306664"
+    },
+    {
+      "bytes": 178,
+      "path": "outputs/tables/manga_full_age_state_vector_summary.csv",
+      "sha256": "6dacfbaa6b1ebdb32a3701f2ecdd5271b40b774738f6bbc97ce176c1c5b5fea5"
+    },
+    {
+      "bytes": 141,
+      "path": "outputs/tables/manga_full_age_variance_scaling.csv",
+      "sha256": "36cb7ee24b3b7814e6e53140b30992dfd56d036c7cd2f086072560315311b3da"
+    },
+    {
+      "bytes": 128,
+      "path": "outputs/tables/manga_full_age_variance_scaling_clean.csv",
+      "sha256": "3c0d0eceece35f90970c9693db6bb5f8d89e0958ce0b95432a88ad2aade41d3e"
+    },
+    {
+      "bytes": 150,
+      "path": "outputs/tables/manga_full_age_variance_summary.csv",
+      "sha256": "0b9d5d57bc0d23c951422a3df08fa69a636e36dc8d9b2686a00b929a957363b8"
+    },
+    {
+      "bytes": 233,
+      "path": "outputs/tables/manga_full_age_variance_summary_clean.csv",
+      "sha256": "3ece306cf45a065e08424491010bd34126fbdb3e6ad1d67ced9cdce63b378ee5"
+    },
+    {
+      "bytes": 84,
+      "path": "outputs/tables/manga_full_cleanflag_summary.csv",
+      "sha256": "4802c8e2c96da231a5b70d0c3e480c84bbc1f5c3f9a4d7246d2de9c412352238"
+    },
+    {
+      "bytes": 2447645,
+      "path": "outputs/tables/manga_full_download_runtime.csv",
+      "sha256": "e014dea8955ee007f095e947ed47f1ad976fe56870b4d36b496d838f291da295"
+    },
+    {
+      "bytes": 151,
+      "path": "outputs/tables/manga_full_download_runtime_summary.csv",
+      "sha256": "edd34de9e33b331c2a04de5a80721cec815b2960fbee396f4ab517cceb07e268"
+    },
+    {
+      "bytes": 2582225,
+      "path": "outputs/tables/manga_full_download_runtime_with_legacy_overlay.csv",
+      "sha256": "a2417eb999e9b1efe20d35a07491bc37f3ab43dfc086a6f78f0acf2955e224fb"
+    },
+    {
+      "bytes": 81,
+      "path": "outputs/tables/manga_full_download_runtime_with_legacy_overlay_summary.csv",
+      "sha256": "b49e13c9f4a66638fa0363ef89d49df0cde697c1d6632364b9f576bb3505c207"
+    },
+    {
+      "bytes": 1679,
+      "path": "outputs/tables/manga_full_kin_bootstrap_summary.csv",
+      "sha256": "247ecd8472a01e644b710d43fd1e418443c0d7b653f62cfa15d76ca9817a59b5"
+    },
+    {
+      "bytes": 656,
+      "path": "outputs/tables/manga_full_kin_compare.csv",
+      "sha256": "8ba69926e40e3e4095e4b97ae71c2bafe76111c505d3e3358379aabafef47f7e"
+    },
+    {
+      "bytes": 40157,
+      "path": "outputs/tables/manga_full_kin_null_slopes.csv",
+      "sha256": "888fd8376cf5ebdddf20b1947921a9f77ca4b4ead0123e2e969c698ad21910ca"
+    },
+    {
+      "bytes": 37830,
+      "path": "outputs/tables/manga_full_kin_null_slopes_clean.csv",
+      "sha256": "0e50d2a744e689b19222f325267418e962fdc3443a8d0a84e143304ddc43fe5a"
+    },
+    {
+      "bytes": 1554,
+      "path": "outputs/tables/manga_full_kin_robust_dispersion_binned.csv",
+      "sha256": "68860e39a7df61cfb2ea3defd2f6236cbc7fdae11d980b30124b4d07cc0327a9"
+    },
+    {
+      "bytes": 683,
+      "path": "outputs/tables/manga_full_kin_robust_dispersion_summary.csv",
+      "sha256": "2cc74ddf89a84095037811dd11bc569edeaa8dd48f991eb95adfc0b6a0a8a5c6"
+    },
+    {
+      "bytes": 1159,
+      "path": "outputs/tables/manga_full_kin_role_tests_seed_nonseed.csv",
+      "sha256": "b9e26f83c7168b5f577cc76c30d6367a947303e4fcd79af3c84487623f115148"
+    },
+    {
+      "bytes": 5690118,
+      "path": "outputs/tables/manga_full_kin_roleviews.csv",
+      "sha256": "5a56ddbfc1f1ecce0a00914c0a76627c524231cad1028eabaaeb6cd18dea6641"
+    },
+    {
+      "bytes": 507,
+      "path": "outputs/tables/manga_full_kin_sensitivity_binned.csv",
+      "sha256": "60c86f541f9c1dbe98316e9df7584a286eb2a7580b62a50a38fe8ddbd820dbda"
+    },
+    {
+      "bytes": 284,
+      "path": "outputs/tables/manga_full_kin_sensitivity_summary.csv",
+      "sha256": "115245dcd8f41b2fc662873f945c86cb21c4f699e9f957e49d7aab61cb084d57"
+    },
+    {
+      "bytes": 5646502,
+      "path": "outputs/tables/manga_full_kin_state_vector.csv",
+      "sha256": "611d52ef70a54bbec960a8e856bc20a77ed72816c34041d5efc6596390acbad1"
+    },
+    {
+      "bytes": 5670036,
+      "path": "outputs/tables/manga_full_kin_state_vector_cleanflag.csv",
+      "sha256": "cd7b9ea102b0fbc8a32c5d8b26a99ff77d9d95280f728d7c881f04a60c245dc9"
+    },
+    {
+      "bytes": 177,
+      "path": "outputs/tables/manga_full_kin_state_vector_summary.csv",
+      "sha256": "28c95d4be2439b570b32661b992f450254c146e2d600c9349f6dd460baa7004d"
+    },
+    {
+      "bytes": 141,
+      "path": "outputs/tables/manga_full_kin_variance_scaling.csv",
+      "sha256": "94ec1dffa477e411ecd1759e732cf5b88e7196eb081871d38979ca2d7ad56841"
+    },
+    {
+      "bytes": 128,
+      "path": "outputs/tables/manga_full_kin_variance_scaling_clean.csv",
+      "sha256": "c46218fb68bea3d230d2128f8df055219d0f02d0f81f945e41be8dfba3e37bb2"
+    },
+    {
+      "bytes": 165,
+      "path": "outputs/tables/manga_full_kin_variance_summary.csv",
+      "sha256": "868db67aae2f4b1c3c72b9ef22bb62bb6d12973bb62da4dfccea00267abf383b"
+    },
+    {
+      "bytes": 234,
+      "path": "outputs/tables/manga_full_kin_variance_summary_clean.csv",
+      "sha256": "07dae4644ded4e859dcd8b6b36a2ee34ddee69d6e3ed7295c657cb9d39a0a0cd"
+    },
+    {
+      "bytes": 101,
+      "path": "outputs/tables/manga_full_maps_batches_summary.csv",
+      "sha256": "a58dcf2539d8d09665ea201937075380d1b30cffc9385341d4656f225d8ad46d"
+    },
+    {
+      "bytes": 310,
+      "path": "outputs/tables/manga_full_maps_chunk_configs/manga_full_maps_chunk_000.yaml",
+      "sha256": "f637369f59ee0c614cb47e90eb3c1861c0599ee7169a24147516e664e74cbf91"
+    },
+    {
+      "bytes": 310,
+      "path": "outputs/tables/manga_full_maps_chunk_configs/manga_full_maps_chunk_001.yaml",
+      "sha256": "081ecae906e5f93e38716103aee4e70457f024e2b19174fe6a8050f27df28cab"
+    },
+    {
+      "bytes": 310,
+      "path": "outputs/tables/manga_full_maps_chunk_configs/manga_full_maps_chunk_002.yaml",
+      "sha256": "267753f71d9d043a87bb4306210451c3de3a4e0e99e212fa960a23e398a2cdb3"
+    },
+    {
+      "bytes": 310,
+      "path": "outputs/tables/manga_full_maps_chunk_configs/manga_full_maps_chunk_003.yaml",
+      "sha256": "a1727e57aa9d76fc3b908c6e9f83205fb218570d74e58e495a647671edafa587"
+    },
+    {
+      "bytes": 310,
+      "path": "outputs/tables/manga_full_maps_chunk_configs/manga_full_maps_chunk_004.yaml",
+      "sha256": "e297131177d36f3b3b5c564d111a5e4b2fddf336b74df5edd90615c22070d61c"
+    },
+    {
+      "bytes": 310,
+      "path": "outputs/tables/manga_full_maps_chunk_configs/manga_full_maps_chunk_005.yaml",
+      "sha256": "fd52c1d18057fdeb9e90dbde2fb734a365fe44382ca2775884230097cf9f341e"
+    },
+    {
+      "bytes": 310,
+      "path": "outputs/tables/manga_full_maps_chunk_configs/manga_full_maps_chunk_006.yaml",
+      "sha256": "37caffba1c7041bf28efeb57423e568f18cab79e91f019bfc95d44faa93e0eac"
+    },
+    {
+      "bytes": 310,
+      "path": "outputs/tables/manga_full_maps_chunk_configs/manga_full_maps_chunk_007.yaml",
+      "sha256": "2b4de058a2924c3c3d78c1acd66b02223a63994381aec33104a48d6018090df8"
+    },
+    {
+      "bytes": 310,
+      "path": "outputs/tables/manga_full_maps_chunk_configs/manga_full_maps_chunk_008.yaml",
+      "sha256": "8177dcc6f994c4cb0eb3872021c3c8292e00318566b75b135c37754b20710508"
+    },
+    {
+      "bytes": 310,
+      "path": "outputs/tables/manga_full_maps_chunk_configs/manga_full_maps_chunk_009.yaml",
+      "sha256": "3ff242483660ffbe74b9a85dd0ceb44285aa78472ac10ce2f4d4967cb6666d0c"
+    },
+    {
+      "bytes": 310,
+      "path": "outputs/tables/manga_full_maps_chunk_configs/manga_full_maps_chunk_010.yaml",
+      "sha256": "31840517596d14b85aa627030fe8866df78d12b4a680876c001ddf467485b799"
+    },
+    {
+      "bytes": 310,
+      "path": "outputs/tables/manga_full_maps_chunk_configs/manga_full_maps_chunk_011.yaml",
+      "sha256": "8e7985cfe8521c77137732133641d11b377cf5a9d8e58738b65df30207e45664"
+    },
+    {
+      "bytes": 310,
+      "path": "outputs/tables/manga_full_maps_chunk_configs/manga_full_maps_chunk_012.yaml",
+      "sha256": "8476e9d261f77f5b81dd6824388f2d9fae9887b7db0d32fe3206bb0d4940b28a"
+    },
+    {
+      "bytes": 310,
+      "path": "outputs/tables/manga_full_maps_chunk_configs/manga_full_maps_chunk_013.yaml",
+      "sha256": "105eacd94455895031fb33704da8a45a31f0c3a4f7ff0385ee30e4e26e618991"
+    },
+    {
+      "bytes": 303047,
+      "path": "outputs/tables/manga_full_maps_chunk_features/manga_full_maps_chunk_000_features.csv",
+      "sha256": "83195c30817bf437642873c3a75d27a160e7a93908fe1a9e7ad0e08809303007"
+    },
+    {
+      "bytes": 275008,
+      "path": "outputs/tables/manga_full_maps_chunk_features/manga_full_maps_chunk_001_features.csv",
+      "sha256": "93c455fc77c1803d373446a37458f124d97ee10597bae3d69cd1a4f75b18e727"
+    },
+    {
+      "bytes": 311109,
+      "path": "outputs/tables/manga_full_maps_chunk_features/manga_full_maps_chunk_002_features.csv",
+      "sha256": "030810718901777bb6762750ef39de2d8970c49e5f3fd1dafd41446dbcba6373"
+    },
+    {
+      "bytes": 310706,
+      "path": "outputs/tables/manga_full_maps_chunk_features/manga_full_maps_chunk_003_features.csv",
+      "sha256": "ff176b958111892a777e851c17d36279acec1ac58ce6b5e1f278e1f7be4c5625"
+    },
+    {
+      "bytes": 310282,
+      "path": "outputs/tables/manga_full_maps_chunk_features/manga_full_maps_chunk_004_features.csv",
+      "sha256": "70180b5ddf3d4a2596340105d4995d683dc0d89a463c550707441a5b4455fcf2"
+    },
+    {
+      "bytes": 309483,
+      "path": "outputs/tables/manga_full_maps_chunk_features/manga_full_maps_chunk_005_features.csv",
+      "sha256": "4fd0d9f8dc50f771cc1c69f3c6d12d1f6bce3a8381dc4f40a05e00818231d566"
+    },
+    {
+      "bytes": 309665,
+      "path": "outputs/tables/manga_full_maps_chunk_features/manga_full_maps_chunk_006_features.csv",
+      "sha256": "e30707b54eeecde46387b80b46e721098a731a4c9e55b4c4aa004800e3924506"
+    },
+    {
+      "bytes": 310075,
+      "path": "outputs/tables/manga_full_maps_chunk_features/manga_full_maps_chunk_007_features.csv",
+      "sha256": "b6b552a4e519c178dd546f11951db4007a91d57517ac52c1ae5b8392842ff270"
+    },
+    {
+      "bytes": 308147,
+      "path": "outputs/tables/manga_full_maps_chunk_features/manga_full_maps_chunk_008_features.csv",
+      "sha256": "eb03ab1adcf77c8bdfe091b15b1de218000b3f7bbcb4309ed93920a98d0d99c1"
+    },
+    {
+      "bytes": 310563,
+      "path": "outputs/tables/manga_full_maps_chunk_features/manga_full_maps_chunk_009_features.csv",
+      "sha256": "745d0551f2d3ef685caea81260146747f1035f2622aabd8fc792290553d79dbf"
+    },
+    {
+      "bytes": 309398,
+      "path": "outputs/tables/manga_full_maps_chunk_features/manga_full_maps_chunk_010_features.csv",
+      "sha256": "e0eea20169507a5cafe424b6e228221f0fb856ba4e4c94490cd0076d38624f52"
+    },
+    {
+      "bytes": 309699,
+      "path": "outputs/tables/manga_full_maps_chunk_features/manga_full_maps_chunk_011_features.csv",
+      "sha256": "3b2afa19c740ecdb7c830eb1619b21273dbcae7a5cd0fc8efb03eb94f3b71da2"
+    },
+    {
+      "bytes": 309658,
+      "path": "outputs/tables/manga_full_maps_chunk_features/manga_full_maps_chunk_012_features.csv",
+      "sha256": "11ca075993b72cf7d91df09c9c1790b09be47debcc821c60eaa0f974cc45497f"
+    },
+    {
+      "bytes": 242949,
+      "path": "outputs/tables/manga_full_maps_chunk_features/manga_full_maps_chunk_013_features.csv",
+      "sha256": "03fddc151932b3a09734505818ee768d7a53b5f810242eb8911fc942bdccd200"
+    },
+    {
+      "bytes": 269658,
+      "path": "outputs/tables/manga_full_maps_chunk_manifests/manga_full_maps_chunk_000.csv",
+      "sha256": "0f10d8ee70c4e4f09a35c091035311847c5c4117b93aab4e3ad1e3e877908964"
+    },
+    {
+      "bytes": 272224,
+      "path": "outputs/tables/manga_full_maps_chunk_manifests/manga_full_maps_chunk_001.csv",
+      "sha256": "476f0349ce07aa9a8f0aa47f800cb4db44f4d73138966ddce2cc109b3b136a53"
+    },
+    {
+      "bytes": 272633,
+      "path": "outputs/tables/manga_full_maps_chunk_manifests/manga_full_maps_chunk_002.csv",
+      "sha256": "01d060654fcb18a216018f59006f9657dcc225912cf7bb8524f8af66c237c48a"
+    },
+    {
+      "bytes": 273303,
+      "path": "outputs/tables/manga_full_maps_chunk_manifests/manga_full_maps_chunk_003.csv",
+      "sha256": "70603019eb30124c6cece0e18f2fcd7fd5adeb746c5b1104ae066aa56293235f"
+    },
+    {
+      "bytes": 272156,
+      "path": "outputs/tables/manga_full_maps_chunk_manifests/manga_full_maps_chunk_004.csv",
+      "sha256": "34d013c6007e06f6af6d79a4b3faf4a0621f2766dfa7554b07d80e0abf6230a0"
+    },
+    {
+      "bytes": 267200,
+      "path": "outputs/tables/manga_full_maps_chunk_manifests/manga_full_maps_chunk_005.csv",
+      "sha256": "5b8997285da0a9758e5a86ea5c1a53f5f8fb2d65a91e88b005dbfd00402ce27e"
+    },
+    {
+      "bytes": 266514,
+      "path": "outputs/tables/manga_full_maps_chunk_manifests/manga_full_maps_chunk_006.csv",
+      "sha256": "5b213f361af73618ae767d551bf10e5972d86f506a41a489cae5afb8684273c8"
+    },
+    {
+      "bytes": 266607,
+      "path": "outputs/tables/manga_full_maps_chunk_manifests/manga_full_maps_chunk_007.csv",
+      "sha256": "ad5fde69761f09c5723a386a9082fa9af2e6714c76aa1714bd9c9459a6a1936e"
+    },
+    {
+      "bytes": 266475,
+      "path": "outputs/tables/manga_full_maps_chunk_manifests/manga_full_maps_chunk_008.csv",
+      "sha256": "dcfd4c08f765e3fdc4d4708897a529ccc6f81f8e660264be904194a68c5c72a2"
+    },
+    {
+      "bytes": 266744,
+      "path": "outputs/tables/manga_full_maps_chunk_manifests/manga_full_maps_chunk_009.csv",
+      "sha256": "3f131b47d061f16f671339a56e68f905b57b97f1117cc0f70d7bcbf477989f35"
+    },
+    {
+      "bytes": 266594,
+      "path": "outputs/tables/manga_full_maps_chunk_manifests/manga_full_maps_chunk_010.csv",
+      "sha256": "579960b7a3cdd48da73a7b2a7e315e184ef4fec6d8ff906116ef9f9b24dfe9a3"
+    },
+    {
+      "bytes": 266887,
+      "path": "outputs/tables/manga_full_maps_chunk_manifests/manga_full_maps_chunk_011.csv",
+      "sha256": "19678ee6ac4064f1052f5bb33d7a1e65e4bca21d83967dc89bbc6bde5df33045"
+    },
+    {
+      "bytes": 266503,
+      "path": "outputs/tables/manga_full_maps_chunk_manifests/manga_full_maps_chunk_012.csv",
+      "sha256": "81549d428e824194affdf3822b4a7ef4c082c769442f7a5bd9c7523fb3edf4c1"
+    },
+    {
+      "bytes": 208949,
+      "path": "outputs/tables/manga_full_maps_chunk_manifests/manga_full_maps_chunk_013.csv",
+      "sha256": "583309af1a15fc2e9e6b7a3d40719551932ffc3c8129f6f35a29afb21347f310"
+    },
+    {
+      "bytes": 76,
+      "path": "outputs/tables/manga_full_maps_chunk_summaries/manga_full_maps_chunk_000_summary.csv",
+      "sha256": "64859c83f9eec249fa243704b97b92f7bc468736990d41c4ecf9ae0f547519f3"
+    },
+    {
+      "bytes": 76,
+      "path": "outputs/tables/manga_full_maps_chunk_summaries/manga_full_maps_chunk_001_summary.csv",
+      "sha256": "43bbf891321426041a18cf05a5235fe027cc3205df3a89f6661712cedafab371"
+    },
+    {
+      "bytes": 75,
+      "path": "outputs/tables/manga_full_maps_chunk_summaries/manga_full_maps_chunk_002_summary.csv",
+      "sha256": "890e81aa1517db65c78f164c9cfd25f8f686ff60b2f4a8061026a0aec8256540"
+    },
+    {
+      "bytes": 75,
+      "path": "outputs/tables/manga_full_maps_chunk_summaries/manga_full_maps_chunk_003_summary.csv",
+      "sha256": "36c193f5789fee294de5c7a69aeebff7f2b590b3be492c6aaec70a693bd6ed18"
+    },
+    {
+      "bytes": 75,
+      "path": "outputs/tables/manga_full_maps_chunk_summaries/manga_full_maps_chunk_004_summary.csv",
+      "sha256": "36c193f5789fee294de5c7a69aeebff7f2b590b3be492c6aaec70a693bd6ed18"
+    },
+    {
+      "bytes": 75,
+      "path": "outputs/tables/manga_full_maps_chunk_summaries/manga_full_maps_chunk_005_summary.csv",
+      "sha256": "36c193f5789fee294de5c7a69aeebff7f2b590b3be492c6aaec70a693bd6ed18"
+    },
+    {
+      "bytes": 75,
+      "path": "outputs/tables/manga_full_maps_chunk_summaries/manga_full_maps_chunk_006_summary.csv",
+      "sha256": "36c193f5789fee294de5c7a69aeebff7f2b590b3be492c6aaec70a693bd6ed18"
+    },
+    {
+      "bytes": 75,
+      "path": "outputs/tables/manga_full_maps_chunk_summaries/manga_full_maps_chunk_007_summary.csv",
+      "sha256": "36c193f5789fee294de5c7a69aeebff7f2b590b3be492c6aaec70a693bd6ed18"
+    },
+    {
+      "bytes": 75,
+      "path": "outputs/tables/manga_full_maps_chunk_summaries/manga_full_maps_chunk_008_summary.csv",
+      "sha256": "36c193f5789fee294de5c7a69aeebff7f2b590b3be492c6aaec70a693bd6ed18"
+    },
+    {
+      "bytes": 75,
+      "path": "outputs/tables/manga_full_maps_chunk_summaries/manga_full_maps_chunk_009_summary.csv",
+      "sha256": "36c193f5789fee294de5c7a69aeebff7f2b590b3be492c6aaec70a693bd6ed18"
+    },
+    {
+      "bytes": 75,
+      "path": "outputs/tables/manga_full_maps_chunk_summaries/manga_full_maps_chunk_010_summary.csv",
+      "sha256": "36c193f5789fee294de5c7a69aeebff7f2b590b3be492c6aaec70a693bd6ed18"
+    },
+    {
+      "bytes": 75,
+      "path": "outputs/tables/manga_full_maps_chunk_summaries/manga_full_maps_chunk_011_summary.csv",
+      "sha256": "36c193f5789fee294de5c7a69aeebff7f2b590b3be492c6aaec70a693bd6ed18"
+    },
+    {
+      "bytes": 75,
+      "path": "outputs/tables/manga_full_maps_chunk_summaries/manga_full_maps_chunk_012_summary.csv",
+      "sha256": "36c193f5789fee294de5c7a69aeebff7f2b590b3be492c6aaec70a693bd6ed18"
+    },
+    {
+      "bytes": 75,
+      "path": "outputs/tables/manga_full_maps_chunk_summaries/manga_full_maps_chunk_013_summary.csv",
+      "sha256": "9f54673742d8fd532ed795919569ff5ebdf572db3be4ef49ab0f72a91b03203b"
+    },
+    {
+      "bytes": 803,
+      "path": "outputs/tables/manga_full_maps_chunk_summaries_merged.csv",
+      "sha256": "fd1a8cd672c4cc602b7181531f1cd83454ee824ce7a84bdf9329a9439ebb6c85"
+    },
+    {
+      "bytes": 119,
+      "path": "outputs/tables/manga_full_maps_failure_audit_summary.csv",
+      "sha256": "98e5588ced1143d8474dc5ac0c5407232c12122608c10002d691dafb7bd458f0"
+    },
+    {
+      "bytes": 325,
+      "path": "outputs/tables/manga_full_maps_failure_compare.csv",
+      "sha256": "342a7ff4a97b93d3a44d0c9b69dad9ae79f20bf50d737ca2aeeab017c3d12c7b"
+    },
+    {
+      "bytes": 88,
+      "path": "outputs/tables/manga_full_maps_failure_error_counts.csv",
+      "sha256": "fe150cfc64bdce32dc6dcfa9534bae7d94a4a25745b9e03bc6b34e318cf82559"
+    },
+    {
+      "bytes": 4444442,
+      "path": "outputs/tables/manga_full_maps_features_merged.csv",
+      "sha256": "8ea878e69dd2f78f013d775078b38bba7593ad5b93356ca9d8e631d4fda62d8d"
+    },
+    {
+      "bytes": 102,
+      "path": "outputs/tables/manga_full_maps_features_merged_summary.csv",
+      "sha256": "9ef8bcd8be7086b2b44f8e0f0b4a39e6ceb8e973811ae32b347b56df6d0a12a8"
+    },
+    {
+      "bytes": 1832742,
+      "path": "outputs/tables/manga_full_parent_manifest.csv",
+      "sha256": "992e13807c1e35cff41014197bde9dbefa18e14b377189913fb511a9aac86160"
+    },
+    {
+      "bytes": 176,
+      "path": "outputs/tables/manga_full_parent_manifest_counts.csv",
+      "sha256": "162dfe19381dfe0e432d3be5fa4fcd6bdd98f15206214b7dd0f8836c314be02f"
+    },
+    {
+      "bytes": 84,
+      "path": "outputs/tables/manga_full_parent_manifest_summary.csv",
+      "sha256": "f07da6bf8ae21b4b0377a6c624c01dd9eaafec23080f1c0d21fc932e4cabab08"
+    },
+    {
+      "bytes": 3696948,
+      "path": "outputs/tables/manga_full_parent_manifest_with_maps.csv",
+      "sha256": "4cb9c2f7236f7a9f287a9b8076e9ff2fc7ff1486903bcd90de5afcbc0577c70a"
+    },
+    {
+      "bytes": 1050,
+      "path": "outputs/tables/manga_ifu_age_bootstrap_summary.csv",
+      "sha256": "9e7a53d7c1bdd02fc3a7ff90f9da931cef06f5acfd599c3297678d1ec8f1b462"
+    },
+    {
+      "bytes": 1546,
+      "path": "outputs/tables/manga_ifu_age_bootstrap_summary_expanded.csv",
+      "sha256": "1b796d02ffc4f00ab212ef18cac59a87dad8babc524336118e3f0aa5ebfc213a"
+    },
+    {
+      "bytes": 37946,
+      "path": "outputs/tables/manga_ifu_age_null_slopes.csv",
+      "sha256": "a8f9910bbfed4c1db1bf95f1434a42cc5c99c9b38868b4b9deef24a946210438"
+    },
+    {
+      "bytes": 37958,
+      "path": "outputs/tables/manga_ifu_age_null_slopes_expanded.csv",
+      "sha256": "f508c1cdd0029cd62e9363cb7d2355ebcb72755673cf8747f7ae4e1140f1da47"
+    },
+    {
+      "bytes": 806,
+      "path": "outputs/tables/manga_ifu_age_robust_dispersion_binned.csv",
+      "sha256": "3369a8ca286172865e3729f276ece7ce599feb9ed9c15da4c335833cc51e4e50"
+    },
+    {
+      "bytes": 1578,
+      "path": "outputs/tables/manga_ifu_age_robust_dispersion_binned_expanded.csv",
+      "sha256": "4ea993f8ea4653de0620c809f107580c2e8afc84206abb9d22d7deb6761621a0"
+    },
+    {
+      "bytes": 808,
+      "path": "outputs/tables/manga_ifu_age_robust_dispersion_summary.csv",
+      "sha256": "c7fb7d8f2e7f65a7392d764a9259a413e0d3477bb067dcabd441b16e1a0fbc7a"
+    },
+    {
+      "bytes": 810,
+      "path": "outputs/tables/manga_ifu_age_robust_dispersion_summary_expanded.csv",
+      "sha256": "f9a2ca313271136dd56ad67acc6505b2509d54df6046ba9f7c8ca97628b26d5a"
+    },
+    {
+      "bytes": 1128,
+      "path": "outputs/tables/manga_ifu_age_role_tests.csv",
+      "sha256": "5a3b2c51cbb4433237feee9ccb01f13484b57985239ab146bfc78d638b8915bc"
+    },
+    {
+      "bytes": 1139,
+      "path": "outputs/tables/manga_ifu_age_role_tests_expanded_seed_control.csv",
+      "sha256": "0586c58ac313d6a164592a7498c220fee6f17cf89d8bfe8f30a100631df2cc65"
+    },
+    {
+      "bytes": 1150,
+      "path": "outputs/tables/manga_ifu_age_role_tests_expanded_seed_nonseed.csv",
+      "sha256": "b19cd967b5a84d300e95572d83eb3e7769e89b49ab88ff2667549d6403c0bcab"
+    },
+    {
+      "bytes": 17383,
+      "path": "outputs/tables/manga_ifu_age_state_vector.csv",
+      "sha256": "229754bc5aa7f3192593ca76b31d44ea8bd472c86acc9fd9ef6f2221c51ec20f"
+    },
+    {
+      "bytes": 68911,
+      "path": "outputs/tables/manga_ifu_age_state_vector_expanded.csv",
+      "sha256": "1ee36732d257e23a4600567df992717f0750ee996e61cbe9cd3b34d9d85a0df2"
+    },
+    {
+      "bytes": 69342,
+      "path": "outputs/tables/manga_ifu_age_state_vector_expanded_roleviews.csv",
+      "sha256": "be51f260d20c49f3d0af594bfbaed5b116a6e261c8fe26b3500a60fb492761cd"
+    },
+    {
+      "bytes": 128,
+      "path": "outputs/tables/manga_ifu_age_state_vector_summary.csv",
+      "sha256": "3d838da74f83503217e225e7756eaabe369b11bb0622af535ae000fed2de76ca"
+    },
+    {
+      "bytes": 128,
+      "path": "outputs/tables/manga_ifu_age_state_vector_summary_expanded.csv",
+      "sha256": "36ec6c75697db66e6f7dc174c806e0cfd8f147e32dcbd102564ae1c52d3de65a"
+    },
+    {
+      "bytes": 70,
+      "path": "outputs/tables/manga_ifu_age_variance_scaling.csv",
+      "sha256": "3421e60145466365048037dfbceb1116a8b2832c2624088b109b2529b29db36a"
+    },
+    {
+      "bytes": 124,
+      "path": "outputs/tables/manga_ifu_age_variance_scaling_expanded.csv",
+      "sha256": "73d3970c873c5509f3a5084a1a37a30590d86756d4b4e30abee66073dd6bd139"
+    },
+    {
+      "bytes": 164,
+      "path": "outputs/tables/manga_ifu_age_variance_summary.csv",
+      "sha256": "bc4d5811c441092709a393c6e717da4205b51791fafa0d943ff7d19004253e28"
+    },
+    {
+      "bytes": 167,
+      "path": "outputs/tables/manga_ifu_age_variance_summary_expanded.csv",
+      "sha256": "09b7630789835cf633c18287cbcb352cebfed1179729132cb927b1df7836185f"
+    },
+    {
+      "bytes": 56006,
+      "path": "outputs/tables/manga_ifu_expanded_features.csv",
+      "sha256": "58179b08e769183bd98b7e0969e9ae27d3b5c266ee1b6b22ea4fcd97f94748ad"
+    },
+    {
+      "bytes": 72,
+      "path": "outputs/tables/manga_ifu_expanded_features_summary.csv",
+      "sha256": "ad201f2b1e9cd24905537a4c0d9eb85d8f86979f4d45bce8d90d468ba42f5b26"
+    },
+    {
+      "bytes": 40217,
+      "path": "outputs/tables/manga_ifu_expanded_manifest.csv",
+      "sha256": "4c4017d3f05e50cf5684ca73d4d64418a3e694784d698770e5735f9699a0aab3"
+    },
+    {
+      "bytes": 138,
+      "path": "outputs/tables/manga_ifu_expanded_manifest_bin_summary.csv",
+      "sha256": "7c140e72725559f396df61cb74e0c16af914a72fc72f1b59c17c4b32f982b13d"
+    },
+    {
+      "bytes": 73,
+      "path": "outputs/tables/manga_ifu_expanded_manifest_summary.csv",
+      "sha256": "558601a54bd71bf3848ade938f84a55cfba8add517f3a02af7bb53c9459d4d1c"
+    },
+    {
+      "bytes": 1031,
+      "path": "outputs/tables/manga_ifu_kin_bootstrap_summary.csv",
+      "sha256": "0cf651ee0b2117490b1104fe640e4e0cdd98d6b43efb8bf5d63c1f52a40c793e"
+    },
+    {
+      "bytes": 1540,
+      "path": "outputs/tables/manga_ifu_kin_bootstrap_summary_expanded.csv",
+      "sha256": "bd780ff9140aa61c9b33f1160f1559a2c89509136a30d6912e9d3d63ad31dacc"
+    },
+    {
+      "bytes": 37714,
+      "path": "outputs/tables/manga_ifu_kin_null_slopes.csv",
+      "sha256": "334c95153841008bf1368527eb70eb31792dc3fcad6232807decbe03f94b2412"
+    },
+    {
+      "bytes": 38010,
+      "path": "outputs/tables/manga_ifu_kin_null_slopes_expanded.csv",
+      "sha256": "449bf8d716fc41f6f7eba1e393dfae8e606c9d68dbe245f27c9aa630de5df6ee"
+    },
+    {
+      "bytes": 777,
+      "path": "outputs/tables/manga_ifu_kin_robust_dispersion_binned.csv",
+      "sha256": "b1a39bfe7d7c1211b9fe84988d92c77865eefafdd9d2ec686e78dace71b49647"
+    },
+    {
+      "bytes": 1531,
+      "path": "outputs/tables/manga_ifu_kin_robust_dispersion_binned_expanded.csv",
+      "sha256": "719630a58f7c7632b6373df9ada2a680ae5af4e8b09cf9f154b3dc0a469f75ed"
+    },
+    {
+      "bytes": 782,
+      "path": "outputs/tables/manga_ifu_kin_robust_dispersion_summary.csv",
+      "sha256": "300269c103ed8d6c1b6064b06b4a8a8ac142064591339293fc32236aca0fe489"
+    },
+    {
+      "bytes": 793,
+      "path": "outputs/tables/manga_ifu_kin_robust_dispersion_summary_expanded.csv",
+      "sha256": "604ea1214d10b87d17e567688802a5b05d79a6d64a933d863dcb0be4bb03c1b8"
+    },
+    {
+      "bytes": 1145,
+      "path": "outputs/tables/manga_ifu_kin_role_tests.csv",
+      "sha256": "b3784f29c5306ec4e202398748a08a41052d01b371ad397595bbd59c67450b4a"
+    },
+    {
+      "bytes": 1137,
+      "path": "outputs/tables/manga_ifu_kin_role_tests_expanded_seed_control.csv",
+      "sha256": "59d8f81f7a8eb234768ba4dc98b6c239ba9d950af84320e7ab109e765bc1613a"
+    },
+    {
+      "bytes": 1146,
+      "path": "outputs/tables/manga_ifu_kin_role_tests_expanded_seed_nonseed.csv",
+      "sha256": "5230fb8efa2889a811ba9d83983a0fa8023920fbfdf21e4219bc8ff01c590886"
+    },
+    {
+      "bytes": 17372,
+      "path": "outputs/tables/manga_ifu_kin_state_vector.csv",
+      "sha256": "0669bb4444eaf4456251683ae5392f6fb6e31aa0c5dc068e4ddd47f625b0e809"
+    },
+    {
+      "bytes": 68631,
+      "path": "outputs/tables/manga_ifu_kin_state_vector_expanded.csv",
+      "sha256": "508846e050c19f9daf795a47793186b5bd90c994fbb4158e4ccdfa983e1bbc18"
+    },
+    {
+      "bytes": 69185,
+      "path": "outputs/tables/manga_ifu_kin_state_vector_expanded_roleviews.csv",
+      "sha256": "c5320fc790602b199b7e417853062bea8a2732fbaf1ad256e60f37fb6d210ca6"
+    },
+    {
+      "bytes": 128,
+      "path": "outputs/tables/manga_ifu_kin_state_vector_summary.csv",
+      "sha256": "b765b31a51a9fe570f309da339ec43fb9bd81cf818bcce65671957982929c561"
+    },
+    {
+      "bytes": 128,
+      "path": "outputs/tables/manga_ifu_kin_state_vector_summary_expanded.csv",
+      "sha256": "30776f6d3fe8bd3ca54aebf76623abf6e16e15dff13d311ad27b01890ad88a38"
+    },
+    {
+      "bytes": 70,
+      "path": "outputs/tables/manga_ifu_kin_variance_scaling.csv",
+      "sha256": "572481086ccc001270b984545e0174d09787b488ae393cb263fe7c6cc058025f"
+    },
+    {
+      "bytes": 126,
+      "path": "outputs/tables/manga_ifu_kin_variance_scaling_expanded.csv",
+      "sha256": "e4e656389238fdb4886ad1bd3b8c6b6108518db349982efe0850310bce125662"
+    },
+    {
+      "bytes": 166,
+      "path": "outputs/tables/manga_ifu_kin_variance_summary.csv",
+      "sha256": "c4d95608b31161b52d75a684abb0f3f5b08f1fdb07f3ed192841d955cc21c0a9"
+    },
+    {
+      "bytes": 165,
+      "path": "outputs/tables/manga_ifu_kin_variance_summary_expanded.csv",
+      "sha256": "8e930bb72b8ca1ab547c8465531463ddb83eb7398f42055f6742949e514935f9"
+    },
+    {
+      "bytes": 16270,
+      "path": "outputs/tables/manga_ifu_pilot_features.csv",
+      "sha256": "402146622e419e7197e7026c8b183d056a8627ffea40973aafd4f42b66a3d515"
+    },
+    {
+      "bytes": 72,
+      "path": "outputs/tables/manga_ifu_pilot_features_summary.csv",
+      "sha256": "87867050d10a96f503def78d873bc1524f42afb671fb0a991d24fa17df307bc3"
+    },
+    {
+      "bytes": 12829,
+      "path": "outputs/tables/manga_ifu_pilot_manifest.csv",
+      "sha256": "9e67a2ea10a751103c21357f52cfb9ac786c8675bb32c758f31c9a8a8f899afc"
+    },
+    {
+      "bytes": 63,
+      "path": "outputs/tables/manga_ifu_pilot_manifest_summary.csv",
+      "sha256": "ee77b30a3d1b4547f07a21a0142ed72422224c878960b1bcdf080c32010baadb"
+    },
+    {
+      "bytes": 5280,
+      "path": "outputs/tables/manga_provenance_audit.csv",
+      "sha256": "d95a6cd6e493f649112a67284a50b9c0181d7ac8a7c8e3329ba366e70883dbdf"
+    },
+    {
+      "bytes": 2973,
+      "path": "outputs/tables/manga_sample_runtime_table.csv",
+      "sha256": "57f7d586eaf475c9dd6bfcbf145c1317c1c0e4517a67558c3d717f52acc78c72"
+    },
+    {
+      "bytes": 3338,
+      "path": "outputs/tables/manga_sample_runtime_table_augmented.csv",
+      "sha256": "001e6a4e8f127dfa4af17ae8e3584c19204aa644fa9b6b02b423d20570e7dcc1"
+    },
+    {
+      "bytes": 11,
+      "path": "outputs/tables/obs_gama_null_slopes.csv",
+      "sha256": "9f1be8f4b90371c05465ecf0aea252059f90471b2d2684b70bfe89b35fa9df50"
+    },
+    {
+      "bytes": 37692,
+      "path": "outputs/tables/obs_gama_null_slopes_coarse.csv",
+      "sha256": "dbb428253eccc566bc383cb3f84ccb92cae2c6211facc6eaef8985dfd49e6def"
+    },
+    {
+      "bytes": 40077,
+      "path": "outputs/tables/obs_gama_rebuilt_oiiibH_d4000S_null_slopes.csv",
+      "sha256": "19e952040ce8f2020b77aefcedd90ec3efb0eb2af841ed9d14027d36801769f8"
+    },
+    {
+      "bytes": 159,
+      "path": "outputs/tables/obs_gama_rebuilt_oiiibH_d4000S_qc.csv",
+      "sha256": "5cd331e945066f602a5df367f91bd7e6793b5df62f0168d7a18d19b5f350fa65"
+    },
+    {
+      "bytes": 107,
+      "path": "outputs/tables/obs_gama_rebuilt_oiiibH_d4000S_variance_scaling.csv",
+      "sha256": "67ecaa0ba1022f10dbfc3f39d595c4acb6e66ac07dcfd390583234f047e2fede"
+    },
+    {
+      "bytes": 150,
+      "path": "outputs/tables/obs_gama_rebuilt_oiiibH_d4000S_variance_summary.csv",
+      "sha256": "4dcf06c4d5a5f8659f6baea322a10849f7b984e64d7ea46a78ad36f6c247880b"
+    },
+    {
+      "bytes": 36505,
+      "path": "outputs/tables/obs_gama_rebuilt_oiiibH_sigmaS_null_slopes.csv",
+      "sha256": "db087cbb537890673f0e3bc63b339312579a16994a88a24bb7d81d62b44fb970"
+    },
+    {
+      "bytes": 107,
+      "path": "outputs/tables/obs_gama_rebuilt_oiiibH_sigmaS_qc.csv",
+      "sha256": "84b1d2c89dcb5dfabd98ee2ce64321930666fa1077589f176cccb3282ef2d103"
+    },
+    {
+      "bytes": 107,
+      "path": "outputs/tables/obs_gama_rebuilt_oiiibH_sigmaS_variance_scaling.csv",
+      "sha256": "ebcb65a242fbc7b0fa3f8c848e0cadd2cbc9b685cf6921481ba5c7a21c653798"
+    },
+    {
+      "bytes": 123,
+      "path": "outputs/tables/obs_gama_rebuilt_oiiibH_sigmaS_variance_summary.csv",
+      "sha256": "172298090c17e8ec59aa5b6a1c80a91f239e57c7d990cf796b8b36a59790763c"
+    },
+    {
+      "bytes": 39612,
+      "path": "outputs/tables/obs_gama_rebuilt_sigmaS_null_slopes.csv",
+      "sha256": "926da21fb0faeafe549d4beda09708321a6533e620dd4792e523896679853c25"
+    },
+    {
+      "bytes": 93,
+      "path": "outputs/tables/obs_gama_rebuilt_sigmaS_qc.csv",
+      "sha256": "1c931215bcb17aa992b01cb5fc9943d39e16008a17ac9ee4961efad4ca359acc"
+    },
+    {
+      "bytes": 102,
+      "path": "outputs/tables/obs_gama_rebuilt_sigmaS_variance_scaling.csv",
+      "sha256": "840dc8f7100d893859dd15945e7335de474d9d90309a58397499edf8299fb9c5"
+    },
+    {
+      "bytes": 124,
+      "path": "outputs/tables/obs_gama_rebuilt_sigmaS_variance_summary.csv",
+      "sha256": "2bf939b7935c0c0592475b58a85199bb5755002bb2da3c9fb0cdb0a698ceebe9"
+    },
+    {
+      "bytes": 41,
+      "path": "outputs/tables/obs_gama_variance_scaling.csv",
+      "sha256": "d5ac20b51819f74ed04ca6ed89b935d21a1a7214b8bb43215e8366e77eb5861e"
+    },
+    {
+      "bytes": 106,
+      "path": "outputs/tables/obs_gama_variance_scaling_coarse.csv",
+      "sha256": "28edefdccc53e9dc132122117c28afdc59beafaf06b6a4eec2b8d6741f955b7a"
+    },
+    {
+      "bytes": 123,
+      "path": "outputs/tables/obs_gama_variance_summary.csv",
+      "sha256": "8469bbb3c579a9935ab6c2f50f558487020ff31d51894d4e7d0645f378c73a4c"
+    },
+    {
+      "bytes": 125,
+      "path": "outputs/tables/obs_gama_variance_summary_coarse.csv",
+      "sha256": "1621e0cff81ae45c2cc9bf78934802a052545e8463a9bbad68dcae5a4ecf46b2"
+    },
+    {
+      "bytes": 11,
+      "path": "outputs/tables/obs_manga_null_slopes.csv",
+      "sha256": "9f1be8f4b90371c05465ecf0aea252059f90471b2d2684b70bfe89b35fa9df50"
+    },
+    {
+      "bytes": 9011,
+      "path": "outputs/tables/obs_manga_rebuilt_oiiiH_d4000S_null_slopes.csv",
+      "sha256": "3e31ab37490bf55e62267bb9b9dea78285f0d6329742867212a271a5cd4ae0cb"
+    },
+    {
+      "bytes": 142,
+      "path": "outputs/tables/obs_manga_rebuilt_oiiiH_d4000S_qc.csv",
+      "sha256": "4033fc876360a48a20bdf2ce53556ae2ec552113d3358b21641c1c8f1ad3c3b9"
+    },
+    {
+      "bytes": 87,
+      "path": "outputs/tables/obs_manga_rebuilt_oiiiH_d4000S_variance_scaling.csv",
+      "sha256": "12d59d129230dd7605ea48326333d9fe63892bfc8bb30d75f3ce9cd964f3af03"
+    },
+    {
+      "bytes": 107,
+      "path": "outputs/tables/obs_manga_rebuilt_oiiiH_d4000S_variance_summary.csv",
+      "sha256": "a13fa8e305cc58218ecc85724200952e9f925ec92d4a1f1da317ef410f13a8af"
+    },
+    {
+      "bytes": 10511,
+      "path": "outputs/tables/obs_manga_rebuilt_sigmaS_null_slopes.csv",
+      "sha256": "5a7dee2a2dfbce9987959cc54ccf11cc8739038372052b311a56811866e3ddea"
+    },
+    {
+      "bytes": 73,
+      "path": "outputs/tables/obs_manga_rebuilt_sigmaS_qc.csv",
+      "sha256": "95b5ad59428acb68841b2533bca3d5db0742a958f29fa967b39e8cf881b07b97"
+    },
+    {
+      "bytes": 103,
+      "path": "outputs/tables/obs_manga_rebuilt_sigmaS_variance_scaling.csv",
+      "sha256": "55681e8fe6f5e8296feaa84f8d454c9eca094a97c24253e713ff0d9202e3e84e"
+    },
+    {
+      "bytes": 109,
+      "path": "outputs/tables/obs_manga_rebuilt_sigmaS_variance_summary.csv",
+      "sha256": "58de61081a3ee49b8739223237ceb3fb46becdf32c8dbcf751a016ecac3870f6"
+    },
+    {
+      "bytes": 1,
+      "path": "outputs/tables/obs_manga_variance_scaling.csv",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "bytes": 123,
+      "path": "outputs/tables/obs_manga_variance_summary.csv",
+      "sha256": "78953b51707598c4eff4993ed938fe3f684f4a78880c637ba7813b47a7d1e215"
+    },
+    {
+      "bytes": 38895,
+      "path": "outputs/tables/obs_sdss_null_slopes.csv",
+      "sha256": "67214f449b7d7ab3ec82a4dc02196de3f79df16802b8f789cc367dd468a657c5"
+    },
+    {
+      "bytes": 223,
+      "path": "outputs/tables/obs_sdss_variance_scaling.csv",
+      "sha256": "c72fef01c0ddde32be1a4768ddbd688808cff246356088a241d6bb605b0bb748"
+    },
+    {
+      "bytes": 125,
+      "path": "outputs/tables/obs_sdss_variance_summary.csv",
+      "sha256": "19d973e24221348c1c137716f8e3c5de0befba08d75585176bc9256a9f8c8ea8"
+    },
+    {
+      "bytes": 41587,
+      "path": "paper/manuscript_snapshot/main.tex",
+      "sha256": "b43227d99dcfea574d1890f2e7226640fb66cc40c719aa2003197dfa28be7cb8"
+    },
+    {
+      "bytes": 20033,
+      "path": "scripts/40_execute_bh_protocol_claim_audit.py",
+      "sha256": "561e29349ebe01e6990a22fbb2cea277332d9b08884495bfebf5bcbe8159faf4"
+    },
+    {
+      "bytes": 0,
+      "path": "src/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "src/core/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 739,
+      "path": "src/core/normalize.py",
+      "sha256": "2219c8e655c78e7604360218c84545395f36c7867d2390e3e172157e4cfb06e0"
+    },
+    {
+      "bytes": 2314,
+      "path": "src/core/permutation_nulls.py",
+      "sha256": "075538e348c2292ce4e0f117688af4d11b1022695f31f31674b43b07e46d2876"
+    },
+    {
+      "bytes": 649,
+      "path": "src/core/ripeness.py",
+      "sha256": "c0974f390ba693de9603121796c239db156a990fea9ff15844bb5fb3c0af0b5d"
+    },
+    {
+      "bytes": 3403,
+      "path": "src/core/robust_dispersion.py",
+      "sha256": "fd71a6fba7f3a0100ca53e4bac69298ef30aa7e3611357076e602ed2a2d18b85"
+    },
+    {
+      "bytes": 318,
+      "path": "src/core/state_vector.py",
+      "sha256": "c71f5f6eaff7ab46972a4fda17f4166af84d646c93090a5aca9ee346e2253b38"
+    },
+    {
+      "bytes": 600,
+      "path": "src/core/variance_scaling.py",
+      "sha256": "3c6de428bf4d98b8ccd7bd5e79379b6718dec1a346e3cc5fd7fb1392a843f080"
+    },
+    {
+      "bytes": 682,
+      "path": "src/core/windows.py",
+      "sha256": "88a7bd407a8a4107f7897247ec651b18be939b452fe6f4e47fcc46db635e25c7"
+    },
+    {
+      "bytes": 2360,
+      "path": "src/obs/01_build_obs_static_from_csv.py",
+      "sha256": "efc98d678df255dce452e1519a0dd1fb851bb6d3763bdfd28a09833d8ccb7d77"
+    },
+    {
+      "bytes": 3372,
+      "path": "src/obs/02_obs_variance_scaling_from_csv.py",
+      "sha256": "681503167a6f15f1721919508a4756c8e7910f74df827a5d6aaf74618badd428"
+    },
+    {
+      "bytes": 3889,
+      "path": "src/obs/10_build_manga_provenance_audit.py",
+      "sha256": "e9279bf6f2561ead49cad374ee0f25dc9898d3ee2dce304184d439e6a68e0358"
+    },
+    {
+      "bytes": 4497,
+      "path": "src/obs/11_build_obs_static_with_sigma_S.py",
+      "sha256": "2e1b0caa83a002e0711f23044ee234857c24feed30ee4523668a56dfe86ce716"
+    },
+    {
+      "bytes": 2345,
+      "path": "src/obs/12_check_manga_downloads.py",
+      "sha256": "62f7f7954f28808cbc6a971ae0ce1bad8e83f7c3400d34d07739776a153057b1"
+    },
+    {
+      "bytes": 3655,
+      "path": "src/obs/13_prepare_manga_runtime_products.py",
+      "sha256": "544dd282781997b8ab790603bd49d0ff8642f8af4b5ab9b3674d73e5aac7d9ae"
+    },
+    {
+      "bytes": 626,
+      "path": "src/obs/14_check_gama_downloads.py",
+      "sha256": "6375c2db692be64cb1f9138fbf32565224173c5f9445e52f8996818bde6fe857"
+    },
+    {
+      "bytes": 1483,
+      "path": "src/obs/15_audit_gama_tables.py",
+      "sha256": "df0072b5208820cb5e98a758cf78acc3b041bef775be9d9d1f7a11cf6b6878f4"
+    },
+    {
+      "bytes": 7322,
+      "path": "src/obs/16_prepare_gama_runtime_products.py",
+      "sha256": "20972c245c776b7d3399a6b8eee823de138963e90b16e06e0f77800e0aceaee2"
+    },
+    {
+      "bytes": 5312,
+      "path": "src/obs/17_build_rebuilt_static_with_sigma_S.py",
+      "sha256": "d6c1f865c8bfd66638cbda4cb92a3a43cec9df7a3be4ce99fdf79b67cad55680"
+    },
+    {
+      "bytes": 774,
+      "path": "src/obs/18_compare_rebuilt_vs_prebuilt.py",
+      "sha256": "322b9b26d3e8deae4991c91b3e45e66d20e6383ee79a75475a61f0a4083d06c6"
+    },
+    {
+      "bytes": 4802,
+      "path": "src/obs/19_audit_rebuilt_rejections.py",
+      "sha256": "8ba653102f8b4f07a346d040b609175af3ebfaad16acf4eb02f73bd4c29b8037"
+    },
+    {
+      "bytes": 7248,
+      "path": "src/obs/20_gama_lambda0_sensitivity.py",
+      "sha256": "7ad194c8c75b0aa68a6f3418de07e82abd958c619685aaab22dd98aef36547b2"
+    },
+    {
+      "bytes": 5286,
+      "path": "src/obs/21_build_rebuilt_static_with_altS.py",
+      "sha256": "0f27192138ecf270703e81a73a41a01d4738b167da16b25cf397a5a21b3e78f6"
+    },
+    {
+      "bytes": 7412,
+      "path": "src/obs/22_build_rebuilt_static_with_custom_HS.py",
+      "sha256": "29cd5273c6f925a0c2e875ea4902ef50b888c562a58441a8557fa7a2c9194240"
+    },
+    {
+      "bytes": 3653,
+      "path": "src/obs/23_audit_class_normalization.py",
+      "sha256": "146e60d4077bb12b8707f4b56901daafdf0e32974a9fd2a437e34bd014a09760"
+    },
+    {
+      "bytes": 3772,
+      "path": "src/obs/24_augment_manga_runtime_from_dap_channels.py",
+      "sha256": "9ede87b5ba7faf40cb15368aa47a4f2ce6c0b5ffbbe97e26434b9e1be1942b94"
+    },
+    {
+      "bytes": 3371,
+      "path": "src/obs/24_extract_manga_dap_channels_full.py",
+      "sha256": "2fd9dc517bd30753aa524af608dca57380781cf421f466e684859a3352d6629c"
+    },
+    {
+      "bytes": 1599,
+      "path": "src/obs/25_build_manga_full_download_runtime.py",
+      "sha256": "ba74a5c1aee0357c959224bb711babc659543ea61f5c2a004a1a43371b8af8de"
+    },
+    {
+      "bytes": 1663,
+      "path": "src/obs/26_attach_manga_legacy_bh_overlay.py",
+      "sha256": "c5b7363cac26692daff73ac16d2f2f00d61e1cf7bae5bc6f2b378472e0156747"
+    },
+    {
+      "bytes": 7150,
+      "path": "src/obs/27_run_gama_baseline_stress_tests.py",
+      "sha256": "c5d5e6fe96fc82be7fdd790dbb830fedb1bb023e7cd04b95976df0396fe74731"
+    },
+    {
+      "bytes": 5629,
+      "path": "src/obs/28_build_manga_ifu_pilot_manifest.py",
+      "sha256": "baa09adb93a0bdde5fbc083fc505e2e5497b647bdb4dbcd7290c58d88f59da83"
+    },
+    {
+      "bytes": 11513,
+      "path": "src/obs/29_extract_manga_maps_features.py",
+      "sha256": "0b23eb57b10fc26f5e540c58647baf77de970927c53f7af1964e4b6c92735b35"
+    },
+    {
+      "bytes": 4928,
+      "path": "src/obs/30_build_manga_ifu_state_vectors.py",
+      "sha256": "f69b983eb908b59c41b09fa4556c0f75f370a5fea2409e53f5d76ac34d3d7c9d"
+    },
+    {
+      "bytes": 3501,
+      "path": "src/obs/31_manga_ifu_variance_scaling.py",
+      "sha256": "a3fd2e2874df9e54b03165c81891f732f69a92a8b185d4b3e624b4bdb74b1432"
+    },
+    {
+      "bytes": 5494,
+      "path": "src/obs/32_manga_ifu_robust_dispersion_scaling.py",
+      "sha256": "513672e06a6b295dc738c4df029367ef045360786850bf6e36b7bc4d446beb34"
+    },
+    {
+      "bytes": 4183,
+      "path": "src/obs/33_manga_ifu_role_permutation_tests.py",
+      "sha256": "7aead64de35e534aa664156d04f2f098ed20c9b94596189bab987c74f800a059"
+    },
+    {
+      "bytes": 2579,
+      "path": "src/obs/34_manga_ifu_bootstrap_summaries.py",
+      "sha256": "2dddad478c14316d28db821c141cf12312168b77da06614b8aafc3caec33a7a6"
+    },
+    {
+      "bytes": 7724,
+      "path": "src/obs/35_build_manga_ifu_expanded_manifest.py",
+      "sha256": "19c247774857525e2a50c6eb9f8fe3bf170152a4f7d2b310a0b8feebceb7b2c4"
+    },
+    {
+      "bytes": 719,
+      "path": "src/obs/36_build_manga_ifu_role_views.py",
+      "sha256": "ab6aefa702aceeb319b33f4fdb7081226742f769fe910008867dd8b356649703"
+    },
+    {
+      "bytes": 3593,
+      "path": "src/obs/37_build_manga_full_parent_manifest.py",
+      "sha256": "436b9d4d098f080850115db0d600066bfe87f7806db10f2005adadd48fd8ae26"
+    },
+    {
+      "bytes": 3756,
+      "path": "src/obs/38_prepare_manga_full_maps_batches.py",
+      "sha256": "7df92728124f0b8839e992bf1eed87056bcde59fc9b671e7152e647643e268d1"
+    },
+    {
+      "bytes": 1996,
+      "path": "src/obs/40_merge_manga_full_maps_batches.py",
+      "sha256": "33b2e62ff2cad566d3d1ce0c5d56c25534a3b007219f30ef5c8c263b613961a3"
+    },
+    {
+      "bytes": 3796,
+      "path": "src/obs/41_manga_full_ifu_variance_scaling.py",
+      "sha256": "78cab6d4d2528549b03f18412e393933b8ba367e139c9d2ba35ba024cab6fdb8"
+    },
+    {
+      "bytes": 5135,
+      "path": "src/obs/42_manga_full_ifu_robust_dispersion_scaling.py",
+      "sha256": "555a61de2ecc56bb9ef17a062b22e00b894a12e3568f7fa50a562eff471af7c4"
+    },
+    {
+      "bytes": 646,
+      "path": "src/obs/43_manga_full_ifu_role_views.py",
+      "sha256": "0f309a3a5cd1271912cc5f22cbf5238665f7be0f80ad33d2187b362211b95a5d"
+    },
+    {
+      "bytes": 3211,
+      "path": "src/obs/44_manga_full_ifu_role_permutation_tests.py",
+      "sha256": "9c4fdf4e6af7c655a12912aa029cf0d549c1339320a66ce56a736a8e311490b2"
+    },
+    {
+      "bytes": 2290,
+      "path": "src/obs/45_manga_full_ifu_bootstrap_summaries.py",
+      "sha256": "7d5b2b4da5fe579b3aa9e9716ae6a714bd75e40abec2f8037a8ef846557ce32f"
+    },
+    {
+      "bytes": 2355,
+      "path": "src/obs/46_audit_manga_full_maps_failures.py",
+      "sha256": "433de6814c017dcc6fc197a7044a7af2d69f9ebb7dd26b27d00510b909caa461"
+    },
+    {
+      "bytes": 5134,
+      "path": "src/obs/47_manga_full_ifu_variance_scaling_clean.py",
+      "sha256": "2a6e683327873d3ed50e988fc7fc41dd7d7f112ffa709874633ac5074c493754"
+    },
+    {
+      "bytes": 2197,
+      "path": "src/obs/48_attach_manga_full_clean_flags.py",
+      "sha256": "74dd08107f1b5e20e06beaacd6d0d4cdebf7db139a8d6c2e5f96326b496fa817"
+    },
+    {
+      "bytes": 3477,
+      "path": "src/obs/49_manga_full_ifu_sensitivity_cuts.py",
+      "sha256": "920a03a4cf1a504fe1cc4e0c0b3587bb664a131e436a474b7f179a380b597532"
+    },
+    {
+      "bytes": 1478,
+      "path": "src/obs/50_manga_full_summary_compare.py",
+      "sha256": "cbb37dfc60cfa50902fc41d8b5aab1c6f6bc067b28b092c30580d85dbe8a843d"
+    },
+    {
+      "bytes": 3139,
+      "path": "src/obs/61_gama_leave_one_bin_out.py",
+      "sha256": "32d450729a4c68eb5163abe8fe613cc894333ad9a81f760a536fd44c73b49701"
+    },
+    {
+      "bytes": 0,
+      "path": "src/obs/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 3217,
+      "path": "src/sim/01_build_tng_static_bh_catalog.py",
+      "sha256": "06327eb664094558bb21948f8f8112666c81ebb00178bb8dbc23a2696e7d1f5d"
+    },
+    {
+      "bytes": 899,
+      "path": "src/sim/02_compute_tng_phi_bh.py",
+      "sha256": "c2c1368e7a4151fa89d104db756d5a61bd99095586357c69af23f0f289c35e54"
+    },
+    {
+      "bytes": 1199,
+      "path": "src/sim/03_define_tng_window.py",
+      "sha256": "d7491f451df0e3d7f61132ae9b79d61268839374256031e12d0d9815212e6672"
+    },
+    {
+      "bytes": 2605,
+      "path": "src/sim/04_tng_variance_scaling.py",
+      "sha256": "988b80e90150c7229cf1306d65c971aab4e496be3e39dfeb485641db5c79dbe3"
+    },
+    {
+      "bytes": 2235,
+      "path": "src/sim/05_extract_bh_time_from_csv.py",
+      "sha256": "cc97e77fcd65a133c7be4de1525875d2bb4bca1c40c43a4f12b2f3f51c89d4aa"
+    },
+    {
+      "bytes": 2407,
+      "path": "src/sim/05_extract_bh_time_from_csv_tier1_hrsm.py",
+      "sha256": "c047edcca4b3c91ad6c5a9f53742f108a18b4de55004e3ed41ab42124cb4a75e"
+    },
+    {
+      "bytes": 2101,
+      "path": "src/sim/05_extract_tng_time_tracks.py",
+      "sha256": "97a869859b2607722055896811a0b2253469f696b76c61261d6dd7138352dede"
+    },
+    {
+      "bytes": 2351,
+      "path": "src/sim/06_compute_bh_time_ripeness_from_csv.py",
+      "sha256": "ef44cdb4ef00fb2fec0f3975498c11e71d09dc4d74861b79d0f53e121feb0361"
+    },
+    {
+      "bytes": 2577,
+      "path": "src/sim/06_compute_bh_time_ripeness_from_csv_tier1_hrsm.py",
+      "sha256": "eff56c1c8604500785a7b8ecefda312b98dd20ffd4b4d4e77e0665833d7060ea"
+    },
+    {
+      "bytes": 2324,
+      "path": "src/sim/06_compute_tng_ripeness.py",
+      "sha256": "31a4ebc4477540a75c73ce4599e86268ef0fa46c7adfd49cd48c7701838480bd"
+    },
+    {
+      "bytes": 3451,
+      "path": "src/sim/07_bh_time_variance_scaling_tier1_hrsm.py",
+      "sha256": "51a028408aac435300ad3d1ee24171ea810024439595075229dd7ddfe310dbe5"
+    },
+    {
+      "bytes": 1292,
+      "path": "src/sim/07_tng_permutation_tests.py",
+      "sha256": "16dd954068c7a7261d204c0702ba14ed42e998c0499c65cb02bcc7e92eb14e5d"
+    },
+    {
+      "bytes": 4744,
+      "path": "src/sim/08_bh_time_diagnostics_tier1_hrsm.py",
+      "sha256": "4ba0c7c5f1528191daf8d4745e84e76ccb563888746c0943a3ab23864b3616f2"
+    },
+    {
+      "bytes": 1391,
+      "path": "src/sim/08_tng_summary_tables.py",
+      "sha256": "f474ae63968742d5f3381f14c1ad071097efa3e46e624f71376d4cd9bc54aa1e"
+    },
+    {
+      "bytes": 3323,
+      "path": "src/sim/09_bh_time_robust_dispersion_scaling.py",
+      "sha256": "0e8856db5e88b47e80de318b2fbc99ac1e56ad77ee7723bcb957230f6cb7f52a"
+    },
+    {
+      "bytes": 6022,
+      "path": "src/sim/51_build_bh_ripeness_rankings.py",
+      "sha256": "775ee951d1cee5719608628d77faf7db5f86353e03fda67def3f93ffe790592e"
+    },
+    {
+      "bytes": 2821,
+      "path": "src/sim/52_bh_ripeness_diagnostics.py",
+      "sha256": "2ab05e6b993d1cfe79ef8312a5647779f1f1a77d5a344ab35cc02a492890a792"
+    },
+    {
+      "bytes": 2822,
+      "path": "src/sim/53_bh_ripeness_sensitivity_suite.py",
+      "sha256": "72d8a891d19b306935cb8ff80588cbe3acd0662dbe414fa6a9d46c3bbab84cfe"
+    },
+    {
+      "bytes": 3885,
+      "path": "src/sim/54_bh_ripeness_component_audit.py",
+      "sha256": "085caa39767ae5c81a0c69bca3e131a12903c19d9887729475894830bd3b1357"
+    },
+    {
+      "bytes": 2833,
+      "path": "src/sim/55_bh_ripeness_leave_one_out_audit.py",
+      "sha256": "60e0b00e75d4cacb31d9efe1dd106427c4fe5308bc14ab51fdd214efd26ee817"
+    },
+    {
+      "bytes": 2123,
+      "path": "src/sim/56_bh_ripeness_decoupling_audit.py",
+      "sha256": "f1812019a1c22acbcfd5c8409b5aef25498186d4bb61d76a62140e6009d7db96"
+    },
+    {
+      "bytes": 4069,
+      "path": "src/sim/57_bh_ripeness_stable_core_overlap.py",
+      "sha256": "375031df343c0df431cb895f5c19eea6941ba2bcf7729410788e4cc9bc9a5fcb"
+    },
+    {
+      "bytes": 3999,
+      "path": "src/sim/58_bh_settlement_residual_audit.py",
+      "sha256": "c6d6fcb399c6cd309d77770e32a9684cee5f082cc1aa7213a795bcdc634b5d33"
+    },
+    {
+      "bytes": 3803,
+      "path": "src/sim/59_bh_ripeness_regime_plots.py",
+      "sha256": "0744bba3b8fbed54d748cff593de05eb827255c5d7f76becfe73488406f1e486"
+    },
+    {
+      "bytes": 2605,
+      "path": "src/sim/60_verify_intermediate_mass_class_gating.py",
+      "sha256": "e7f00bb7dcb0e16e19b9b90015c1a46660d5d3c587acef86e5c006cc18293dc1"
+    },
+    {
+      "bytes": 0,
+      "path": "src/sim/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "src/utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 162,
+      "path": "src/utils/config.py",
+      "sha256": "c80d0327ef82265bf9094bf3cc45d978abaf1fb0b8a729a8f5d543f8acc112c4"
+    }
+  ],
+  "policy": {
+    "memory_activated": false,
+    "missing_evidence_can_pass": false,
+    "recoverability_activated": false,
+    "scientific_inputs_modified": false
+  },
+  "repo_root": "/home/satal/bh_stability_vector_space",
+  "schema_version": 1,
+  "script_version": "1.0.0"
+}

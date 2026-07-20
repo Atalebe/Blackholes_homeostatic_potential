@@ -1,0 +1,23 @@
+{
+  "axis_verdict": "blocked_same_channel",
+  "cadence": {
+    "irregular_fraction": 0.9875,
+    "irregular_tracks": 395,
+    "median_dt_cv": 3.0342365894621977,
+    "n_tracks": 400
+  },
+  "dependence_bridge_verdict": "no_explicit_bh_dependency_bridge",
+  "formula_verdicts": {
+    "gama_d4000_stability": "pass",
+    "gama_sigma_stability": "fail_nonconcordant",
+    "tng_stability": "pass"
+  },
+  "generated_utc": "2026-07-20T00:35:11+00:00",
+  "manifest_sha256": "7b7ee828586978206d6e8ac291da3d0dffb703e3676f7a96d4c07c9c0dbe8f90",
+  "memory_preconditions_satisfied": false,
+  "memory_stage_authorized": false,
+  "reason": "Memory remains a separate frozen generator stage; occupancy is order-invariant and cannot establish M.",
+  "residence_mode": "right_interval_time_weighted",
+  "run_id": "BH-TIER1-VALIDITY-FREEZE-002",
+  "sigma_verdict": "quarantined_numeric_and_target_construction"
+}
