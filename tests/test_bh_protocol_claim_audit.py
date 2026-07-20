@@ -42,4 +42,3 @@ def test_numeric_quarantine_detects_extreme_non_id_value(tmp_path):
     rows = list(csv.DictReader((tmp_path / "outputs/protocol/audits/bh_numeric_quarantine.csv").open()))
     assert any(r["column"] == "slope" and r["reason"] == "extreme_absolute_value" for r in rows)
     assert not any(r["column"] == "bh_id" for r in rows)
-
