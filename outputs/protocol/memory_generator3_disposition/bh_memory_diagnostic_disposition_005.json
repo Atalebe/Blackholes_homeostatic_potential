@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "run_id": "BH-MEMORY-DIAGNOSTIC-DISPOSITION-005",
+  "generated_utc": "2026-07-21T02:13:21.243937+00:00",
+  "status": "posthoc_diagnostic_disposition",
+  "practical_null_excess_floor": 0.01,
+  "ar3_tau005": {
+    "run_id": "BH-MEMORY-GENERATOR3-LADDER-C-LAG3-SCREEN-001",
+    "tau_track_fraction": 0.005,
+    "observed_fractional_improvement": 0.017580901901849,
+    "null_mean_fractional_improvement": 0.006283418723426312,
+    "null_adjusted_order_excess": 0.01129748317842269,
+    "null_q95_fractional_improvement": 0.006575334159105923,
+    "exceedances": 0,
+    "p_one_sided_plus_one": 0.004975124378109453,
+    "practical_floor_pass": true
+  },
+  "ar3_tau002": {
+    "run_id": "BH-MEMORY-GENERATOR3-AR3-TAU002-C-SCREEN-001",
+    "tau_track_fraction": 0.02,
+    "observed_fractional_improvement": 0.009875962863814704,
+    "null_mean_fractional_improvement": 0.006330191082857893,
+    "null_adjusted_order_excess": 0.003545771780956811,
+    "null_q95_fractional_improvement": 0.006575334159105923,
+    "exceedances": 0,
+    "p_one_sided_plus_one": 0.004975124378109453,
+    "practical_floor_pass": false
+  },
+  "verdict": "statistically_detectable_but_scale_fragile_short_scale_order_dependence",
+  "advancing_scale": 0.005,
+  "tau002_disposition": "detectable_but_below_practical_floor",
+  "depth_status": "unresolved_no_fixed_row_lag_claim",
+  "primary_confirmation_unchanged": true,
+  "hrsm_M_status": "candidate_not_admitted",
+  "authorized_claim": "posthoc short-scale order-dependent predictive structure beyond an AR3 baseline",
+  "prohibited_claims": [
+    "confirmatory_beyond_AR3_memory",
+    "physical_memory_timescale",
+    "fixed_lag_4_to_10_support_without_kernel_support_audit",
+    "independent_H_S_axes",
+    "host_galaxy_regulation"
+  ]
+}

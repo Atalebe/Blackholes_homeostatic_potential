@@ -1,0 +1,27 @@
+schema_version: 1
+run_id: BH-MEMORY-GENERATOR3-PHASEA-001
+
+data:
+  track_parquet: outputs/catalogs/bh_time_tracks_phi_from_csv_tier1_hrsm.parquet
+
+columns:
+  id: bh_id
+  time: t
+  signal: lambda_bh_t
+  category: category
+  mass_class: final_mass_class
+
+selection:
+  min_prediction_rows: 10
+
+kernel:
+  tau_track_fractions: [0.02, 0.05, 0.10, 0.20]
+
+splitting:
+  mode: chronological_within_track
+  train_fraction: 0.60
+  validation_fraction: 0.20
+  test_fraction: 0.20
+
+outputs:
+  root: outputs/protocol/memory_generator3

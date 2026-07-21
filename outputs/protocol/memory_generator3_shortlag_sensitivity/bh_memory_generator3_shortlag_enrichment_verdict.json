@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "run_id": "BH-MEMORY-GENERATOR3-SHORTLAG-ENRICH-001",
+  "generated_utc": "2026-07-20T23:23:44.422223+00:00",
+  "status": "posthoc_sensitivity_only",
+  "n_input_rows": 1332993,
+  "n_output_rows": 1332593,
+  "n_tracks": 400,
+  "added_columns": [
+    "lambda_previous",
+    "delta_u_previous"
+  ],
+  "primary_confirmation_unchanged": true,
+  "claim_cap": "diagnostic_short_lag_sensitivity"
+}

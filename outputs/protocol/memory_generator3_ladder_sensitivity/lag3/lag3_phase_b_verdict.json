@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "run_id": "BH-MEMORY-GENERATOR3-LADDER-B-LAG3-001",
+  "generated_utc": "2026-07-21T00:18:05.403726+00:00",
+  "status": "posthoc_sensitivity_only",
+  "candidate_sha256": "17fe7f8a77362edfef31119c337c1b6082310a05203aa6de2287f2e69b8626e6",
+  "baseline_continuous": [
+    "lambda_current",
+    "lambda_previous",
+    "lambda_previous2",
+    "lambda_previous3",
+    "delta_u_next",
+    "delta_u_previous",
+    "delta_u_previous2",
+    "delta_u_previous3"
+  ],
+  "selected_tau_track_fraction": 0.005,
+  "baseline_test_rmse": 0.2801631075564751,
+  "augmented_test_rmse": 0.274864508658962,
+  "fractional_test_improvement": 0.01891255042009776,
+  "bootstrap_ci_fractional_improvement": [
+    0.012972345615340117,
+    0.024148095378037773
+  ],
+  "median_track_fractional_improvement": 0.012327031803809074,
+  "effect_size_gate_pass": true,
+  "phase_c_selection_within_null_authorized": true,
+  "primary_confirmation_unchanged": true,
+  "hrsm_M_status": "candidate_not_admitted"
+}

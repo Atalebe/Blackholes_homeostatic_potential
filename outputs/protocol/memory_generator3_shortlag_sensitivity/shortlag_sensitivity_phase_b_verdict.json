@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "run_id": "BH-MEMORY-GENERATOR3-SHORTLAG-B-001",
+  "generated_utc": "2026-07-20T23:23:51.153825+00:00",
+  "status": "posthoc_sensitivity_only",
+  "candidate_sha256": "eb118ea593be77f44a261b7a82266e02b12fd3c6284b5c2521c9a343947e35d3",
+  "baseline_continuous": [
+    "lambda_current",
+    "lambda_previous",
+    "delta_u_next",
+    "delta_u_previous"
+  ],
+  "selected_tau_track_fraction": 0.005,
+  "baseline_test_rmse": 0.28604486982192867,
+  "augmented_test_rmse": 0.27557105184985614,
+  "fractional_test_improvement": 0.03661599656932421,
+  "bootstrap_ci_fractional_improvement": [
+    0.02675097643138635,
+    0.04571893677677902
+  ],
+  "median_track_fractional_improvement": 0.015130240204289477,
+  "effect_size_gate_pass": true,
+  "phase_c_selection_within_null_authorized": true,
+  "primary_confirmation_unchanged": true,
+  "hrsm_M_status": "candidate_not_admitted"
+}

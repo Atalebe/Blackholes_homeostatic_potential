@@ -1,0 +1,23 @@
+schema_version: 1
+run_id: BH-MEMORY-GENERATOR3-SHORTLAG-C-SCREEN-001
+seed: 12345
+data:
+  candidate_parquet: outputs/protocol/memory_generator3_shortlag_sensitivity/bh_memory_generator3_shortlag_candidates.parquet
+  phase_b_verdict: outputs/protocol/memory_generator3_shortlag_sensitivity/shortlag_sensitivity_phase_b_verdict.json
+columns:
+  id: bh_id
+  order: row_in_track
+  time: u_current
+  signal: lambda_current
+  split: split
+  target: lambda_next
+  current: lambda_current
+  delta_time: delta_u_next
+  category: category
+  mass_class: final_mass_class
+  baseline_continuous: [lambda_current, lambda_previous, delta_u_next, delta_u_previous]
+selection: {tau_track_fractions: [0.005, 0.01, 0.02, 0.05, 0.10, 0.20]}
+model: {family: pooled_linear_ridge, ridge_alpha: 1.0e-6}
+screen: {max_rows_per_split: 100000, n_permutations: 200, progress_every: 10}
+gates: {minimum_fractional_test_improvement: 0.01, screen_alpha: 0.05}
+outputs: {root: outputs/protocol/memory_generator3_shortlag_sensitivity}

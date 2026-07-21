@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "run_id": "BH-MEMORY-GENERATOR3-PHASEC-RECOMPUTE-SCREEN-002",
+  "generated_utc": "2026-07-20T23:00:15.359909+00:00",
+  "null": "permute_lambda_within_track_and_split_then_recompute_all_causal_kernels",
+  "finished_memory_columns_permuted": false,
+  "causal_memory_recomputed_inside_each_null": true,
+  "selection_repeated_inside_each_null": true,
+  "sample_seed": 12345,
+  "n_sample_rows": 300000,
+  "n_sample_tracks": 400,
+  "max_rows_per_split": 100000,
+  "n_permutations": 200,
+  "observed": {
+    "selected_tau_track_fraction": 0.02,
+    "selected_memory_column": "memory_tau_0.02",
+    "baseline_test_rmse": 0.3061127024063909,
+    "augmented_test_rmse": 0.2930639032695933,
+    "fractional_test_improvement": 0.042627434386810166
+  },
+  "null_mean_fractional_improvement": 0.026425236293360667,
+  "null_q95_fractional_improvement": 0.027038413596986652,
+  "exceedances": 0,
+  "p_one_sided_plus_one": 0.004975124378109453,
+  "screen_alpha": 0.05,
+  "screen_pass": true,
+  "phase_c_confirmation_2000_authorized": true,
+  "hrsm_M_status": "candidate_not_admitted",
+  "claim_cap": "exploratory_track_level_self_history",
+  "reason": "Screen passed; freeze this design and run 2000-replicate confirmation."
+}

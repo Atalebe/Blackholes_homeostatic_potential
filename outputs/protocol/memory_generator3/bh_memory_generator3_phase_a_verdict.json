@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "run_id": "BH-MEMORY-GENERATOR3-PHASEA-001",
+  "generated_utc": "2026-07-20T07:42:30.827081+00:00",
+  "input": "outputs/catalogs/bh_time_tracks_phi_from_csv_tier1_hrsm.parquet",
+  "input_sha256": "55fddc3c4ebc8eeb853786eb5e3a41e3c73c93cd15e2cdfb878a805f39beb86d",
+  "generator": "causal_exponential_self_history",
+  "time_coordinate": "within_track_normalized_ordering_coordinate",
+  "physical_timescale_interpretation_authorized": false,
+  "tau_track_fractions": [
+    0.02,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "current_row_excluded_from_memory": true,
+  "future_rows_excluded_from_memory": true,
+  "target": "next_step_lambda_bh_t",
+  "n_input_tracks": 400,
+  "n_candidate_tracks": 400,
+  "n_excluded_tracks": 0,
+  "excluded_track_ids": [],
+  "n_candidate_rows": 1332993,
+  "split_counts": {
+    "train": 799471,
+    "test": 266845,
+    "validation": 266677
+  },
+  "finite_memory_coordinates": true,
+  "phase_a_authorized": true,
+  "phase_b_predictive_comparison_authorized": true,
+  "hrsm_M_status": "candidate_not_admitted",
+  "claim_cap": "exploratory_track_level_self_history",
+  "prohibited_claims": [
+    "confirmatory_HRSM_M",
+    "physical_memory_timescale",
+    "independent_H_S_axes",
+    "host_galaxy_regulation"
+  ]
+}

@@ -1,0 +1,35 @@
+schema_version: 1
+run_id: BH-MEMORY-GENERATOR3-AR3-TAU002-B-SENSITIVITY-001
+seed: 12345
+status: posthoc_sensitivity_only
+primary_confirmation_unchanged: true
+data:
+  candidate_parquet: outputs/protocol/memory_generator3_deeplag_sensitivity/bh_memory_generator3_deeplag_candidates.parquet
+  phase_a_verdict: outputs/protocol/memory_generator3_depth_sensitivity/bh_memory_generator3_phase_a_verdict.json
+columns:
+  id: bh_id
+  split: split
+  target: lambda_next
+  current: lambda_current
+  delta_time: delta_u_next
+  category: category
+  mass_class: final_mass_class
+  baseline_continuous: [lambda_current, lambda_previous, lambda_previous2, lambda_previous3, delta_u_next, delta_u_previous, delta_u_previous2, delta_u_previous3]
+selection:
+  tau_track_fractions: [0.02]
+model:
+  family: pooled_linear_ridge
+  ridge_alpha: 1.0e-6
+bootstrap:
+  unit: bh_id
+  n_resamples: 2000
+  confidence: 0.95
+gates:
+  minimum_fractional_test_improvement: 0.01
+claim:
+  claim_cap: diagnostic_ar3_fixed_tau_scale_robustness
+  hrsm_M_status: candidate_not_admitted
+  physical_timescale_interpretation_authorized: false
+outputs:
+  root: outputs/protocol/memory_generator3_ar3_tau002_sensitivity
+  label: ar3_tau002

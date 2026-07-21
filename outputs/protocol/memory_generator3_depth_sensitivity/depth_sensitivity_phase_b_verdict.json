@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "run_id": "BH-MEMORY-GENERATOR3-DEPTH-SENSITIVITY-B-001",
+  "generated_utc": "2026-07-20T23:23:28.138168+00:00",
+  "status": "posthoc_sensitivity_only",
+  "candidate_sha256": "58633af5b829693e306c97d8e646db64c756c65236be9ce2ea0ff10360c491b4",
+  "baseline_continuous": [
+    "lambda_current",
+    "delta_u_next"
+  ],
+  "selected_tau_track_fraction": 0.005,
+  "baseline_test_rmse": 0.3054124878633219,
+  "augmented_test_rmse": 0.28143133157242123,
+  "fractional_test_improvement": 0.07852054923711153,
+  "bootstrap_ci_fractional_improvement": [
+    0.06051642600040594,
+    0.09449560547209272
+  ],
+  "median_track_fractional_improvement": 0.03500908414412863,
+  "effect_size_gate_pass": true,
+  "phase_c_selection_within_null_authorized": true,
+  "primary_confirmation_unchanged": true,
+  "hrsm_M_status": "candidate_not_admitted"
+}

@@ -1,0 +1,59 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{xurl}
+\title{Protocol Entry 006: Generator 3 Primary Memory Confirmation Closure}
+\author{BH Stability Vector Space Protocol Record}
+\date{2026-07-21}
+\begin{document}
+\maketitle
+
+\section*{Question}
+Does a strictly causal self-history feature improve next-step $\lambda_{\rm bh}$
+prediction beyond the frozen current-state and cadence baseline under a
+selection-aware, within-track null?
+
+\section*{Frozen design}
+The baseline was $[\lambda_t,\Delta u_{t\rightarrow t+1}]$.  The candidate
+grid was $\tau/T\in\{0.02,0.05,0.10,0.20\}$.  Memory was recomputed after
+within-track-and-split permutation and kernel selection was repeated inside
+every null replicate.  The confirmation used 2,000 null replicates and the
+pre-frozen 300,000-row, 400-track sample.
+
+\section*{Result}
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Quantity & Value \\
+\midrule
+Observed fractional RMSE improvement & 0.042627 \\
+Null mean fractional improvement & 0.026412 \\
+Null-adjusted order excess & 0.016215 \\
+Null 95th percentile & 0.027086 \\
+Exceedances & 0/2,000 \\
+Plus-one one-sided $p$ & 0.0004998 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The frozen confirmation passed.  The null-adjusted excess is approximately
+1.62\%, above the declared 1\% practical floor.  Most of the raw improvement
+remains null-preserved denoising and is not labeled memory.
+
+\section*{Adjudication}
+The authorized statement is: \emph{a small order-dependent self-history
+predictive gain exists in the frozen TNG $\lambda$-track primary design beyond
+the current state and cadence baseline}.  This closes the pre-registered
+existence test.  No further permutations of the same design are authorized.
+
+The result does not confirm structure beyond AR(3), identify a physical
+timescale, establish independent H/S axes, establish host regulation, or admit
+HRSM M.  Post-hoc AR(3) diagnostics remain separate and show scale-fragile,
+short-scale order dependence with unresolved fixed-row depth.
+
+\section*{Provenance}
+Raw confirmation SHA-256: \nolinkurl{f3098426b7181802aa7ce9c08ab6411a2ed4d0a8dfb3e37148f30f246cc00c51}\\
+Freeze manifest SHA-256: \nolinkurl{dfbba783a75e02da206ed2c1dc42bf39a1612738fa5dc3c0720e228795901776}
+
+\end{document}

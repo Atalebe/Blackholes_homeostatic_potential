@@ -1,0 +1,2 @@
+tau_track_fraction,memory_column,baseline_validation_rmse,augmented_validation_rmse,fractional_validation_improvement
+0.02,memory_tau_0.02,0.2719685107313611,0.26784499233562575,0.015161749368140498

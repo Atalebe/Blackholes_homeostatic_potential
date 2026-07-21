@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "run_id": "BH-MEMORY-GENERATOR3-AR3-TAU002-B-SENSITIVITY-001",
+  "generated_utc": "2026-07-21T01:53:18.623102+00:00",
+  "status": "posthoc_sensitivity_only",
+  "candidate_sha256": "17fe7f8a77362edfef31119c337c1b6082310a05203aa6de2287f2e69b8626e6",
+  "baseline_continuous": [
+    "lambda_current",
+    "lambda_previous",
+    "lambda_previous2",
+    "lambda_previous3",
+    "delta_u_next",
+    "delta_u_previous",
+    "delta_u_previous2",
+    "delta_u_previous3"
+  ],
+  "selected_tau_track_fraction": 0.02,
+  "baseline_test_rmse": 0.2801631075564751,
+  "augmented_test_rmse": 0.2772759537418872,
+  "fractional_test_improvement": 0.010305260531156614,
+  "bootstrap_ci_fractional_improvement": [
+    0.0050432264341227495,
+    0.014877180281094115
+  ],
+  "median_track_fractional_improvement": 0.014826027302164091,
+  "effect_size_gate_pass": true,
+  "phase_c_selection_within_null_authorized": true,
+  "primary_confirmation_unchanged": true,
+  "hrsm_M_status": "candidate_not_admitted"
+}

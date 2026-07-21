@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "run_id": "BH-MEMORY-GENERATOR3-PHASEC-SCREEN-001",
+  "generated_utc": "2026-07-20T08:26:42.269048+00:00",
+  "null": "shared_nonzero_circular_shift_within_track_and_split",
+  "selection_repeated_inside_each_null": true,
+  "sample_seed": 12345,
+  "n_sample_rows": 300000,
+  "n_sample_tracks": 400,
+  "max_rows_per_split": 100000,
+  "n_permutations": 200,
+  "observed": {
+    "selected_tau_track_fraction": 0.02,
+    "selected_memory_column": "memory_tau_0.02",
+    "baseline_test_rmse": 0.30611070123477113,
+    "augmented_test_rmse": 0.29320743165967683,
+    "fractional_test_improvement": 0.042152298247156536
+  },
+  "null_mean_fractional_improvement": 0.012982167353461714,
+  "null_q95_fractional_improvement": 0.014034882973100751,
+  "exceedances": 0,
+  "p_one_sided_plus_one": 0.004975124378109453,
+  "screen_alpha": 0.05,
+  "screen_pass": true,
+  "phase_c_confirmation_2000_authorized": true,
+  "hrsm_M_status": "candidate_not_admitted",
+  "claim_cap": "exploratory_track_level_self_history",
+  "reason": "Screen passed; freeze this design and run 2000-replicate confirmation."
+}

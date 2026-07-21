@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "run_id": "BH-MEMORY-GENERATOR3-PHASEB-001",
+  "generated_utc": "2026-07-20T07:51:30.053560+00:00",
+  "candidate_sha256": "6d3d31c0ad74f50cad3dc0bab311f65246a8b8f8afaf10cf9845bb3fabaa8eaf",
+  "selection_partition": "validation_only",
+  "selected_tau_track_fraction": 0.02,
+  "selected_memory_column": "memory_tau_0.02",
+  "ridge_alpha": 1e-06,
+  "baseline_validation_rmse": 0.30494802746015376,
+  "selected_augmented_validation_rmse": 0.28378628389188165,
+  "baseline_test_rmse": 0.3054124878633219,
+  "augmented_test_rmse": 0.2922040489678999,
+  "fractional_test_improvement": 0.04324786778637892,
+  "minimum_fractional_test_improvement": 0.01,
+  "bootstrap_confidence": 0.95,
+  "bootstrap_ci_fractional_improvement": [
+    0.02393757855132737,
+    0.06045821086023981
+  ],
+  "median_track_fractional_improvement": 0.028076418781715726,
+  "tracks_positive_improvement": 226,
+  "n_tracks": 400,
+  "effect_size_gate_pass": true,
+  "phase_c_selection_within_null_authorized": true,
+  "hrsm_M_status": "candidate_not_admitted",
+  "claim_cap": "exploratory_track_level_self_history",
+  "reason": "Effect-size screen passed; selection-within-null is required."
+}

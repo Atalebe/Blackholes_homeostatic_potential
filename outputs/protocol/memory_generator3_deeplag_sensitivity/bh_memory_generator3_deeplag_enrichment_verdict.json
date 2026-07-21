@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "run_id": "BH-MEMORY-GENERATOR3-DEEPLAG-ENRICH-001",
+  "generated_utc": "2026-07-21T00:16:06.399652+00:00",
+  "status": "posthoc_sensitivity_only",
+  "source": "outputs/protocol/memory_generator3_depth_sensitivity/bh_memory_generator3_candidates.parquet",
+  "n_input_rows": 1332993,
+  "n_output_rows": 1331793,
+  "expected_row_loss": 1200,
+  "observed_row_loss": 1200,
+  "n_tracks": 400,
+  "lags": [
+    1,
+    2,
+    3
+  ],
+  "primary_confirmation_unchanged": true,
+  "claim_cap": "diagnostic_ar_lag_ladder"
+}

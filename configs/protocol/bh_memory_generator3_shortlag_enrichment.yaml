@@ -1,0 +1,5 @@
+schema_version: 1
+run_id: BH-MEMORY-GENERATOR3-SHORTLAG-ENRICH-001
+data: {candidate_parquet: outputs/protocol/memory_generator3_depth_sensitivity/bh_memory_generator3_candidates.parquet}
+columns: {id: bh_id, order: row_in_track, current: lambda_current, delta_time: delta_u_next}
+outputs: {root: outputs/protocol/memory_generator3_shortlag_sensitivity}
