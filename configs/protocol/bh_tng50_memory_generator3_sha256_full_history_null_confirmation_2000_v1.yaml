@@ -1,0 +1,44 @@
+schema_version: 1
+run_id: BH-TNG50-MEMORY-GENERATOR3-SHA256-FULL-HISTORY-NULL-CONFIRMATION-2000-028
+seed: 12345
+data:
+  raw_track_parquet: outputs/catalogs/tng50_bh_memory_external_tracks_sha256_split.parquet
+  candidate_parquet: outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_memory_generator3_candidates.parquet
+  phase_b_verdict: outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_memory_generator3_sha256_phase_b_verdict.json
+columns:
+  id: bh_id
+  raw_time: t
+  raw_signal: lambda_bh_t
+  order: row_in_track
+  candidate_time: t_current
+  split: split
+  target: lambda_next
+  current: lambda_current
+  delta_time: delta_u_next
+  category: category
+  mass_class: final_mass_class
+selection:
+  tau_track_fractions: [0.02, 0.05, 0.1, 0.2]
+model:
+  family: pooled_linear_ridge
+  ridge_alpha: 1.0e-06
+screen:
+  complete_tracks_per_split: 400
+  split_order: [train, validation, test]
+  n_permutations: 2000
+  progress_every: 50
+gates:
+  minimum_fractional_test_improvement: 0.01
+  screen_alpha: 0.05
+null_design:
+  evaluation_unit: complete_bh_track
+  track_selection_uses: id_and_canonical_hash_split_only
+  permutation_unit: raw_signal_within_complete_bh_track
+  recompute_history: complete_raw_track
+  initial_seed_row_included: true
+  terminal_target_only_row_permuted: false
+  selection_repeated_inside_each_null: true
+outputs:
+  root: outputs/protocol/tng50_memory_generator3_sha256_split/full_history_null_confirmation_2000
+  label: bh_tng50_memory_generator3_sha256_full_history_null_confirmation_2000
+

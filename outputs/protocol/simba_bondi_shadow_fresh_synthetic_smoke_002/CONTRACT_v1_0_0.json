@@ -1,0 +1,1024 @@
+{
+  "adopted_dependency_contract": {
+    "path": "outputs/protocol/simba_bondi_shadow_phase_b_dependency_amendment_001/ADOPTED_DEPENDENCY_CONTRACT_v1_0_0.json",
+    "sha256": "b76b98a50b0ce6b401f758b95a2cfc390845f297ae416e175d136ac14fe8c1b7"
+  },
+  "adopted_support_contract": {
+    "path": "outputs/protocol/simba_bondi_shadow_synthetic_support_amendment_001/ADOPTED_SUPPORT_CONTRACT_v1_0_0.json",
+    "sha256": "ab002fd519d53fdc3ccdf6a0f837d1fd1092409224fab6f2c398716e3566584c"
+  },
+  "basis": {
+    "canonical_replacements": 6,
+    "installation_commit_receipt_sha256": "dbe35f1c77ce11b2c73e09ce5c2016807d817c345b6789f205844388d4dccb5c",
+    "installation_plan_receipt_sha256": "0ea569d0641ecbfa546434e35a3b3b73710f607e9340d7c40d578939870ed8b3",
+    "installation_report_filename": "BH_SIMBA_Bondi_Shadow_Phase_B_Dependency_Six_File_Installation_v1_5zzb_REPORT_20260920T084722Z_237f6a33.zip",
+    "installation_report_sha256": "16882299570bfed11685e3ada14bae8e5ab8b21c04fc2c0c5118ecaa492f2e63",
+    "installation_result_receipt_sha256": "2550818de47577fba38b5b277b7517beff93b3155951392118bab247e7a9155c",
+    "installation_rollback_rehearsal_receipt_sha256": "557b117ad5d499d1eb05905f7997587327e216081a4958eaabdbd6450e1d6962"
+  },
+  "contract_id": "BH-SIMBA-FRESH-SYNTHETIC-SMOKE-002",
+  "deferred_gate_pins": {
+    "adjudication": {
+      "module": "scripts/364_adjudicate_simba_bondi_shadow_translation.py",
+      "sha256": "43ce299021563cc969d853614e98d702b1247b46f42bdbb22a4aaa9f341dca09"
+    },
+    "matrix": {
+      "module": "scripts/363_execute_simba_tng_shadow_translation_matrix.py",
+      "sha256": "e5a9c800f51ccc0f701fbb7b864766aef596aeec0a718362001965f02e057e1e"
+    },
+    "route_closure": {
+      "module": "scripts/365_freeze_simba_bondi_shadow_cli_manifest_route.py",
+      "sha256": "6caea297fe7aeb44c5fc7ad8f7279e2100defefe3829065fad40c2d7c6e35566"
+    }
+  },
+  "execution_authorized_now": false,
+  "future_executor_required_flag": "--authorize-fresh-synthetic-smoke-002-only",
+  "gate_plan": [
+    {
+      "fresh_run_id": "BH-SIMBA-FRESH-SYNTHETIC-SMOKE-002-DESIGN-v1.0.0",
+      "mode": "fresh_no_stage_execution",
+      "module": "scripts/359_freeze_simba_tng_shadow_exact_binding_repair_design.py",
+      "module_sha256": "d68f55811932cb7d27907a34749b407b5a4503f95c7ff451f39d9a61f405e4f7",
+      "role": "design"
+    },
+    {
+      "fresh_run_id": "BH-SIMBA-FRESH-SYNTHETIC-SMOKE-002-PREFLIGHT-v1.0.0",
+      "mode": "fresh_construction_only",
+      "module": "scripts/360_preflight_simba_tng_shadow_exact_binding_concordance.py",
+      "module_sha256": "5a9f3e28f240e23ffa581bfbaaa64805d75244fb5bb65420ec5373b2835918a0",
+      "role": "preflight"
+    },
+    {
+      "fresh_run_id": "BH-SIMBA-FRESH-SYNTHETIC-SMOKE-002-SMOKE-v1.0.0",
+      "mode": "conditional_four_exact_stages",
+      "module": "scripts/361_execute_simba_tng_shadow_sequential_smoke.py",
+      "module_sha256": "76137fc05cddbfe1d453e3fe605c8f8f314c95d15da93102a9338fc7afc32cc7",
+      "role": "zero_offset_smoke"
+    },
+    {
+      "fresh_run_id": "BH-SIMBA-FRESH-SYNTHETIC-SMOKE-002-SMOKE-ACCEPTANCE-v1.0.0",
+      "mode": "receipt_acceptance_only",
+      "module": "scripts/362_freeze_simba_tng_shadow_smoke_acceptance.py",
+      "module_sha256": "4d1a4ef57f43ebd8aff6d6f83332dd5df166b2f936bc7ad3ef8c08b71e158817",
+      "role": "smoke_acceptance"
+    }
+  ],
+  "installed_file_pins": {
+    "configs/protocol/bh_simba_bondi_shadow_exact_binding_source_state_lifecycle_recovery_v1_4.json": "bb21fca00478146d127983683467743ede596d596e619e59e0a4a1353e700a65",
+    "run_bh_simba_bondi_shadow_exact_binding_source_state_lifecycle_recovery_no_exit.sh": "cbefe9f6acefc4808d716f998f8d88c3f8ef9e70a1e8df6a49a31a07f1e72881",
+    "scripts/359_freeze_simba_tng_shadow_exact_binding_repair_design.py": "d68f55811932cb7d27907a34749b407b5a4503f95c7ff451f39d9a61f405e4f7",
+    "scripts/364_adjudicate_simba_bondi_shadow_translation.py": "43ce299021563cc969d853614e98d702b1247b46f42bdbb22a4aaa9f341dca09",
+    "scripts/bh_simba_shadow_exact_binding_source_state_lifecycle_recovery_v1_4.py": "1869e5eeca1620ae30f46756d204de5630ff0b9d7fe3f3e79cb59838086529bb",
+    "tests/test_bh_simba_bondi_shadow_exact_binding_source_state_lifecycle_recovery.py": "c4c8fd35f93e4cd9aa2ade7bbbad9294661e136c5100fd93ed00bda15c179706"
+  },
+  "installed_gate_pins": {
+    "scripts/359_freeze_simba_tng_shadow_exact_binding_repair_design.py": "d68f55811932cb7d27907a34749b407b5a4503f95c7ff451f39d9a61f405e4f7",
+    "scripts/360_preflight_simba_tng_shadow_exact_binding_concordance.py": "5a9f3e28f240e23ffa581bfbaaa64805d75244fb5bb65420ec5373b2835918a0",
+    "scripts/361_execute_simba_tng_shadow_sequential_smoke.py": "76137fc05cddbfe1d453e3fe605c8f8f314c95d15da93102a9338fc7afc32cc7",
+    "scripts/362_freeze_simba_tng_shadow_smoke_acceptance.py": "4d1a4ef57f43ebd8aff6d6f83332dd5df166b2f936bc7ad3ef8c08b71e158817",
+    "scripts/363_execute_simba_tng_shadow_translation_matrix.py": "e5a9c800f51ccc0f701fbb7b864766aef596aeec0a718362001965f02e057e1e",
+    "scripts/364_adjudicate_simba_bondi_shadow_translation.py": "43ce299021563cc969d853614e98d702b1247b46f42bdbb22a4aaa9f341dca09",
+    "scripts/365_freeze_simba_bondi_shadow_cli_manifest_route.py": "6caea297fe7aeb44c5fc7ad8f7279e2100defefe3829065fad40c2d7c6e35566"
+  },
+  "mandatory_execution_prerequisites": [
+    "separate reviewed smoke-002 executor bundle and explicit smoke-002 invocation flag",
+    "live six-file installed poststate, all protected dependencies, adopted support/dependency contracts and installation transaction reverified",
+    "fresh versioned design and preflight receipts for BH-SIMBA-FRESH-SYNTHETIC-SMOKE-002; no old R3A/R4A or smoke-001 receipt may substitute",
+    "fresh artifact namespace absent; no replacement, quarantine, reuse or deletion of historical evidence",
+    "stage order fixed; each stage requires all prior lifecycle and manifest checks, no retry or parameter change",
+    "phase-B binding must emit the exact v2 three-mutation receipt including declared parent dependency sha256 refresh",
+    "exactly two declared post-stage binding receipts remain required downstream",
+    "full stdout/stderr and first failure retained; no downstream continuation after a HOLD",
+    "no network, no real SIMBA reads, no kernel/model guard changes, no post hoc row or parameter selection",
+    "final protected-state equality and uniquely named closed-log report on PASS or HOLD"
+  ],
+  "maximum_conditional_scope": {
+    "adjudication_execution_authorized": false,
+    "allowed_stages": [
+      "generator3_phase_b",
+      "generator3_null_screen",
+      "generator3_null_confirmation_2000",
+      "generator4_pooled_innovation_screen"
+    ],
+    "data": "new isolated synthetic shadow only; never historical science tables or real SIMBA data",
+    "declared_dependency_refresh_required": true,
+    "frozen_later_offset_grid_not_authorized_by_this_contract": [
+      -12.5,
+      -3.0,
+      0.0,
+      7.25,
+      20.0
+    ],
+    "matrix_execution_authorized": false,
+    "maximum_stage_invocations": 4,
+    "model_fits_and_scores": "only those performed by the exact frozen stage executors during the separately authorized synthetic smoke",
+    "offsets": [
+      0.0
+    ],
+    "per_stage_timeout_seconds": 900,
+    "retries_per_stage": 0,
+    "route_closure_execution_authorized": false,
+    "run_gate_365_or_write_entry_128": false,
+    "run_old_route_runner": false,
+    "runtime_binding_receipt_schema_version": 2,
+    "runtime_binding_schema_version": 2,
+    "seed": 200703
+  },
+  "pending_after_registration": [
+    "prepare and independently validate a fresh smoke-002 executor bundle consuming this exact contract",
+    "obtain explicit smoke-002 execution authorization and recompute new design/preflight before any stage invocation",
+    "matrix, adjudication, route closure, Entry 128, Git/logbook writes and scientific interpretation remain unauthorized"
+  ],
+  "previous_consumed_smoke_namespace": {
+    "contract_id": "BH-SIMBA-FRESH-SYNTHETIC-SMOKE-001",
+    "execution_receipt_sha256": "06669b5519eb852c2549f3c5d1bfacf548ab7cb9961506a796ab984fc0a2be6f",
+    "execution_report_filename": "BH_SIMBA_Bondi_Shadow_Fresh_Synthetic_Smoke_Execution_v1_5zl_REPORT_20260917T001127Z_ee4a38ce.zip",
+    "execution_report_sha256": "ed8faf8a57fe1baf112fff0a903004f8881506469c9c73ee52ef9fdd251ae95c",
+    "execution_status": "HOLD_FRESH_SYNTHETIC_SMOKE",
+    "reuse_forbidden": true
+  },
+  "production_execution_authorized": false,
+  "receipt_sha256": "f64186988e7af57579050defc200f9d1b680fd294b4231f73c2f2c7eb0382c6b",
+  "registration_authorization_flag": "--register-fresh-synthetic-smoke-002-contract-only",
+  "route_artifact_directory": "outputs/protocol/simba_bondi_shadow_fresh_synthetic_smoke_002/artifacts_v1_0_0",
+  "route_config": {
+    "acceptance_run_id": "BH-SIMBA-FRESH-SYNTHETIC-SMOKE-002-SMOKE-ACCEPTANCE-v1.0.0",
+    "adjudication_live_replay": {
+      "attestation_limit": "integrity_and_honest_code_execution_evidence_not_adversarial_process_attestation",
+      "expected_actual_executor_invocations": 20,
+      "expected_fresh_temporary_shadows": 5,
+      "run_offset_module": "scripts/bh_simba_shadow_exact_binding_source_state_lifecycle_recovery_v1_4.py",
+      "run_offset_module_sha256": "1869e5eeca1620ae30f46756d204de5630ff0b9d7fe3f3e79cb59838086529bb",
+      "schema_version": 1
+    },
+    "adjudication_run_id": "BH-SIMBA-FRESH-SYNTHETIC-SMOKE-002-ADJUDICATION-DEFERRED-v1.0.0",
+    "authority_resolution": {
+      "absolute_paths_forbidden": true,
+      "all_claims_inventory_required": true,
+      "allowed_non_primary_static_paths": [
+        "outputs/protocol/memory_admission_design_freeze/bh_memory_admission_design_freeze_manifest.json",
+        "outputs/protocol/tng50_canonical_hash_split_repair/bh_tng50_canonical_hash_split_repair_verdict.json",
+        "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_canonical_generator3_closure.json",
+        "outputs/protocol/tng50_memory_generator4_pooled_innovation/bh_tng50_memory_generator4_canonical_wiring_failure.json",
+        "scripts/46_screen_bh_memory_generator3_selection_null.py"
+      ],
+      "canonical_digest_algorithm": "sha256_of_utf8_canonical_json_sort_keys_compact_separators",
+      "declared_generated_record_policy": "defer_to_declared_lifecycle",
+      "known_prior_first_conflict_path": "scripts/85_screen_tng50_canonical_generator3_full_history_null.py",
+      "non_primary_claim_policy": "require_unanimous_digest_and_matching_contained_regular_source",
+      "non_primary_digest_conflict_policy": "fatal_after_complete_inventory",
+      "primary_claim_conflict_policy": "fatal",
+      "primary_claim_kinds": [
+        "exact_source",
+        "stage_executor",
+        "stage_config",
+        "stage_manifest"
+      ],
+      "primary_manifest_record_disagreement_policy": "select_validated_primary_and_receipt_shadow_translation",
+      "primary_observed_digest_mismatch_policy": "fatal",
+      "record_before_and_after_values": true,
+      "schema_specific_config_integrity_bindings": [
+        {
+          "algorithm": "sha256",
+          "binding_id": "generator4_exact_g3_track_plan_sha256_v1",
+          "consumer_proof": "pinned_executor_ast_same_path_sha256_guard",
+          "digest_dotted_key": "screen.exact_g3_track_plan_sha256",
+          "path_dotted_key": "data.canonical_g3_track_plan",
+          "schema_version": 1,
+          "stage": "generator4_pooled_innovation_screen"
+        }
+      ],
+      "schema_version": 1,
+      "source_manifests_immutable": true,
+      "synthetic_record_policy": "defer_to_authorized_synthetic_construction",
+      "wall_clock_fields_forbidden": true
+    },
+    "bundle_version": "1.4",
+    "claim_cap": "synthetic_only_exact_TNG_CLI_manifest_interface_and_selected_observable_admission_sensitivity_to_tested_latent_signal_offsets_with_writer_semantics_physical_units_population_equivalence_SIMBA_coordinate_tracks_zero_policy_adapter_and_scientific_memory_execution_closed",
+    "cli_repair_design_run_id": "BH-SIMBA-FRESH-SYNTHETIC-SMOKE-002-DESIGN-v1.0.0",
+    "exact_sources": {
+      "scripts/84_run_tng50_canonical_generator3_phase_b.py": "bd4d2abee49683804f86f3313c7867eb667aa15e51791b7e8257200e1fe8d684",
+      "scripts/85_screen_tng50_canonical_generator3_full_history_null.py": "0fd976cc6a0955bb84182b1e99d1ca8d363ea489257f1880f335d8eef8418fe1",
+      "scripts/89_screen_tng50_memory_generator4_pooled_innovation.py": "9eb669cd2684e544d228f8d8d71a3fe51154977d84a4ea232e522a719ff9d4b8",
+      "src/core/causal_memory.py": "871a77690c0d39dd88a888c53a868200ce754fa1f78eaa01cc08e94daf537d76",
+      "src/core/innovation_memory.py": "6e82ca529896de10e5b18bdc166597577018d30aa1c2ec81173920a999087244",
+      "src/core/memory_nulls.py": "e5fd52e4bee13a710d0b24b63249599495c5380c55048eeeacfe5512612d1afb",
+      "src/core/predictive_memory.py": "041ae4802059af87d7b1a99bdc9bbaad564543424c4ea55f6e0f33ad23695625"
+    },
+    "execution_authorizations": {
+      "SIMBA_adapter": false,
+      "SIMBA_coordinate": false,
+      "SIMBA_scientific_payload": false,
+      "SIMBA_tracks": false,
+      "construct_temporary_synthetic_shadow": true,
+      "execute_full_exact_stage_matrix_only_after_smoke_acceptance": true,
+      "execute_zero_offset_four_stage_smoke_on_synthetic_only": true,
+      "matrix_requires_current_217c_r3_pass": true,
+      "network": false,
+      "r4_requires_current_r3a_pass": true,
+      "raw_SIMBA_values": false,
+      "read_hash_pinned_local_source_config_and_manifest": true,
+      "read_protocol_artifacts": true,
+      "scientific_memory_generator_execution": false,
+      "scope_kind": "maximum_conditional_scope_not_live_authorization",
+      "smoke_requires_current_r4a_pass": true,
+      "zero_policy": false
+    },
+    "expected_prior": {
+      "run_214_failure_class": "argument_or_cli_contract",
+      "run_214_id": "BH-SIMBA-TNG-SHADOW-REBINDING-DIAGNOSIS-FREEZE-214",
+      "run_214_inventory_sha256": "4973930eff911bd07371b772629f37839d250cc1f7efd94ae280063d8b970cca",
+      "run_215_id": "BH-SIMBA-TNG-SHADOW-INTERFACE-CLOSURE-INVENTORY-215",
+      "run_215_inventory_sha256": "e742cd4a8cb3f0e252322d14d8bb20f2a4127f88643c218b8367619a803a4db1",
+      "run_216_id": "BH-SIMBA-TNG-SHADOW-REBINDING-REPAIR-CONTRACT-216",
+      "run_217_attempted": 1,
+      "run_217_disposition": "synthetic_interface_hold",
+      "run_217_hold_reason": "zero_offset_generator3_phase_b_hold:return_code_2",
+      "run_217_id": "BH-SIMBA-TNG-SHADOW-ZERO-OFFSET-BASELINE-217",
+      "run_217_results_sha256": "2660c0383b0e961cc7270dd188c146d4018aaecc8ae21ef5f431138dabfd9c0f",
+      "run_217_successful": 0
+    },
+    "failed_run_217A": {
+      "disposition": "immutable_failed_prerequisite_not_overwritten",
+      "evidence": "outputs/protocol/simba_bondi_shadow_cli_manifest_repair/bh_simba_tng_shadow_manifest_concordance_preflight_217A.csv",
+      "evidence_sha256": "f5cf87cbfc2d7ee26c7ac4b5962121ff577d376a6848b5e7dcbea90063aafcef",
+      "expected_evidence": {
+        "preexisting_concordant_row_count": 7,
+        "row_count": 9,
+        "runtime_target_binding_count": 2,
+        "runtime_target_declared_only_in_confirmation_template_count": 1,
+        "runtime_target_missing_from_shared_manifest_count": 1
+      },
+      "expected_fields": {
+        "checks": {
+          "all_required_bindings_inventoried": true,
+          "all_static_inputs_exist_and_match_manifest": true,
+          "historical_authorities_unchanged": true,
+          "runtime_phase_b_products_are_declared_manifest_records": false,
+          "shadow_constructed_without_error": true,
+          "temporary_shadow_removed": true
+        },
+        "claim_cap": "synthetic_only_exact_TNG_CLI_manifest_interface_and_additive_translation_sensitivity_with_writer_semantics_physical_units_population_equivalence_SIMBA_coordinate_tracks_zero_policy_adapter_and_scientific_memory_execution_closed",
+        "construction_error": null,
+        "manifest_concordance_preflight_pass": false,
+        "next_gate": "hold_manifest_config_concordance_preflight",
+        "preexisting_concordant_count": 7,
+        "required_binding_count": 9,
+        "run_id": "BH-SIMBA-TNG-SHADOW-MANIFEST-CONCORDANCE-PREFLIGHT-217A",
+        "runtime_upstream_product_pending_count": 1,
+        "schema_version": 1,
+        "shadow_audit": {
+          "shadow_manifest_integrity_mutation_count": 15,
+          "synthetic_row_count": 38400
+        }
+      },
+      "verdict": "outputs/protocol/simba_bondi_shadow_cli_manifest_repair/bh_simba_tng_shadow_manifest_concordance_preflight_217A.json",
+      "verdict_sha256": "69e61ee83341b66874c9986de5c02677756f5ecfd732aa5074c2d5274adb639b"
+    },
+    "final_route_run_id": "BH-SIMBA-FRESH-SYNTHETIC-SMOKE-002-CLOSURE-DEFERRED-v1.0.0",
+    "inputs": {
+      "prior_release_field_verdict": "outputs/protocol/simba_bondi_adapter_field_identity/bh_simba_bondi_release_rooted_field_identity_verdict_209.json",
+      "run_214_diagnostic": "outputs/protocol/simba_bondi_shadow_rebinding_repair/bh_simba_tng_shadow_rebinding_diagnostic_freeze_214.json",
+      "run_214_inventory": "outputs/protocol/simba_bondi_shadow_rebinding_repair/bh_simba_tng_shadow_rebinding_diagnostic_214.csv",
+      "run_215_closure": "outputs/protocol/simba_bondi_shadow_rebinding_repair/bh_simba_tng_shadow_interface_closure_verdict_215.json",
+      "run_215_inventory": "outputs/protocol/simba_bondi_shadow_rebinding_repair/bh_simba_tng_shadow_interface_closure_inventory_215.csv",
+      "run_216_contract": "outputs/protocol/simba_bondi_shadow_rebinding_repair/bh_simba_tng_shadow_rebinding_repair_contract_216.json",
+      "run_217_baseline": "outputs/protocol/simba_bondi_shadow_rebinding_repair/bh_simba_tng_shadow_zero_offset_baseline_verdict_217.json",
+      "run_217_results": "outputs/protocol/simba_bondi_shadow_rebinding_repair/bh_simba_tng_shadow_zero_offset_baseline_results_217.csv"
+    },
+    "manifest_preflight_run_id": "BH-SIMBA-FRESH-SYNTHETIC-SMOKE-002-PREFLIGHT-v1.0.0",
+    "matrix_run_id": "BH-SIMBA-FRESH-SYNTHETIC-SMOKE-002-MATRIX-DEFERRED-v1.0.0",
+    "outputs": {
+      "acceptance_verdict": "smoke_acceptance_v1_0_0.json",
+      "adjudication_evidence": "DEFERRED_adjudication_evidence_v1_0_0.csv",
+      "adjudication_verdict": "DEFERRED_adjudication_v1_0_0.json",
+      "design_inventory": "design_inventory_v1_0_0.csv",
+      "design_verdict": "design_v1_0_0.json",
+      "directory": "outputs/protocol/simba_bondi_shadow_fresh_synthetic_smoke_002/artifacts_v1_0_0",
+      "final_route": "DEFERRED_route_closure_v1_0_0.json",
+      "matrix_results": "DEFERRED_matrix_results_v1_0_0.csv",
+      "matrix_verdict": "DEFERRED_matrix_v1_0_0.json",
+      "preflight_evidence": "preflight_evidence_v1_0_0.csv",
+      "preflight_verdict": "preflight_v1_0_0.json",
+      "protocol_entry": "outputs/protocol/simba_bondi_shadow_fresh_synthetic_smoke_002/artifacts_v1_0_0/FORBIDDEN_entry_128_NOT_AUTHORIZED.tex",
+      "smoke_results": "smoke_results_v1_0_0.csv",
+      "smoke_verdict": "smoke_v1_0_0.json"
+    },
+    "prior_attempt_custody": {
+      "accepted_downstream_stage_invocations": 0,
+      "artifacts": {
+        "outputs/protocol/simba_bondi_shadow_cli_manifest_repair_v1_2/bh_simba_tng_shadow_runtime_manifest_binding_preflight_217A_R2.csv": {
+          "sha256": "8608f823736b1a0e5d53a5dbb4f0fb8a2991b2f9f8d82e12f96c685576e57236"
+        },
+        "outputs/protocol/simba_bondi_shadow_cli_manifest_repair_v1_2/bh_simba_tng_shadow_runtime_manifest_binding_preflight_217A_R2.json": {
+          "sha256": "989f542252a407e5535d639cf20b6a9609de30a42f513228f834045a99b79cc4"
+        },
+        "outputs/protocol/simba_bondi_shadow_cli_manifest_repair_v1_2/bh_simba_tng_shadow_runtime_manifest_lifecycle_freeze_217A_R1.json": {
+          "sha256": "b1ecf67e4589c68cc64139e5cf4ab94c28d02a0bce2bb9fea5aa668d78db0b63"
+        },
+        "outputs/protocol/simba_bondi_shadow_cli_manifest_repair_v1_2/bh_simba_tng_shadow_runtime_manifest_lifecycle_inventory_217A_R1.csv": {
+          "sha256": "04235363a559d838ae2b88be5abf34370794bfea7f50f37edcbc5cf16491ab20"
+        }
+      },
+      "bundle_sha256": "f29663e340a0e87651fd2ad5245216db23ec31fd0d4555afbab7edcaf1302588",
+      "bundle_version": "1.2",
+      "design_inventory": "outputs/protocol/simba_bondi_shadow_cli_manifest_repair_v1_2/bh_simba_tng_shadow_runtime_manifest_lifecycle_inventory_217A_R1.csv",
+      "design_verdict": "outputs/protocol/simba_bondi_shadow_cli_manifest_repair_v1_2/bh_simba_tng_shadow_runtime_manifest_lifecycle_freeze_217A_R1.json",
+      "disposition": "immutable_failed_prerequisite_not_overwritten",
+      "expected_design_fields": {
+        "lifecycle_repair_design_freeze_pass": true,
+        "next_gate": "preflight_runtime_manifest_lifecycle_and_full_executor_manifest_closure",
+        "run_id": "BH-SIMBA-TNG-SHADOW-RUNTIME-MANIFEST-LIFECYCLE-FREEZE-217A-R1",
+        "schema_version": 2,
+        "scientific_design_changed": false,
+        "scientific_execution_authorized": false,
+        "stage_count": 4,
+        "unique_executor_count": 3,
+        "unique_manifest_count": 3
+      },
+      "expected_preflight_evidence_rows": 0,
+      "expected_preflight_fields": {
+        "construction_error": "RuntimeError:cross_manifest_digest_conflict:scripts/85_screen_tng50_canonical_generator3_full_history_null.py",
+        "executor_manifest_count": 0,
+        "manifest_concordance_preflight_pass": false,
+        "manifest_file_digest_match_count": 0,
+        "manifest_file_record_count": 0,
+        "next_gate": "hold_runtime_manifest_lifecycle_preflight",
+        "run_id": "BH-SIMBA-TNG-SHADOW-RUNTIME-MANIFEST-BINDING-PREFLIGHT-217A-R2",
+        "runtime_manifest_preflight_pass": false,
+        "schema_version": 2,
+        "scientific_execution_authorized": false,
+        "scientific_parameter_changed": false
+      },
+      "preflight_evidence": "outputs/protocol/simba_bondi_shadow_cli_manifest_repair_v1_2/bh_simba_tng_shadow_runtime_manifest_binding_preflight_217A_R2.csv",
+      "preflight_verdict": "outputs/protocol/simba_bondi_shadow_cli_manifest_repair_v1_2/bh_simba_tng_shadow_runtime_manifest_binding_preflight_217A_R2.json",
+      "protocol_entry_written": false
+    },
+    "prior_v1_3_attempt_custody": {
+      "accepted_downstream_stage_invocations": 0,
+      "artifacts": {
+        "outputs/protocol/simba_bondi_shadow_cli_manifest_repair_v1_3/bh_simba_tng_shadow_cross_manifest_authority_freeze_217A_R3.json": {
+          "sha256": "501ba3581957ba01c4580877e33bee972a4bd6b9e01e0dded01b2a14360ea90e"
+        },
+        "outputs/protocol/simba_bondi_shadow_cli_manifest_repair_v1_3/bh_simba_tng_shadow_cross_manifest_authority_inventory_217A_R3.csv": {
+          "sha256": "f3cfc773798d9bf34110c2a3b17760475ec0373a2932249f9e130a1f0b773b38"
+        }
+      },
+      "bundle_sha256": "229f4fc33fa6cafc3ff9e7476bc02e8770d705aa6e43833d162366d75d71fa2c",
+      "bundle_version": "1.3",
+      "design_inventory": "outputs/protocol/simba_bondi_shadow_cli_manifest_repair_v1_3/bh_simba_tng_shadow_cross_manifest_authority_inventory_217A_R3.csv",
+      "design_verdict": "outputs/protocol/simba_bondi_shadow_cli_manifest_repair_v1_3/bh_simba_tng_shadow_cross_manifest_authority_freeze_217A_R3.json",
+      "disposition": "immutable_failed_prerequisite_not_overwritten",
+      "expected_design_fields": {
+        "authority_resolution_error": "RuntimeError:unsupported_or_orphan_sibling_integrity_fields:$.screen:exact_g3_track_plan_sha256",
+        "checks": {
+          "all_stage_authorities_current": true,
+          "all_ten_exact_sources_current": false,
+          "runtime_binding_lifecycle_schema_exact": false
+        },
+        "cli_repair_design_freeze_pass": false,
+        "lifecycle_repair_design_freeze_pass": false,
+        "next_gate": "hold_lifecycle_repair_design_authority_failure",
+        "run_id": "BH-SIMBA-TNG-SHADOW-CROSS-MANIFEST-AUTHORITY-FREEZE-217A-R3",
+        "schema_version": 2,
+        "scientific_execution_authorized": false
+      },
+      "protocol_entry_written": false
+    },
+    "release_field_authority": {
+      "exact_expected_bondi_storage_field_resolved": true,
+      "expected_bondi_physical_semantics_resolved": false,
+      "files": {
+        "outputs/protocol/simba_bondi_adapter_field_identity/bh_simba_bondi_release_rooted_field_identity_evidence_209.csv": {
+          "sha256": "27e6552a0451b1996f1c89098e7d35c566942c77ef66e4d0094e01db9eebb4d9"
+        }
+      },
+      "path": "outputs/protocol/simba_bondi_adapter_field_identity/bh_simba_bondi_release_rooted_field_identity_verdict_209.json",
+      "run_id": "BH-SIMBA-BONDI-RELEASE-ROOTED-FIELD-IDENTITY-209",
+      "sha256": "52b0b76290cc7407745b09410ad180ba68c81d3f972b5bfc6955674f63d3d9c1"
+    },
+    "repair_contract": {
+      "SIMBA_payload": false,
+      "audit_entire_top_level_manifest_files_before_each_stage": true,
+      "audit_required_inputs_before_each_stage": true,
+      "config_and_manifest_arguments_shadow_relative": true,
+      "construction_receipts_include_exact_before_after_mutations": true,
+      "generic_cross_mapping_integrity_inference": false,
+      "generic_interstage_manifest_or_config_refresh": false,
+      "historical_file_mutation": false,
+      "initial_shadow_authority_translation_before_first_invocation_only": true,
+      "initial_translation_receipt_required": true,
+      "inventory_all_cross_manifest_claims_before_resolution": true,
+      "network": false,
+      "one_runtime_binding_receipt_per_smoke_or_matrix_shadow": true,
+      "only_explicit_postproducer_runtime_binding_mutation": true,
+      "optional_repo_root_flag": "--repo-root",
+      "package_initializers_shadow_only_scaffolds": true,
+      "record_every_shadow_manifest_before_and_after_digest": true,
+      "refresh_native_path_integrity_records": false,
+      "reject_normalized_manifest_path_collisions": true,
+      "repo_root_argument_explicit_absolute_shadow": true,
+      "require_resolved_containment_regular_file_and_no_symlink": true,
+      "required_flags": [
+        "--config",
+        "--freeze-manifest"
+      ],
+      "schema_specific_cross_mapping_config_binding_required": true,
+      "scientific_parameter_mutation": false,
+      "sequential_zero_offset_four_stage_smoke_required": true,
+      "source_manifest_templates_remain_byte_exact": true,
+      "source_package_initializer_mutation": false,
+      "strategy": "exact_cli_schema_specific_binding_source_state_and_runtime_manifest_lifecycle_recovery_v1_4",
+      "unresolved_non_primary_conflict_is_hold": true,
+      "validated_primary_authority_precedence": true
+    },
+    "runtime_binding": {
+      "binding_id": "phase_b_verdict_post_producer_binding_v2_declared_dependency_refresh",
+      "binding_sequence": [
+        "invoke_producer_with_unmodified_shared_shadow_manifest",
+        "require_zero_return_code_and_exact_fresh_target_json",
+        "clone_target_record_from_hash_pinned_confirmation_template",
+        "derive_postproducer_shared_manifest_digest_from_complete_serialized_after_bytes",
+        "refresh_exact_existing_confirmation_dependency_digest_for_shared_manifest",
+        "refresh_only_existing_content_derived_target_record_fields",
+        "atomically_replace_shared_and_confirmation_shadow_manifests",
+        "verify_exact_mutation_scope_and_postwrite_manifest_digests",
+        "audit_full_executor_manifest_closure_and_three_of_three_consumer_input_concordance"
+      ],
+      "confirmation_manifest": "outputs/protocol/tng50_memory_generator3_sha256_split/full_history_null_confirmation_2000/bh_tng50_canonical_full_history_confirmation_freeze_manifest.json",
+      "confirmation_template_manifest": "outputs/protocol/tng50_memory_generator3_sha256_split/full_history_null_confirmation_2000/bh_tng50_canonical_full_history_confirmation_freeze_manifest.json",
+      "consumer_stages": [
+        "generator3_null_screen",
+        "generator3_null_confirmation_2000"
+      ],
+      "dependency_refresh": {
+        "child_manifest": "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_canonical_generator3_rerun_freeze_manifest.json",
+        "derive_after_from_serialized_child_after_bytes": true,
+        "exact_existing_record_only": true,
+        "no_generic_refresh": true,
+        "no_size_field_invention": true,
+        "parent_manifest": "outputs/protocol/tng50_memory_generator3_sha256_split/full_history_null_confirmation_2000/bh_tng50_canonical_full_history_confirmation_freeze_manifest.json",
+        "record_field": "sha256",
+        "schema_version": 1
+      },
+      "generic_interstage_refresh_forbidden": true,
+      "lifecycle": {
+        "atomic_shadow_manifest_replacement": true,
+        "bind_only_after_producer_return_code_zero": true,
+        "declared_dependency_digest_refresh_required": true,
+        "generic_manifest_refresh_forbidden": true,
+        "producer_target_absent_before_execution": true,
+        "receipt_required": true,
+        "source_authorities_immutable": true
+      },
+      "mutation_scope": {
+        "all_non_content_fields_immutable": true,
+        "all_unrelated_manifest_records_immutable": true,
+        "atomic_sibling_temp_write_fsync_replace": true,
+        "authorized_existing_content_derived_fields": [
+          "sha256",
+          "bytes",
+          "size",
+          "size_bytes",
+          "file_size_bytes"
+        ],
+        "clone_exact_confirmation_template_record": true,
+        "partial_multi_manifest_binding_is_failure": true,
+        "shadow_only": true,
+        "source_authorities_immutable": true,
+        "target_plus_one_declared_dependency_record_only": true,
+        "target_record_only": false
+      },
+      "post_stage_generated_binding_count_per_shadow": 2,
+      "post_stage_generated_bindings": [
+        {
+          "binding_id": "generator3_null_screen_to_confirmation_manifest_v1",
+          "consumer_stage": "generator3_null_confirmation_2000",
+          "mutation_scope": {
+            "all_non_content_fields_immutable": true,
+            "all_unrelated_manifest_records_immutable": true,
+            "atomic_sibling_temp_write_fsync_replace": true,
+            "authorized_existing_content_derived_fields": [
+              "sha256",
+              "bytes",
+              "size",
+              "size_bytes",
+              "file_size_bytes"
+            ],
+            "shadow_only": true,
+            "source_authorities_immutable": true,
+            "target_record_only": true
+          },
+          "producer_stage": "generator3_null_screen",
+          "schema_version": 1,
+          "target_manifest": "outputs/protocol/tng50_memory_generator3_sha256_split/full_history_null_confirmation_2000/bh_tng50_canonical_full_history_confirmation_freeze_manifest.json",
+          "target_relative_path": "outputs/protocol/tng50_memory_generator3_sha256_split/full_history_null/bh_tng50_memory_generator3_sha256_full_history_null_screen_verdict.json"
+        },
+        {
+          "binding_id": "generator3_null_confirmation_to_generator4_manifest_v1",
+          "consumer_stage": "generator4_pooled_innovation_screen",
+          "mutation_scope": {
+            "all_non_content_fields_immutable": true,
+            "all_unrelated_manifest_records_immutable": true,
+            "atomic_sibling_temp_write_fsync_replace": true,
+            "authorized_existing_content_derived_fields": [
+              "sha256",
+              "bytes",
+              "size",
+              "size_bytes",
+              "file_size_bytes"
+            ],
+            "shadow_only": true,
+            "source_authorities_immutable": true,
+            "target_record_only": true
+          },
+          "producer_stage": "generator3_null_confirmation_2000",
+          "schema_version": 1,
+          "target_manifest": "outputs/protocol/tng50_memory_generator4_pooled_innovation/bh_tng50_memory_generator4_pooled_innovation_freeze_manifest.json",
+          "target_relative_path": "outputs/protocol/tng50_memory_generator3_sha256_split/full_history_null_confirmation_2000/bh_tng50_memory_generator3_sha256_full_history_null_confirmation_2000_verdict.json"
+        }
+      ],
+      "post_stage_generated_receipt_schema": {
+        "absolute_temporary_paths_forbidden": true,
+        "name": "bh_simba_shadow_post_stage_generated_binding_receipt",
+        "receipt_payload_digest_algorithm": "sha256_of_utf8_canonical_json_sort_keys_compact_separators_before_adding_receipt_sha256",
+        "required_fields": [
+          "schema_version",
+          "binding_id",
+          "offset",
+          "producer_stage",
+          "producer_return_code",
+          "consumer_stage",
+          "target_relative_path",
+          "product_payload_b64",
+          "product_json_run_id",
+          "product_json_schema_version",
+          "target_sha256",
+          "target_bytes",
+          "target_manifest_relative_path",
+          "source_template_manifest_expected_sha256",
+          "source_template_manifest_observed_sha256",
+          "template_record_sha256",
+          "template_record",
+          "refreshed_record",
+          "preproducer_target_absent",
+          "producer_invocation_manifest_sha256",
+          "target_manifest_expected_before_sha256",
+          "target_manifest_before",
+          "target_manifest_before_sha256",
+          "target_manifest_after",
+          "target_manifest_after_sha256",
+          "manifest_mutations",
+          "exact_mutation_scope_pass",
+          "atomic_replacement_pass",
+          "downstream_manifest_closure_pass",
+          "downstream_required_input_concordance_pass",
+          "binding_pass",
+          "hold_reason",
+          "receipt_payload_sha256",
+          "receipt_sha256"
+        ],
+        "version": 1,
+        "wall_clock_fields_forbidden": true
+      },
+      "producer_manifest": "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_canonical_generator3_rerun_freeze_manifest.json",
+      "producer_stage": "generator3_phase_b",
+      "receipt_count_per_shadow": 1,
+      "receipt_schema": {
+        "absolute_temporary_paths_forbidden": true,
+        "dependency_refresh_semantics": "manifest_mutations_may_add_exact_declared_parent_dependency_digest_refresh",
+        "name": "bh_simba_shadow_runtime_manifest_binding_receipt_v2_dependency_refresh",
+        "one_receipt_per_shadow_offset": true,
+        "receipt_payload_digest_algorithm": "sha256_of_utf8_canonical_json_sort_keys_compact_separators_before_adding_receipt_sha256",
+        "required_fields": [
+          "schema_version",
+          "offset",
+          "producer_stage",
+          "producer_return_code",
+          "target_relative_path",
+          "product_payload_b64",
+          "product_json_run_id",
+          "product_json_schema_version",
+          "target_sha256",
+          "target_bytes",
+          "template_manifest_relative_path",
+          "template_manifest_source_sha256",
+          "template_record_sha256",
+          "preproducer_target_absent",
+          "confirmation_manifest_expected_before_sha256",
+          "manifest_mutations",
+          "exact_mutation_scope_pass",
+          "atomic_replacement_pass",
+          "downstream_full_manifest_closure_pass",
+          "downstream_three_of_three_input_concordance_pass",
+          "receipt_payload_sha256",
+          "receipt_sha256"
+        ],
+        "template_record_digest_algorithm": "sha256_of_utf8_canonical_json_sort_keys_compact_separators",
+        "version": 2,
+        "wall_clock_fields_forbidden": true
+      },
+      "required_postproducer_state": {
+        "producer_return_code": 0,
+        "target_digest_and_byte_count_observed": true,
+        "target_hardlink_count": 1,
+        "target_is_contained_regular_nonsymlink_file": true,
+        "target_is_fresh_json": true
+      },
+      "required_preproducer_state": {
+        "target_absent": true,
+        "target_record_absent_from_shared_shadow_manifest": true,
+        "template_target_record_present_in_confirmation_source_manifest": true
+      },
+      "schema_version": 2,
+      "shared_manifest": "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_canonical_generator3_rerun_freeze_manifest.json",
+      "source_manifest_sha256": {
+        "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_canonical_generator3_rerun_freeze_manifest.json": "fd939ccc4b1b71cbd4cf56bfec0c1f2a3c8bd10bc4f515917f4526cd42daccb6",
+        "outputs/protocol/tng50_memory_generator3_sha256_split/full_history_null_confirmation_2000/bh_tng50_canonical_full_history_confirmation_freeze_manifest.json": "9bab12071e8b9659a108c9831a3c268e072694fe4156c7d12a46ee0e7e74cdc9"
+      },
+      "source_manifest_top_level_file_count_policy": "derive_nonzero_exact_len_of_files_from_each_hash_pinned_source_manifest_and_record_in_every_shadow_audit",
+      "target_relative_path": "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_memory_generator3_sha256_phase_b_verdict.json",
+      "template_target_bytes": 1026,
+      "template_target_content_sha256": "3ca47dd63b1357f52e2cf57acf638a3a2e179b7d57b313880ff004e718e17ce4"
+    },
+    "schema_version": 2,
+    "shadow_package_scaffolds": {
+      "paths": {
+        "scripts/__init__.py": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "src/__init__.py": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "src/core/__init__.py": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "schema_version": 1,
+      "shadow_construction": "exact_empty_atomic_shadow_only",
+      "source_mutation": false,
+      "source_precondition": "absent_or_exact_empty_regular_contained_single_link"
+    },
+    "smoke_run_id": "BH-SIMBA-FRESH-SYNTHETIC-SMOKE-002-SMOKE-v1.0.0",
+    "stage_contracts": [
+      {
+        "config": "configs/protocol/bh_tng50_memory_generator3_sha256_phase_b_v1.yaml",
+        "config_sha256": "2dbb9653d60fc0cc62d8d56b212c05916613c869deb81293f1096add78bfdf7b",
+        "executor": "scripts/84_run_tng50_canonical_generator3_phase_b.py",
+        "executor_sha256": "bd4d2abee49683804f86f3313c7867eb667aa15e51791b7e8257200e1fe8d684",
+        "fresh_output_contract": {
+          "config_dotted_path_mapping": {
+            "label": "outputs.label",
+            "root": "outputs.root"
+          },
+          "expected_label": "bh_tng50_memory_generator3_sha256_phase_b",
+          "expected_relative_path": "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_memory_generator3_sha256_phase_b_verdict.json",
+          "filename_template": "{outputs.label}_verdict.json",
+          "require_absent_before_invocation": true,
+          "require_contained_regular_nonsymlink_file": true,
+          "required_fresh_json": true,
+          "required_json_keys": [
+            "schema_version",
+            "run_id",
+            "candidate_sha256",
+            "fractional_test_improvement",
+            "effect_size_gate_pass",
+            "phase_c_full_history_screen_authorized"
+          ],
+          "required_truthy_keys": [
+            "phase_c_full_history_screen_authorized"
+          ]
+        },
+        "manifest": "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_canonical_generator3_rerun_freeze_manifest.json",
+        "manifest_sha256": "fd939ccc4b1b71cbd4cf56bfec0c1f2a3c8bd10bc4f515917f4526cd42daccb6",
+        "pass_kind": "predictive_phase_b",
+        "required_data_keys": [
+          "data.candidate_parquet"
+        ],
+        "stage": "generator3_phase_b"
+      },
+      {
+        "config": "configs/protocol/bh_tng50_memory_generator3_sha256_full_history_null_screen_v1.yaml",
+        "config_sha256": "9b12be308bb57d6a2f6808a10046f783c195e33d3e351012690f68c3f80189eb",
+        "executor": "scripts/85_screen_tng50_canonical_generator3_full_history_null.py",
+        "executor_sha256": "0fd976cc6a0955bb84182b1e99d1ca8d363ea489257f1880f335d8eef8418fe1",
+        "fresh_output_contract": {
+          "config_dotted_path_mapping": {
+            "label": "outputs.label",
+            "root": "outputs.root"
+          },
+          "expected_label": "bh_tng50_memory_generator3_sha256_full_history_null_screen",
+          "expected_relative_path": "outputs/protocol/tng50_memory_generator3_sha256_split/full_history_null/bh_tng50_memory_generator3_sha256_full_history_null_screen_verdict.json",
+          "filename_template": "{outputs.label}_verdict.json",
+          "require_absent_before_invocation": true,
+          "require_contained_regular_nonsymlink_file": true,
+          "required_fresh_json": true,
+          "required_json_keys": [
+            "schema_version",
+            "run_id",
+            "phase_b_verdict_sha256",
+            "n_permutations",
+            "observed",
+            "screen_pass",
+            "confirmation_2000_authorized"
+          ],
+          "required_truthy_keys": [
+            "confirmation_2000_authorized"
+          ]
+        },
+        "manifest": "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_canonical_generator3_rerun_freeze_manifest.json",
+        "manifest_sha256": "fd939ccc4b1b71cbd4cf56bfec0c1f2a3c8bd10bc4f515917f4526cd42daccb6",
+        "pass_kind": "selection_screen",
+        "required_data_keys": [
+          "data.phase_b_verdict",
+          "data.candidate_parquet",
+          "data.raw_track_parquet"
+        ],
+        "stage": "generator3_null_screen"
+      },
+      {
+        "config": "configs/protocol/bh_tng50_memory_generator3_sha256_full_history_null_confirmation_2000_v1.yaml",
+        "config_sha256": "1d1342251ea626582bf0debf30ee9e52458eaa4ae1f6a59937ee8f129b4f7533",
+        "executor": "scripts/85_screen_tng50_canonical_generator3_full_history_null.py",
+        "executor_sha256": "0fd976cc6a0955bb84182b1e99d1ca8d363ea489257f1880f335d8eef8418fe1",
+        "fresh_output_contract": {
+          "config_dotted_path_mapping": {
+            "label": "outputs.label",
+            "root": "outputs.root"
+          },
+          "expected_label": "bh_tng50_memory_generator3_sha256_full_history_null_confirmation_2000",
+          "expected_relative_path": "outputs/protocol/tng50_memory_generator3_sha256_split/full_history_null_confirmation_2000/bh_tng50_memory_generator3_sha256_full_history_null_confirmation_2000_verdict.json",
+          "filename_template": "{outputs.label}_verdict.json",
+          "require_absent_before_invocation": true,
+          "require_contained_regular_nonsymlink_file": true,
+          "required_fresh_json": true,
+          "required_json_keys": [
+            "schema_version",
+            "run_id",
+            "phase_b_verdict_sha256",
+            "n_permutations",
+            "observed",
+            "screen_pass",
+            "confirmation_status",
+            "generator4_execution_authorized"
+          ],
+          "required_truthy_keys": [
+            "generator4_execution_authorized"
+          ]
+        },
+        "manifest": "outputs/protocol/tng50_memory_generator3_sha256_split/full_history_null_confirmation_2000/bh_tng50_canonical_full_history_confirmation_freeze_manifest.json",
+        "manifest_sha256": "9bab12071e8b9659a108c9831a3c268e072694fe4156c7d12a46ee0e7e74cdc9",
+        "pass_kind": "binding_confirmatory_null",
+        "required_data_keys": [
+          "data.phase_b_verdict",
+          "data.candidate_parquet",
+          "data.raw_track_parquet"
+        ],
+        "stage": "generator3_null_confirmation_2000"
+      },
+      {
+        "config": "configs/protocol/bh_tng50_memory_generator4_pooled_innovation_screen_v1.yaml",
+        "config_sha256": "b296c55a0461cbd7580897d8a2416a607e90ebaf3fa94120b1f404d6e4305d0a",
+        "executor": "scripts/89_screen_tng50_memory_generator4_pooled_innovation.py",
+        "executor_sha256": "9eb669cd2684e544d228f8d8d71a3fe51154977d84a4ea232e522a719ff9d4b8",
+        "fresh_output_contract": {
+          "config_dotted_path_mapping": {
+            "label": "outputs.label",
+            "root": "outputs.root"
+          },
+          "expected_label": "bh_tng50_memory_generator4_pooled_innovation_screen",
+          "expected_relative_path": "outputs/protocol/tng50_memory_generator4_pooled_innovation/bh_tng50_memory_generator4_pooled_innovation_screen_verdict.json",
+          "expected_relative_path_policy": "declared_expected_path_must_equal_hash_pinned_config_root_label_and_filename_template",
+          "filename_template": "{outputs.label}_verdict.json",
+          "require_absent_before_invocation": true,
+          "require_contained_regular_nonsymlink_file": true,
+          "required_fresh_json": true,
+          "required_json_keys": [
+            "schema_version",
+            "run_id"
+          ],
+          "required_truthy_keys": [],
+          "schema_limit": "exact_generator4_verdict_keys_are_discovered_from_the_hash_pinned_config_and_executor_at_runtime"
+        },
+        "manifest": "outputs/protocol/tng50_memory_generator4_pooled_innovation/bh_tng50_memory_generator4_pooled_innovation_freeze_manifest.json",
+        "manifest_sha256": "7cb7bbb7053f0ee6544efade8ee70032d1bb93d8e0c33037cefd17efc0369f32",
+        "pass_kind": "binding_boundary_screen",
+        "required_data_keys": [
+          "data.canonical_g3_track_plan",
+          "data.raw_track_parquet"
+        ],
+        "stage": "generator4_pooled_innovation_screen"
+      }
+    ],
+    "synthetic_contract": {
+      "absolute_tolerance": 1e-12,
+      "baseline_offset": 0.0,
+      "classified_interface_failure_is_hold_not_negative_result": true,
+      "complete_tracks_per_split": 400,
+      "diagnostic_tail_characters": 20000,
+      "input_support": {
+        "adopted_contract_file_sha256": "ab002fd519d53fdc3ccdf6a0f837d1fd1092409224fab6f2c398716e3566584c",
+        "amendment_id": "BH-SIMBA-SYNTHETIC-RAW-CANDIDATE-SUPPORT-001",
+        "candidate_support": "raw_positions_1_through_N_minus_2",
+        "only_retained_column_rebound": "row_in_track",
+        "raw_history_support": "all_rows_including_seed_and_terminal"
+      },
+      "maximum_rows": 200000,
+      "memory_tau_column_template": "memory_tau_{tau:g}",
+      "memory_tau_source_config_key": "selection.tau_track_fractions",
+      "offsets": [
+        -12.5,
+        -3.0,
+        0.0,
+        7.25,
+        20.0
+      ],
+      "relative_tolerance": 1e-10,
+      "require_every_configured_memory_tau_column": true,
+      "required_splits": [
+        "train",
+        "validation",
+        "test"
+      ],
+      "seed": 200703,
+      "stage_timeout_seconds": 900,
+      "steps_per_track": 48,
+      "track_count": 1200,
+      "track_plan_each_required_split_exact_count": 400,
+      "track_plan_required_key": "selected_track_ids"
+    }
+  },
+  "route_config_change_pointers": [
+    "$.acceptance_run_id",
+    "$.adjudication_run_id",
+    "$.cli_repair_design_run_id",
+    "$.final_route_run_id",
+    "$.manifest_preflight_run_id",
+    "$.matrix_run_id",
+    "$.outputs.acceptance_verdict",
+    "$.outputs.adjudication_evidence",
+    "$.outputs.adjudication_verdict",
+    "$.outputs.design_inventory",
+    "$.outputs.design_verdict",
+    "$.outputs.directory",
+    "$.outputs.final_route",
+    "$.outputs.matrix_results",
+    "$.outputs.matrix_verdict",
+    "$.outputs.preflight_evidence",
+    "$.outputs.preflight_verdict",
+    "$.outputs.protocol_entry",
+    "$.outputs.smoke_results",
+    "$.outputs.smoke_verdict",
+    "$.smoke_run_id"
+  ],
+  "route_config_sha256": "9ed33abf5922880583630f21a7929d646545c5da690813e41bf85cc79141c482",
+  "schema_version": 1,
+  "scientific_authorizations": {
+    "physical_units_resolved": false,
+    "population_equivalence_resolved": false,
+    "real_SIMBA_execution_authorized": false,
+    "scientific_memory_inference_authorized": false,
+    "writer_semantics_resolved": false
+  },
+  "stage_plan": [
+    {
+      "config": "configs/protocol/bh_tng50_memory_generator3_sha256_phase_b_v1.yaml",
+      "config_sha256": "2dbb9653d60fc0cc62d8d56b212c05916613c869deb81293f1096add78bfdf7b",
+      "executor": "scripts/84_run_tng50_canonical_generator3_phase_b.py",
+      "executor_sha256": "bd4d2abee49683804f86f3313c7867eb667aa15e51791b7e8257200e1fe8d684",
+      "fresh_output_contract": {
+        "config_dotted_path_mapping": {
+          "label": "outputs.label",
+          "root": "outputs.root"
+        },
+        "expected_label": "bh_tng50_memory_generator3_sha256_phase_b",
+        "expected_relative_path": "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_memory_generator3_sha256_phase_b_verdict.json",
+        "filename_template": "{outputs.label}_verdict.json",
+        "require_absent_before_invocation": true,
+        "require_contained_regular_nonsymlink_file": true,
+        "required_fresh_json": true,
+        "required_json_keys": [
+          "schema_version",
+          "run_id",
+          "candidate_sha256",
+          "fractional_test_improvement",
+          "effect_size_gate_pass",
+          "phase_c_full_history_screen_authorized"
+        ],
+        "required_truthy_keys": [
+          "phase_c_full_history_screen_authorized"
+        ]
+      },
+      "source_manifest": "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_canonical_generator3_rerun_freeze_manifest.json",
+      "source_manifest_sha256": "fd939ccc4b1b71cbd4cf56bfec0c1f2a3c8bd10bc4f515917f4526cd42daccb6",
+      "stage": "generator3_phase_b"
+    },
+    {
+      "config": "configs/protocol/bh_tng50_memory_generator3_sha256_full_history_null_screen_v1.yaml",
+      "config_sha256": "9b12be308bb57d6a2f6808a10046f783c195e33d3e351012690f68c3f80189eb",
+      "executor": "scripts/85_screen_tng50_canonical_generator3_full_history_null.py",
+      "executor_sha256": "0fd976cc6a0955bb84182b1e99d1ca8d363ea489257f1880f335d8eef8418fe1",
+      "fresh_output_contract": {
+        "config_dotted_path_mapping": {
+          "label": "outputs.label",
+          "root": "outputs.root"
+        },
+        "expected_label": "bh_tng50_memory_generator3_sha256_full_history_null_screen",
+        "expected_relative_path": "outputs/protocol/tng50_memory_generator3_sha256_split/full_history_null/bh_tng50_memory_generator3_sha256_full_history_null_screen_verdict.json",
+        "filename_template": "{outputs.label}_verdict.json",
+        "require_absent_before_invocation": true,
+        "require_contained_regular_nonsymlink_file": true,
+        "required_fresh_json": true,
+        "required_json_keys": [
+          "schema_version",
+          "run_id",
+          "phase_b_verdict_sha256",
+          "n_permutations",
+          "observed",
+          "screen_pass",
+          "confirmation_2000_authorized"
+        ],
+        "required_truthy_keys": [
+          "confirmation_2000_authorized"
+        ]
+      },
+      "source_manifest": "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_canonical_generator3_rerun_freeze_manifest.json",
+      "source_manifest_sha256": "fd939ccc4b1b71cbd4cf56bfec0c1f2a3c8bd10bc4f515917f4526cd42daccb6",
+      "stage": "generator3_null_screen"
+    },
+    {
+      "config": "configs/protocol/bh_tng50_memory_generator3_sha256_full_history_null_confirmation_2000_v1.yaml",
+      "config_sha256": "1d1342251ea626582bf0debf30ee9e52458eaa4ae1f6a59937ee8f129b4f7533",
+      "executor": "scripts/85_screen_tng50_canonical_generator3_full_history_null.py",
+      "executor_sha256": "0fd976cc6a0955bb84182b1e99d1ca8d363ea489257f1880f335d8eef8418fe1",
+      "fresh_output_contract": {
+        "config_dotted_path_mapping": {
+          "label": "outputs.label",
+          "root": "outputs.root"
+        },
+        "expected_label": "bh_tng50_memory_generator3_sha256_full_history_null_confirmation_2000",
+        "expected_relative_path": "outputs/protocol/tng50_memory_generator3_sha256_split/full_history_null_confirmation_2000/bh_tng50_memory_generator3_sha256_full_history_null_confirmation_2000_verdict.json",
+        "filename_template": "{outputs.label}_verdict.json",
+        "require_absent_before_invocation": true,
+        "require_contained_regular_nonsymlink_file": true,
+        "required_fresh_json": true,
+        "required_json_keys": [
+          "schema_version",
+          "run_id",
+          "phase_b_verdict_sha256",
+          "n_permutations",
+          "observed",
+          "screen_pass",
+          "confirmation_status",
+          "generator4_execution_authorized"
+        ],
+        "required_truthy_keys": [
+          "generator4_execution_authorized"
+        ]
+      },
+      "source_manifest": "outputs/protocol/tng50_memory_generator3_sha256_split/full_history_null_confirmation_2000/bh_tng50_canonical_full_history_confirmation_freeze_manifest.json",
+      "source_manifest_sha256": "9bab12071e8b9659a108c9831a3c268e072694fe4156c7d12a46ee0e7e74cdc9",
+      "stage": "generator3_null_confirmation_2000"
+    },
+    {
+      "config": "configs/protocol/bh_tng50_memory_generator4_pooled_innovation_screen_v1.yaml",
+      "config_sha256": "b296c55a0461cbd7580897d8a2416a607e90ebaf3fa94120b1f404d6e4305d0a",
+      "executor": "scripts/89_screen_tng50_memory_generator4_pooled_innovation.py",
+      "executor_sha256": "9eb669cd2684e544d228f8d8d71a3fe51154977d84a4ea232e522a719ff9d4b8",
+      "fresh_output_contract": {
+        "config_dotted_path_mapping": {
+          "label": "outputs.label",
+          "root": "outputs.root"
+        },
+        "expected_label": "bh_tng50_memory_generator4_pooled_innovation_screen",
+        "expected_relative_path": "outputs/protocol/tng50_memory_generator4_pooled_innovation/bh_tng50_memory_generator4_pooled_innovation_screen_verdict.json",
+        "expected_relative_path_policy": "declared_expected_path_must_equal_hash_pinned_config_root_label_and_filename_template",
+        "filename_template": "{outputs.label}_verdict.json",
+        "require_absent_before_invocation": true,
+        "require_contained_regular_nonsymlink_file": true,
+        "required_fresh_json": true,
+        "required_json_keys": [
+          "schema_version",
+          "run_id"
+        ],
+        "required_truthy_keys": [],
+        "schema_limit": "exact_generator4_verdict_keys_are_discovered_from_the_hash_pinned_config_and_executor_at_runtime"
+      },
+      "source_manifest": "outputs/protocol/tng50_memory_generator4_pooled_innovation/bh_tng50_memory_generator4_pooled_innovation_freeze_manifest.json",
+      "source_manifest_sha256": "7cb7bbb7053f0ee6544efade8ee70032d1bb93d8e0c33037cefd17efc0369f32",
+      "stage": "generator4_pooled_innovation_screen"
+    }
+  ],
+  "status": "REGISTERED_FRESH_SYNTHETIC_SMOKE_CONTRACT_EXECUTION_PENDING",
+  "unresolved_interpretation": [
+    "G3 latent-memory response and G4 next-raw-signal response are not established as equivalent",
+    "G3 candidate time increment and G4 normalized raw-grid increment are not established as equivalent",
+    "physical units, writer semantics and SIMBA/TNG population equivalence remain unresolved",
+    "synthetic smoke success would certify software/interface execution only, not a scientific memory inference",
+    "failure of any effect/admission/lifecycle condition is preserved as HOLD and must not be retuned"
+  ],
+  "version": "1.0.0"
+}

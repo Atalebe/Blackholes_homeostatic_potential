@@ -1,0 +1,73 @@
+schema_version: 1
+run_id: BH-TNG50-MEMORY-GENERATOR4-POOLED-INNOVATION-SCREEN-030
+seed: 12345
+data:
+  raw_track_parquet: outputs/catalogs/tng50_bh_memory_external_tracks_sha256_split.parquet
+  canonical_g3_confirmation: outputs/protocol/tng50_memory_generator3_sha256_split/full_history_null_confirmation_2000/bh_tng50_memory_generator3_sha256_full_history_null_confirmation_2000_verdict.json
+  canonical_g3_track_plan: outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_sha256_full_history_track_plan.json
+columns:
+  id: bh_id
+  split: external_split
+  time: t
+  signal: lambda_bh_t
+  order: t
+  ordering_rule: stable_ascending_time
+  category: category
+  mass_class: final_mass_class
+model:
+  family: pooled_linear_ridge
+  ridge_alpha: 1.0e-06
+  ar_lag_order: 3
+  residualizer_fit_partition: train
+  baseline_continuous:
+    - lambda_current
+    - lambda_previous
+    - lambda_previous2
+    - lambda_previous3
+    - delta_u_next
+    - delta_u_previous
+    - delta_u_previous2
+    - delta_u_previous3
+  categorical: [category, final_mass_class]
+innovation:
+  target: next_step_AR3_residual
+  current_and_future_innovations_excluded: true
+  history: normalized_strictly_prior_exponential
+  observed_tau_fit_partition: train
+  tau_estimator: pooled_within_track_adjacent_pair_OU_SSE
+  cross_track_transitions: prohibited
+  tau_profile_bounds: [0.0001, 0.20]
+  tau_profile_grid_size: 512
+  require_observed_interior_tau: true
+  boundary_observed_disposition: generator4_fail_no_grid_change
+screen:
+  selected_tracks_per_split: 400
+  exact_g3_track_plan_sha256: 41371b3c1a88c95e0d99d582333a37f81888b2fba7948b6c7f8ef5cf24736919
+  split_order: [train, validation, test]
+  n_permutations: 200
+  progress_every: 10
+  bootstrap_resamples: 2000
+  confidence: 0.95
+null_design:
+  permutation_unit: innovation_within_complete_track_and_split
+  observed_targets_unchanged: true
+  recompute_tau_inside_every_null: true
+  recompute_history_inside_every_null: true
+  boundary_null_estimates_retained: true
+  boundary_null_estimates_discarded: false
+  grid_change_after_outcome: prohibited
+gates:
+  p_max: 0.05
+  minimum_raw_fractional_improvement: 0.01
+  minimum_null_adjusted_fractional_improvement: 0.01
+  require_bootstrap_lower_bound_above_zero: true
+  require_observed_interior_tau: true
+claims:
+  pass_scope: predictive_innovation_history_coordinate_beyond_frozen_AR3_baseline
+  irreducible_nonlocal_memory: prohibited
+  fundamental_non_markovian_dynamics: prohibited
+  physical_timescale: prohibited
+  universal_black_hole_M: prohibited
+outputs:
+  root: outputs/protocol/tng50_memory_generator4_pooled_innovation
+  label: bh_tng50_memory_generator4_pooled_innovation_screen

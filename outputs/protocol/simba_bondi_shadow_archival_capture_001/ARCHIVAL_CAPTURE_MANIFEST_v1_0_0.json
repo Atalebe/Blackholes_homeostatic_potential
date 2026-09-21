@@ -1,0 +1,331 @@
+{
+  "branch": "main",
+  "capture_id": "BH-SIMBA-BONDI-SHADOW-ARCHIVAL-CAPTURE-001",
+  "claim": "archival/reproducibility capture only; no scientific result changed",
+  "entry_128_authorized": false,
+  "expected_parent_head": "a18f0f56845ea9b5677b8c20d29e9533285999eb",
+  "generated_protocol_metadata_paths": [
+    "outputs/protocol/simba_bondi_shadow_current_state/BH_CURRENT_STATE_INDEX_v1_0_0.json",
+    "outputs/protocol/simba_bondi_shadow_archival_capture_001/ARCHIVAL_CAPTURE_MANIFEST_v1_0_0.json"
+  ],
+  "maintenance_receipt_sha256": "631ed08f3234505257c9dd50ceeec894ac32e9c4fe165240ccd387553112540a",
+  "matrix_execution_authorized": false,
+  "receipt_sha256": "4974d12a0cc220a3fd74e51eeba2448e386d4b626ceff9215a45a087b9feb5c7",
+  "reviewed_paths": [
+    {
+      "bytes": 37006,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "configs/protocol/bh_simba_bondi_shadow_exact_binding_source_state_lifecycle_recovery_v1_4.json",
+      "sha256": "bb21fca00478146d127983683467743ede596d596e619e59e0a4a1353e700a65",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 1537,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "configs/protocol/bh_tng50_memory_generator3_sha256_full_history_null_confirmation_2000_v1.yaml",
+      "sha256": "1d1342251ea626582bf0debf30ee9e52458eaa4ae1f6a59937ee8f129b4f7533",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 1496,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "configs/protocol/bh_tng50_memory_generator3_sha256_full_history_null_screen_v1.yaml",
+      "sha256": "9b12be308bb57d6a2f6808a10046f783c195e33d3e351012690f68c3f80189eb",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 853,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "configs/protocol/bh_tng50_memory_generator3_sha256_phase_b_v1.yaml",
+      "sha256": "2dbb9653d60fc0cc62d8d56b212c05916613c869deb81293f1096add78bfdf7b",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 2678,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "configs/protocol/bh_tng50_memory_generator4_pooled_innovation_screen_v1.yaml",
+      "sha256": "b296c55a0461cbd7580897d8a2416a607e90ebaf3fa94120b1f404d6e4305d0a",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 4535,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "outputs/protocol/memory_admission_design_freeze/bh_memory_admission_design_freeze_manifest.json",
+      "sha256": "52afc8f37f7434f75face5cfef71e0fc68917c09f362c5ff3e8cac23404d543e",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 51014,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "outputs/protocol/simba_bondi_shadow_fresh_synthetic_smoke_001/CONTRACT_v1_0_0.json",
+      "sha256": "b73fcae6d5829de771850ff40af8f559781f9522b4d16345196415198ad71903",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 55157,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "outputs/protocol/simba_bondi_shadow_fresh_synthetic_smoke_002/CONTRACT_v1_0_0.json",
+      "sha256": "155d84eb33feb10d9e663f458fa2f164078bf42d891b4a758ba856d79ff8b72a",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 43032,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "outputs/protocol/simba_bondi_shadow_fresh_synthetic_smoke_003/CONTRACT_v1_0_0.json",
+      "sha256": "1381480e10bbf78baeacf4885d5b45a9d1d037be2f0c05c09bef79b322a1b3b3",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 54045,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "outputs/protocol/simba_bondi_shadow_fresh_synthetic_smoke_004/CONTRACT_v1_0_0.json",
+      "sha256": "11256d2cf5166043b0aa308f3269b82e6560055d39e74503bb98d46d33e03326",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 56649,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "outputs/protocol/simba_bondi_shadow_fresh_synthetic_smoke_005/CONTRACT_v1_0_0.json",
+      "sha256": "7b2bcd420fba662e85c0ae2347fb019f5fe6dcd0300c91ef96a9919336f8c77d",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 7304,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "outputs/protocol/simba_bondi_shadow_phase_b_dependency_amendment_001/ADOPTED_DEPENDENCY_CONTRACT_v1_0_0.json",
+      "sha256": "b76b98a50b0ce6b401f758b95a2cfc390845f297ae416e175d136ac14fe8c1b7",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 7757,
+      "git_state": "untracked",
+      "mode": "0o600",
+      "path": "outputs/protocol/simba_bondi_shadow_synthetic_support_amendment_001/ADOPTED_SUPPORT_CONTRACT_v1_0_0.json",
+      "sha256": "ab002fd519d53fdc3ccdf6a0f837d1fd1092409224fab6f2c398716e3566584c",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 2129,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "outputs/protocol/tng50_canonical_hash_split_repair/bh_tng50_canonical_hash_split_repair_verdict.json",
+      "sha256": "3eb9d29a04a49164a492dff7304b6848cb20c3a952af20833d738e7189b730bf",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 2757,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_canonical_generator3_closure.json",
+      "sha256": "16aea19a48110977a4fa217d7ef170f2a1336547a892a488c81b8629d747fcbc",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 3401,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_canonical_generator3_rerun_freeze_manifest.json",
+      "sha256": "fd939ccc4b1b71cbd4cf56bfec0c1f2a3c8bd10bc4f515917f4526cd42daccb6",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 3675,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "outputs/protocol/tng50_memory_generator3_sha256_split/full_history_null_confirmation_2000/bh_tng50_canonical_full_history_confirmation_freeze_manifest.json",
+      "sha256": "9bab12071e8b9659a108c9831a3c268e072694fe4156c7d12a46ee0e7e74cdc9",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 1859,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "outputs/protocol/tng50_memory_generator4_pooled_innovation/bh_tng50_memory_generator4_canonical_wiring_failure.json",
+      "sha256": "bd71b605a3812322bfe0e48d2cb4c4ba67f9eb72c0df1b42bbf31caa99e366ce",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 4010,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "outputs/protocol/tng50_memory_generator4_pooled_innovation/bh_tng50_memory_generator4_pooled_innovation_freeze_manifest.json",
+      "sha256": "7cb7bbb7053f0ee6544efade8ee70032d1bb93d8e0c33037cefd17efc0369f32",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 91134,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "run_bh_simba_bondi_shadow_exact_binding_source_state_lifecycle_recovery_no_exit.sh",
+      "sha256": "cbefe9f6acefc4808d716f998f8d88c3f8ef9e70a1e8df6a49a31a07f1e72881",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 38860,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "scripts/359_freeze_simba_tng_shadow_exact_binding_repair_design.py",
+      "sha256": "d68f55811932cb7d27907a34749b407b5a4503f95c7ff451f39d9a61f405e4f7",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 19170,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "scripts/360_preflight_simba_tng_shadow_exact_binding_concordance.py",
+      "sha256": "5a9f3e28f240e23ffa581bfbaaa64805d75244fb5bb65420ec5373b2835918a0",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 26789,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "scripts/361_execute_simba_tng_shadow_sequential_smoke.py",
+      "sha256": "76137fc05cddbfe1d453e3fe605c8f8f314c95d15da93102a9338fc7afc32cc7",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 23926,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "scripts/362_freeze_simba_tng_shadow_smoke_acceptance.py",
+      "sha256": "4d1a4ef57f43ebd8aff6d6f83332dd5df166b2f936bc7ad3ef8c08b71e158817",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 36851,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "scripts/363_execute_simba_tng_shadow_translation_matrix.py",
+      "sha256": "e5a9c800f51ccc0f701fbb7b864766aef596aeec0a718362001965f02e057e1e",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 89386,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "scripts/364_adjudicate_simba_bondi_shadow_translation.py",
+      "sha256": "43ce299021563cc969d853614e98d702b1247b46f42bdbb22a4aaa9f341dca09",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 72214,
+      "git_state": "untracked",
+      "mode": "0o755",
+      "path": "scripts/365_freeze_simba_bondi_shadow_cli_manifest_route.py",
+      "sha256": "6caea297fe7aeb44c5fc7ad8f7279e2100defefe3829065fad40c2d7c6e35566",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 7517,
+      "git_state": "tracked",
+      "mode": "0o644",
+      "path": "scripts/46_screen_bh_memory_generator3_selection_null.py",
+      "sha256": "1e499366190f125af955d0ef39a3a16a6fb9b5fa2accdd5a3888677fe183b5ad",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 7113,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "scripts/84_run_tng50_canonical_generator3_phase_b.py",
+      "sha256": "bd4d2abee49683804f86f3313c7867eb667aa15e51791b7e8257200e1fe8d684",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 11156,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "scripts/85_screen_tng50_canonical_generator3_full_history_null.py",
+      "sha256": "0fd976cc6a0955bb84182b1e99d1ca8d363ea489257f1880f335d8eef8418fe1",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 16541,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "scripts/89_screen_tng50_memory_generator4_pooled_innovation.py",
+      "sha256": "9eb669cd2684e544d228f8d8d71a3fe51154977d84a4ea232e522a719ff9d4b8",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 18628,
+      "git_state": "untracked",
+      "mode": "0o755",
+      "path": "scripts/bh_simba_runtime_manifest_common_v1_4.py",
+      "sha256": "651b24d3b70670894e9a227d0e7d5bb62a5e9c8806026e4378cf5bbbf7561e01",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 275607,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "scripts/bh_simba_shadow_exact_binding_source_state_lifecycle_recovery_v1_4.py",
+      "sha256": "1869e5eeca1620ae30f46756d204de5630ff0b9d7fe3f3e79cb59838086529bb",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 2784,
+      "git_state": "tracked",
+      "mode": "0o644",
+      "path": "src/core/causal_memory.py",
+      "sha256": "871a77690c0d39dd88a888c53a868200ce754fa1f78eaa01cc08e94daf537d76",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 4442,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "src/core/innovation_memory.py",
+      "sha256": "6e82ca529896de10e5b18bdc166597577018d30aa1c2ec81173920a999087244",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 3616,
+      "git_state": "tracked",
+      "mode": "0o644",
+      "path": "src/core/memory_nulls.py",
+      "sha256": "e5fd52e4bee13a710d0b24b63249599495c5380c55048eeeacfe5512612d1afb",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 3027,
+      "git_state": "tracked",
+      "mode": "0o644",
+      "path": "src/core/predictive_memory.py",
+      "sha256": "041ae4802059af87d7b1a99bdc9bbaad564543424c4ea55f6e0f33ad23695625",
+      "source": "protected_or_smoke_contract_or_static_import"
+    },
+    {
+      "bytes": 176515,
+      "git_state": "untracked",
+      "mode": "0o644",
+      "path": "tests/test_bh_simba_bondi_shadow_exact_binding_source_state_lifecycle_recovery.py",
+      "sha256": "c4c8fd35f93e4cd9aa2ade7bbbad9294661e136c5100fd93ed00bda15c179706",
+      "source": "protected_or_smoke_contract_or_static_import"
+    }
+  ],
+  "reviewed_whitelist_count": 38,
+  "schema_version": 1,
+  "scientific_rerun_authorized": false,
+  "smoke006_authorized": false,
+  "smoke5_receipt_sha256": "f73e962b456f5fb69150334ef3eeca3759742910461d04fb43bfa0a4d8958afc",
+  "status": "EXACT_PATH_ARCHIVAL_CAPTURE_IN_CONTAINING_COMMIT",
+  "tracked_modified_paths_explicitly_excluded": [
+    "paper/manuscript_snapshot/main.tex",
+    "src/obs/29_extract_manga_maps_features.py"
+  ],
+  "whitelist_review_receipt_sha256": "6d3940d5a67836e1a0a7e5a1b1e81e9d5226403856514fdd81bb9768dbb5b40f"
+}

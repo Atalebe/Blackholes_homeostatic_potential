@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "run_id": "BH-TNG50-CANONICAL-GENERATOR3-RERUN-FREEZE-027",
+  "generated_utc": "2026-07-24T23:51:27.354443+00:00",
+  "checks": {
+    "canonical_split_repair_passed": true,
+    "repair_changed_no_scientific_values": true,
+    "repair_computed_no_predictive_outcome": true,
+    "candidate_hash_matches_repair": true,
+    "raw_hash_matches_repair": true,
+    "phase_b_and_c_candidate_identical": true,
+    "baseline_unchanged": true,
+    "tau_grid_unchanged": true,
+    "ridge_unchanged": true,
+    "effect_floor_unchanged": true,
+    "track_bootstrap_2000": true,
+    "phase_c_screen_200": true,
+    "complete_tracks_400_per_split": true,
+    "selected_sets_disjoint": true,
+    "full_raw_history_recompute": true,
+    "seed_history_included": true,
+    "terminal_future_not_permuted": true,
+    "selection_repeated_inside_null": true
+  },
+  "freeze_authorized": true,
+  "files": {
+    "configs/protocol/bh_tng50_memory_generator3_sha256_phase_b_v1.yaml": {
+      "sha256": "2dbb9653d60fc0cc62d8d56b212c05916613c869deb81293f1096add78bfdf7b"
+    },
+    "configs/protocol/bh_tng50_memory_generator3_sha256_full_history_null_screen_v1.yaml": {
+      "sha256": "9b12be308bb57d6a2f6808a10046f783c195e33d3e351012690f68c3f80189eb"
+    },
+    "scripts/84_run_tng50_canonical_generator3_phase_b.py": {
+      "sha256": "bd4d2abee49683804f86f3313c7867eb667aa15e51791b7e8257200e1fe8d684"
+    },
+    "scripts/85_screen_tng50_canonical_generator3_full_history_null.py": {
+      "sha256": "481335a4fa08534b5640382782eda0e80e7cac7c1419a69b017f433d998be666"
+    },
+    "outputs/protocol/tng50_canonical_hash_split_repair/bh_tng50_canonical_hash_split_repair_verdict.json": {
+      "sha256": "3eb9d29a04a49164a492dff7304b6848cb20c3a952af20833d738e7189b730bf"
+    },
+    "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_memory_generator3_candidates.parquet": {
+      "sha256": "070641ce339d8538d5c2244f9afccc7907d16989d703ddd93cdd9766d321e478"
+    },
+    "outputs/catalogs/tng50_bh_memory_external_tracks_sha256_split.parquet": {
+      "sha256": "94cbf1dc3eaa055ad4452e7949fbae435a7f36e552b95252806317edf99d4c4a"
+    },
+    "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_sha256_full_history_track_plan.json": {
+      "sha256": "41371b3c1a88c95e0d99d582333a37f81888b2fba7948b6c7f8ef5cf24736919"
+    },
+    "src/core/causal_memory.py": {
+      "sha256": "871a77690c0d39dd88a888c53a868200ce754fa1f78eaa01cc08e94daf537d76"
+    },
+    "src/core/predictive_memory.py": {
+      "sha256": "041ae4802059af87d7b1a99bdc9bbaad564543424c4ea55f6e0f33ad23695625"
+    },
+    "src/core/memory_nulls.py": {
+      "sha256": "e5fd52e4bee13a710d0b24b63249599495c5380c55048eeeacfe5512612d1afb"
+    },
+    "scripts/46_screen_bh_memory_generator3_selection_null.py": {
+      "sha256": "1e499366190f125af955d0ef39a3a16a6fb9b5fa2accdd5a3888677fe183b5ad"
+    }
+  },
+  "track_plan": "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_sha256_full_history_track_plan.json",
+  "track_plan_sha256": "41371b3c1a88c95e0d99d582333a37f81888b2fba7948b6c7f8ef5cf24736919",
+  "selected_track_counts": {
+    "train": 400,
+    "validation": 400,
+    "test": 400
+  },
+  "phase_b_outcome_read": false,
+  "phase_c_outcome_read": false,
+  "generator4_execution_authorized": false,
+  "hrsm_M_status": "candidate_not_admitted",
+  "claim_cap": "canonical_hash_split_generator3_rerun_design_only"
+}

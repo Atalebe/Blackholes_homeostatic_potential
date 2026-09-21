@@ -1,0 +1,116 @@
+{
+  "adoption_path_if_later_authorized": "outputs/protocol/simba_bondi_shadow_current_state/BH_CURRENT_STATE_INDEX_v1_0_0.json",
+  "archival_capture": {
+    "capture_manifest_path": "outputs/protocol/simba_bondi_shadow_archival_capture_001/ARCHIVAL_CAPTURE_MANIFEST_v1_0_0.json",
+    "capture_manifest_receipt_sha256": "4974d12a0cc220a3fd74e51eeba2448e386d4b626ceff9215a45a087b9feb5c7",
+    "expected_new_additions": 36,
+    "explicit_git_add_path_count": 40,
+    "generated_metadata_path_count": 2,
+    "reviewed_whitelist_count": 38,
+    "status": "CAPTURED_IN_CONTAINING_COMMIT_WITH_EXTERNAL_COMMIT_RECEIPT"
+  },
+  "canonical_scientific_state": {
+    "generator3": {
+      "claim_cap": "confirmed_canonical_external_order_dependent_self_history_gain_over_momentum_inclusive_baseline",
+      "exceedances": 0,
+      "fractional_test_improvement": 0.09460332411587416,
+      "n_permutations": 2000,
+      "null_adjusted_order_excess": 0.09069321545433706,
+      "p_one_sided_plus_one": 0.0004997501249375312
+    },
+    "generator4": {
+      "admission_status": "externally_replicated_self_history_candidate_not_admitted",
+      "claim_cap": "G3_external_replication_with_G4_boundary_failure_and_no_M_admission",
+      "confirmation_2000_status": "not_authorized",
+      "generator4_status": "failed_observed_tau_boundary_scale_unidentified",
+      "tau": 0.0001,
+      "tau_interior": false
+    }
+  },
+  "claim_boundaries": {
+    "hrsm_M_admitted": false,
+    "matrix_execution_authorized": false,
+    "physical_units_resolved": false,
+    "population_equivalence_resolved": false,
+    "real_SIMBA_interpretation_authorized": false,
+    "scientific_inference_from_smoke005_authorized": false,
+    "writer_semantics_resolved": false
+  },
+  "curated_whitelist_review_receipt_sha256": "6d3940d5a67836e1a0a7e5a1b1e81e9d5226403856514fdd81bb9768dbb5b40f",
+  "engineering_state": {
+    "latest_smoke": "BH-SIMBA-FRESH-SYNTHETIC-SMOKE-005",
+    "latest_smoke_status": "ADVERSE_GENERATOR4_SCREEN_COMPLETE_MATRIX_CLOSED",
+    "matrix_authorized": false,
+    "six_file_dependency_installation": "installed_and_protected_state_exact",
+    "smoke5_boundary_violations": 0,
+    "smoke5_controller_errors": 0,
+    "smoke5_receipt_sha256": "f73e962b456f5fb69150334ef3eeca3759742910461d04fb43bfa0a4d8958afc",
+    "smoke5_stage_return_codes": [
+      0,
+      0,
+      0,
+      2
+    ]
+  },
+  "generated_from": "smoke-005 sealed receipt + independent 2026-09-20 repository audit + current read-only Git/live-state probe",
+  "git": {
+    "archival_parent_head": "a18f0f56845ea9b5677b8c20d29e9533285999eb",
+    "branch": "main",
+    "containing_commit_hash": "recorded_externally_in_COMMIT_RESULT.json",
+    "tracked_modified_paths_excluded": [
+      "paper/manuscript_snapshot/main.tex",
+      "src/obs/29_extract_manga_maps_features.py"
+    ]
+  },
+  "maintenance_review_receipt_sha256": "631ed08f3234505257c9dd50ceeec894ac32e9c4fe165240ccd387553112540a",
+  "next_action": {
+    "additional_commit_authorized": false,
+    "git_write_authorized": false,
+    "matrix_authorized": false,
+    "scientific_rerun_authorized": false,
+    "smoke006_authorized": false,
+    "type": "post_archival_capture_review"
+  },
+  "receipt_sha256": "c3becb6fcd236452b7f2bcfa8fa0c77ce8c2339290bbc8488d0719990daa64d3",
+  "schema_version": 1,
+  "synthetic_smoke005_state": {
+    "generator3": {
+      "confirmation_status": "passed",
+      "exceedances": 0,
+      "fractional_test_improvement": 0.9613015572429324,
+      "n_permutations": 2000,
+      "null_adjusted_order_excess": 0.9476120210585811,
+      "null_mean_fractional_improvement": 0.013689536184351337,
+      "p_one_sided_plus_one": 0.0004997501249375312
+    },
+    "generator4": {
+      "augmented_test_rmse": 1.0016543629324692,
+      "baseline_test_rmse": 1.0014498878049685,
+      "bootstrap_ci_null_adjusted_order_excess": [
+        -0.0006519376583677289,
+        -0.0002921960623067403
+      ],
+      "claim_cap": "predictive_innovation_history_screen_beyond_frozen_AR3_not_irreducible_nonlocality",
+      "confirmation_2000_authorized": false,
+      "exceedances": 197,
+      "fractional_test_improvement": -0.0002041790907270947,
+      "gates": {
+        "all_null_draws_retained": true,
+        "bootstrap_excess_lower_above_zero": false,
+        "null_adjusted_effect_floor": false,
+        "observed_tau_interior": true,
+        "permutation_p_gate": false,
+        "raw_effect_floor": false
+      },
+      "hrsm_M_status": "externally_replicated_self_history_candidate_not_admitted",
+      "n_permutations": 200,
+      "null_adjusted_order_excess": -0.0004738565736872166,
+      "null_mean_fractional_improvement": 0.0002696774829601219,
+      "p_one_sided_plus_one": 0.9850746268656716,
+      "screen_pass": false,
+      "tau": 0.0019013776036924009,
+      "tau_interior": true
+    },
+    "scope": "smoke-005 synthetic zero-offset shadow; not canonical scientific evidence"
+  }
+}

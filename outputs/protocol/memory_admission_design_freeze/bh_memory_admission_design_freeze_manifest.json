@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "run_id": "BH-MEMORY-ADMISSION-DESIGN-FREEZE-008",
+  "generated_utc": "2026-07-22T00:23:18.615295+00:00",
+  "checks": {
+    "dataset_preflight_passed": true,
+    "preflight_download_was_forbidden": true,
+    "inventory_contains_no_query_or_secret_markers": true,
+    "tng50_details_head_200": true,
+    "tng50_mergers_head_200": true,
+    "tng50_details_size_pinned": true,
+    "tng50_mergers_size_pinned": true,
+    "no_merger_id_stitching": true,
+    "whole_track_split": true,
+    "lambda_formula_concordant": true,
+    "discovery_groups_existing_id_without_stitching": true,
+    "generator3_grid_unchanged": true,
+    "generator4_training_only_tau_rule": true,
+    "generator4_tau_recomputed_inside_null": true,
+    "generator4_requires_interior_tau": true,
+    "v210_is_ancestor_or_head": true
+  },
+  "freeze_authorized": true,
+  "payload_download_authorized": true,
+  "authorized_payloads": [
+    "https://www.tng-project.org/api/TNG50-1/files/blackhole_details.hdf5",
+    "https://www.tng-project.org/api/TNG50-1/files/blackhole_mergers.hdf5"
+  ],
+  "discovery_lambda_formula_audit": {
+    "mass_column": "mass_t",
+    "mdot_column": "mdot_t",
+    "lambda_column": "lambda_bh_t",
+    "n_rows": 1333793,
+    "n_formula_rows": 1333793,
+    "formula": "log10(mdot_t / mass_t)",
+    "median_absolute_error": 5.329070518200751e-15,
+    "q999_absolute_error": 4.0967229608668276e-13,
+    "maximum_absolute_error": 4.3404169147720495e-13,
+    "formula_concordant": true,
+    "resolved_discovery_tracks": "outputs/catalogs/bh_time_tracks_phi_from_csv_tier1_hrsm.parquet",
+    "resolved_discovery_tracks_sha256": "55fddc3c4ebc8eeb853786eb5e3a41e3c73c93cd15e2cdfb878a805f39beb86d"
+  },
+  "discovery_track_semantics_audit": {
+    "source": "src/sim/05_extract_bh_time_from_csv_tier1_hrsm.py",
+    "source_sha256": "c047edcca4b3c91ad6c5a9f53742f108a18b4de55004e3ed41ab42124cb4a75e",
+    "groups_existing_bh_id": true,
+    "contains_merger_id_stitch_tokens": false,
+    "upstream_raw_generator_status": "absent_from_repository",
+    "scope": "repository_visible_extraction_stage_only"
+  },
+  "git_head": "a18f0f56845ea9b5677b8c20d29e9533285999eb",
+  "v2_1_0_commit": "a18f0f56845ea9b5677b8c20d29e9533285999eb",
+  "files": {
+    "configs/protocol/bh_memory_admission_design_freeze_v1.yaml": {
+      "sha256": "bcfead49fbe8c5542af1330ed4873756bd186ab7097a116b5d8a8b8f47fe646c"
+    },
+    "configs/protocol/bh_memory_admission_datasets_v1.yaml": {
+      "sha256": "416d5e5550be0a9c0721fcbe87772078e47a6f747d17224c71a76395914cadaa"
+    },
+    "src/core/innovation_memory.py": {
+      "sha256": "a5c24f07d67335f5e43bd801579d3c957a10325556c2c8368b108c1d2d34c6b1"
+    },
+    "scripts/56_preflight_bh_memory_admission_datasets.py": {
+      "sha256": "49403a0060e20a66a541d825a4d476372e09c77bef6dc4f57def1fe9b766583b"
+    },
+    "scripts/57_freeze_bh_memory_admission_design.py": {
+      "sha256": "66b4247a16d89279711dcc2ace18dee99c2cae50ad99820c8e945e52b048ed50"
+    },
+    "outputs/protocol/memory_admission_dataset_preflight/bh_memory_admission_dataset_preflight_verdict.json": {
+      "sha256": "178be7127722b6f96a00b017797ce88ab4eba0adb2e57191f84725ec216878dd"
+    },
+    "outputs/protocol/memory_admission_dataset_preflight/bh_memory_admission_file_header_inventory.csv": {
+      "sha256": "b3da71fdf13e12c9934fd63c5a8b268054c190224091fcbde35e21ae4c7044ce"
+    },
+    "src/sim/05_extract_bh_time_from_csv_tier1_hrsm.py": {
+      "sha256": "c047edcca4b3c91ad6c5a9f53742f108a18b4de55004e3ed41ab42124cb4a75e"
+    },
+    "outputs/catalogs/bh_time_tracks_phi_from_csv_tier1_hrsm.parquet": {
+      "sha256": "55fddc3c4ebc8eeb853786eb5e3a41e3c73c93cd15e2cdfb878a805f39beb86d"
+    }
+  },
+  "decision_table": [
+    {
+      "condition": "tng50_generator3_fail",
+      "status": "candidate_not_admitted",
+      "generator4_external_execution_authorized": false
+    },
+    {
+      "condition": "tng50_generator3_pass_and_generator4_fail",
+      "status": "externally_replicated_self_history_candidate_not_admitted",
+      "generator4_external_execution_authorized": true
+    },
+    {
+      "condition": "tng50_generator3_pass_and_generator4_pass",
+      "status": "M_admitted_for_TNG_lambda_dynamics_only",
+      "generator4_external_execution_authorized": true
+    },
+    {
+      "condition": "illustris2_later_fail_after_TNG_admission",
+      "status": "M_admitted_for_TNG_lambda_dynamics_only",
+      "universal_black_hole_M": "prohibited"
+    }
+  ],
+  "claim_cap": "external_admission_test_design_only_no_M_admission_yet"
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "run_id": "BH-TNG50-CANONICAL-GENERATOR3-CONFIRMATION-FREEZE-028",
+  "generated_utc": "2026-07-25T01:55:47.467209+00:00",
+  "checks": {
+    "canonical_screen_passed": true,
+    "screen_authorized_confirmation": true,
+    "screen_used_canonical_hash_split": true,
+    "screen_used_complete_tracks": true,
+    "screen_selected_1200_tracks": true,
+    "screen_full_history_concordant": true,
+    "screen_mapping_exact": true,
+    "prior_freeze_authorized": true,
+    "track_plan_hash_unchanged": true,
+    "track_plan_400_per_split": true,
+    "confirmation_permutations_2000": true,
+    "scientific_sections_unchanged": true,
+    "complete_track_count_unchanged": true,
+    "split_order_unchanged": true
+  },
+  "freeze_authorized": true,
+  "files": {
+    "configs/protocol/bh_tng50_memory_generator3_sha256_full_history_null_confirmation_2000_v1.yaml": {
+      "sha256": "1d1342251ea626582bf0debf30ee9e52458eaa4ae1f6a59937ee8f129b4f7533"
+    },
+    "configs/protocol/bh_tng50_memory_generator3_sha256_full_history_null_screen_v1.yaml": {
+      "sha256": "9b12be308bb57d6a2f6808a10046f783c195e33d3e351012690f68c3f80189eb"
+    },
+    "scripts/85_screen_tng50_canonical_generator3_full_history_null.py": {
+      "sha256": "0fd976cc6a0955bb84182b1e99d1ca8d363ea489257f1880f335d8eef8418fe1"
+    },
+    "outputs/protocol/tng50_memory_generator3_sha256_split/full_history_null/bh_tng50_memory_generator3_sha256_full_history_null_screen_verdict.json": {
+      "sha256": "4e96da4d63b9a6a696717e294db6ef5975735eeca4fae5d5fcfd57ef900dc58b"
+    },
+    "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_canonical_generator3_rerun_freeze_manifest.json": {
+      "sha256": "fd939ccc4b1b71cbd4cf56bfec0c1f2a3c8bd10bc4f515917f4526cd42daccb6"
+    },
+    "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_sha256_full_history_track_plan.json": {
+      "sha256": "41371b3c1a88c95e0d99d582333a37f81888b2fba7948b6c7f8ef5cf24736919"
+    },
+    "outputs/catalogs/tng50_bh_memory_external_tracks_sha256_split.parquet": {
+      "sha256": "94cbf1dc3eaa055ad4452e7949fbae435a7f36e552b95252806317edf99d4c4a"
+    },
+    "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_memory_generator3_candidates.parquet": {
+      "sha256": "070641ce339d8538d5c2244f9afccc7907d16989d703ddd93cdd9766d321e478"
+    },
+    "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_memory_generator3_sha256_phase_b_verdict.json": {
+      "sha256": "3ca47dd63b1357f52e2cf57acf638a3a2e179b7d57b313880ff004e718e17ce4"
+    },
+    "src/core/causal_memory.py": {
+      "sha256": "871a77690c0d39dd88a888c53a868200ce754fa1f78eaa01cc08e94daf537d76"
+    },
+    "src/core/predictive_memory.py": {
+      "sha256": "041ae4802059af87d7b1a99bdc9bbaad564543424c4ea55f6e0f33ad23695625"
+    },
+    "src/core/memory_nulls.py": {
+      "sha256": "e5fd52e4bee13a710d0b24b63249599495c5380c55048eeeacfe5512612d1afb"
+    },
+    "scripts/46_screen_bh_memory_generator3_selection_null.py": {
+      "sha256": "1e499366190f125af955d0ef39a3a16a6fb9b5fa2accdd5a3888677fe183b5ad"
+    }
+  },
+  "track_plan": "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_sha256_full_history_track_plan.json",
+  "track_plan_sha256": "41371b3c1a88c95e0d99d582333a37f81888b2fba7948b6c7f8ef5cf24736919",
+  "screen_observed_fractional_improvement": 0.09460332411587416,
+  "screen_null_adjusted_order_excess": 0.09069012313234824,
+  "scientific_confirmation_outcome_read": false,
+  "further_design_changes_authorized": false,
+  "generator4_execution_authorized": false,
+  "hrsm_M_status": "candidate_not_admitted",
+  "claim_cap": "canonical_hash_split_external_confirmation_design_only"
+}

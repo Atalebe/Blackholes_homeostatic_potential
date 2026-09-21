@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "run_id": "BH-TNG50-CANONICAL-HASH-SPLIT-REPAIR-026",
+  "generated_utc": "2026-07-24T23:00:18.902805+00:00",
+  "checks": {
+    "catalog_row_count_unchanged": true,
+    "candidate_row_count_unchanged": true,
+    "catalog_values_unchanged_except_external_split": true,
+    "candidate_values_unchanged_except_split": true,
+    "catalog_row_order_preserved": true,
+    "candidate_row_order_preserved": true,
+    "all_tracks_in_one_hash_split": true,
+    "candidate_split_matches_catalog": true,
+    "all_ten_hash_buckets_present": true,
+    "all_splits_have_at_least_400_tracks": true,
+    "candidate_and_catalog_track_counts_match": true
+  },
+  "repair_pass": true,
+  "method": "sha256_id_modulo_10",
+  "canonical_serialization": "unsigned_integer_as_base10_ascii_without_padding",
+  "bucket_derivation": "big_endian_digest_integer_modulo_10",
+  "n_catalog_rows": 9692705,
+  "n_candidate_rows": 9680821,
+  "n_tracks": 5942,
+  "track_split_counts": {
+    "train": 3505,
+    "test": 1246,
+    "validation": 1191
+  },
+  "candidate_track_split_counts": {
+    "test": 1246,
+    "train": 3505,
+    "validation": 1191
+  },
+  "catalog": "outputs/catalogs/tng50_bh_memory_external_tracks_sha256_split.parquet",
+  "catalog_sha256": "94cbf1dc3eaa055ad4452e7949fbae435a7f36e552b95252806317edf99d4c4a",
+  "candidate": "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_memory_generator3_candidates.parquet",
+  "candidate_sha256": "070641ce339d8538d5c2244f9afccc7907d16989d703ddd93cdd9766d321e478",
+  "track_plan": "outputs/protocol/tng50_canonical_hash_split_repair/bh_tng50_canonical_hash_split_by_track.csv",
+  "track_plan_sha256": "deef867cf45e10e76fa1bbaecad984552d3c8351f62a7ec5bbd82d5fc3e71726",
+  "scientific_values_recomputed": false,
+  "predictive_outcome_computed": false,
+  "generator4_execution_authorized": false,
+  "external_hash_split_generator3_authorized": true,
+  "hrsm_M_status": "candidate_not_admitted",
+  "next_gate": "freeze_hash_split_generator3_phase_b_and_full_history_phase_c_before_predictive_readout",
+  "claim_cap": "label_only_canonical_split_repair_no_predictive_result"
+}

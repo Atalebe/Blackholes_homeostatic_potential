@@ -1,0 +1,156 @@
+{
+  "adoption": {
+    "amendment_template_sha256": "f2a563daff958e98194568b568fb7146e99886b4c2a8d6af934b955949081101",
+    "explicit_flag_received": true,
+    "required_explicit_flag": "--adopt-synthetic-support-contract",
+    "scope": "Prospective support specification only; no production source/config mutation or route execution.",
+    "validated_diagnostic_payload_sha256": "052b84b1e221f6c8661e0483ec96beb2dff30d5be03c7cc029f3d3bddfa3d08f",
+    "validated_evidence_report_sha256": "f7b25fba7fa806092e0778a4d34458b1aa9c0e9d3fe48218e3ff95b25b1e38db"
+  },
+  "amendment_id": "BH-SIMBA-SYNTHETIC-RAW-CANDIDATE-SUPPORT-001",
+  "basis": {
+    "accepted_evidence": "PASS_RAW_CANDIDATE_SUPPORT_AMENDMENT_DRY_RUN",
+    "diagnostic_file_sha256": "f97fb52068d8b6f394c6310576b612667bc50e64d884a28b6b1f4c29070917d4",
+    "diagnostic_payload_sha256": "052b84b1e221f6c8661e0483ec96beb2dff30d5be03c7cc029f3d3bddfa3d08f",
+    "predecessor_za_payload_sha256": "6809e0ff912d96a4cb8aaf58a388954a5048a12e35dc1288e5982275651e255d",
+    "report_zip_sha256": "f7b25fba7fa806092e0778a4d34458b1aa9c0e9d3fe48218e3ff95b25b1e38db"
+  },
+  "candidate_support": {
+    "only_permitted_retained_column_change": "row_in_track",
+    "preserve_retained_values_dtypes_order_ids_splits": true,
+    "raw_index_values_inclusive": [
+      1,
+      46
+    ],
+    "raw_position_start_inclusive": 1,
+    "raw_position_stop_exclusive": 47,
+    "row_in_track": "Exact zero-based position in the original raw track, not a reset candidate ordinal.",
+    "row_selection_by_observed_finiteness": false,
+    "rows_per_track": 46,
+    "selection_rule": "For each unchanged contiguous track, select zero-based raw positions i satisfying 1 <= i < N_raw - 1.",
+    "split_rows": {
+      "test": 18400,
+      "train": 18400,
+      "validation": 18400
+    },
+    "split_tracks": {
+      "test": 400,
+      "train": 400,
+      "validation": 400
+    },
+    "targets_memory_current_delta_categories_splits_unchanged": true,
+    "total_rows": 55200
+  },
+  "causal_contract": {
+    "causal_initial_nan_not_imputed": true,
+    "current_and_future_values_excluded_from_memory": true,
+    "fit_ridge_guard_unchanged": true,
+    "interior_nonfinite_values_fail_closed": true,
+    "kernel_source_unchanged": true,
+    "memory_recomputed_from_complete_raw_history": true,
+    "memory_taus": [
+      0.02,
+      0.05,
+      0.1,
+      0.2
+    ]
+  },
+  "fixed_construction": {
+    "byte_references_are_environment_specific_not_cross_version_parquet_promises": true,
+    "candidate_dataframe_fingerprint": "4f8434f66a7efd0e0d238a628b0b45f984abc76956cff4fddb0120e414541f3a",
+    "candidate_parquet_reference": {
+      "bytes": 4461920,
+      "sha256": "e5e5998040af465cffa7e61aeea3a4b8d1401fe104e21ef08d322f5aeb0b81af"
+    },
+    "no_new_seed_or_offset_authorized": true,
+    "preserve_canonical_config_order": true,
+    "raw_parquet_reference": {
+      "outputs/catalogs/tng50_bh_memory_external_tracks_sha256_split.parquet": {
+        "bytes": 4594669,
+        "sha256": "713432f8d70c5a43bd849566537516d255c69841d2f8e000d19cefedd563c0bc"
+      },
+      "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_memory_generator3_candidates.parquet": {
+        "bytes": 4594669,
+        "sha256": "713432f8d70c5a43bd849566537516d255c69841d2f8e000d19cefedd563c0bc"
+      },
+      "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_sha256_full_history_track_plan.json": {
+        "bytes": 235246,
+        "sha256": "41b8f4e16b41ff4bfca6fdd84c9eb69033a74cdd67d3609e356ccef4e83f7a0c"
+      }
+    },
+    "reference_environment": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "pyarrow": "18.1.0",
+      "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:16:10) [GCC 11.2.0]"
+    },
+    "source_row_index_sha256": "69251fad73b254f99e3e510ad4fa91ace389330b81f576d36188e4048cda08f3",
+    "synthetic_seed": 200703,
+    "validated_offset": 0.0
+  },
+  "prospective_integration_requirements": [
+    "Separate candidate_parquet and raw_track_parquet roles explicitly; reject role-path collisions.",
+    "Replace the old candidate_raw_histories_identical fixture assertion; never mark it true for separated data.",
+    "Update both live construction and independent expected reconstruction with independently checked support and byte receipts.",
+    "Retain the pinned raw-history table, track-plan bytes, source kernels, executor/config authority, and existing hold evidence.",
+    "Verify retained values, causal memory identity, mapping, negative controls, and originally registered offset behavior before route resumption.",
+    "Re-run affected historical tests and construction/authority gates; prior R3A/R4A PASS does not certify future modified sources.",
+    "A later explicit implementation authorization is required for canonical source/config changes or production-route execution."
+  ],
+  "purpose": "Prospective synthetic input-support specification; neither production implementation nor a scientific preregistration of target equivalence.",
+  "raw_history": {
+    "first_causal_memory_value_remains_nan": true,
+    "initial_history_seed_retained": true,
+    "retain_all_rows": true,
+    "rows_per_track": 48,
+    "source_values_and_column_order_unchanged": true,
+    "terminal_raw_row_retained": true,
+    "total_rows": 57600,
+    "track_count": 1200
+  },
+  "receipt_sha256": "c843b7506021e4f3d9a85d09bc49e2b87a32d74b73b1cb2b4dadaa358a2746fb",
+  "schema_version": 1,
+  "scientific_authorizations": {
+    "physical_units_resolved": false,
+    "population_equivalence_resolved": false,
+    "real_SIMBA_execution_authorized": false,
+    "scientific_memory_inference_authorized": false,
+    "writer_semantics_resolved": false
+  },
+  "scope": {
+    "authority_repin_authorized": false,
+    "canonical_patch_authorized": false,
+    "entry_128_authorized": false,
+    "implementation_pending": true,
+    "logbook_or_git_commit_authorized_by_this_artifact": false,
+    "model_coefficients_or_scores_authorized": false,
+    "production_adoption_authorized": false,
+    "real_executor_run_authorized": false,
+    "scientific_route_resume_authorized": false,
+    "support_contract_adoption_permitted_only_by_explicit_flag": true
+  },
+  "semantic_boundary": {
+    "common_g3_g4_prediction_task_established": false,
+    "cross_role_census": {
+      "candidate_current_equals_raw_at_current_index": true,
+      "candidate_delta_vs_normalized_raw_delta_mismatch_count": 55200,
+      "candidate_target_vs_next_raw_mismatch_count": 55200,
+      "g4_build_rows_called_without_fit_or_executor": true,
+      "g4_overlap_delta_mismatch_count": 52800,
+      "g4_overlap_rows": 52800,
+      "g4_overlap_target_mismatch_count": 52800,
+      "interpretation": "existing_generator_uses_a_latent_memory_response_and_unit_delta; this_support_proposal_preserves_them_and_does_not_claim_G3_G4_target_equivalence",
+      "physical_next_step_target_equivalence_established": false,
+      "preregistration_or_explicit_synthetic_contract_amendment_required_before_production_adoption": true,
+      "target_or_time_values_changed": false
+    },
+    "cross_role_performance_comparability_authorized": false,
+    "g3_response": "Preserve existing latent-memory response stored under lambda_next; do not reinterpret it as next raw signal.",
+    "g3_time_increment": "Preserve existing delta_u_next values; do not substitute normalized raw increments.",
+    "g4_response_and_time": "Leave the pinned G4 row-builder and its next-raw-signal response and normalized increments unchanged.",
+    "scientific_memory_result_established": false,
+    "support_correction_does_not_validate_target_semantics": true
+  },
+  "status": "ADOPTED_SYNTHETIC_SUPPORT_CONTRACT_ONLY_IMPLEMENTATION_PENDING",
+  "version": "1.0.0"
+}

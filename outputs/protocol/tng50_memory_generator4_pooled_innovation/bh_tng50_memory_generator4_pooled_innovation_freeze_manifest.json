@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "run_id": "BH-TNG50-MEMORY-GENERATOR4-CANONICAL-WIRING-REPAIR-FREEZE-032",
+  "generated_utc": "2026-07-26T00:33:03.431323+00:00",
+  "checks": {
+    "both_pre_outcome_failures_recorded": true,
+    "canonical_wiring_only_repair_authorized": true,
+    "canonical_g3_closure_passed": true,
+    "canonical_g3_confirmation_passed": true,
+    "canonical_g3_authorizes_generator4": true,
+    "admission_design_freeze_authorized": true,
+    "exact_canonical_catalog_hash": true,
+    "exact_canonical_track_plan": true,
+    "all_required_raw_columns_present": true,
+    "raw_split_column_is_external_split": true,
+    "raw_order_is_stable_time": true,
+    "selected_ids_match_canonical_split_labels": true,
+    "selected_track_count_400_per_split": true,
+    "ar3_and_residualizer_unchanged": true,
+    "pooled_tau_has_no_cross_track_transition": true,
+    "tau_grid_unchanged": true,
+    "boundary_rules_unchanged": true,
+    "screen_and_bootstrap_unchanged": true,
+    "claim_cap_unchanged": true,
+    "g4_outcome_still_absent": true
+  },
+  "freeze_authorized": true,
+  "files": {
+    "configs/protocol/bh_tng50_memory_generator4_pooled_innovation_screen_v1.yaml": {
+      "sha256": "b296c55a0461cbd7580897d8a2416a607e90ebaf3fa94120b1f404d6e4305d0a"
+    },
+    "outputs/protocol/tng50_memory_generator4_pooled_innovation/bh_tng50_memory_generator4_canonical_wiring_failure.json": {
+      "sha256": "bd71b605a3812322bfe0e48d2cb4c4ba67f9eb72c0df1b42bbf31caa99e366ce"
+    },
+    "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_canonical_generator3_closure.json": {
+      "sha256": "16aea19a48110977a4fa217d7ef170f2a1336547a892a488c81b8629d747fcbc"
+    },
+    "outputs/protocol/memory_admission_design_freeze/bh_memory_admission_design_freeze_manifest.json": {
+      "sha256": "52afc8f37f7434f75face5cfef71e0fc68917c09f362c5ff3e8cac23404d543e"
+    },
+    "outputs/protocol/tng50_memory_generator3_sha256_split/full_history_null_confirmation_2000/bh_tng50_memory_generator3_sha256_full_history_null_confirmation_2000_verdict.json": {
+      "sha256": "65c1e74b2bcfc462b1a7018f8511e8ab0687a46728f8c87785a34d41aaee9334"
+    },
+    "outputs/protocol/tng50_memory_generator3_sha256_split/bh_tng50_sha256_full_history_track_plan.json": {
+      "sha256": "41371b3c1a88c95e0d99d582333a37f81888b2fba7948b6c7f8ef5cf24736919"
+    },
+    "outputs/catalogs/tng50_bh_memory_external_tracks_sha256_split.parquet": {
+      "sha256": "94cbf1dc3eaa055ad4452e7949fbae435a7f36e552b95252806317edf99d4c4a"
+    },
+    "scripts/89_screen_tng50_memory_generator4_pooled_innovation.py": {
+      "sha256": "9eb669cd2684e544d228f8d8d71a3fe51154977d84a4ea232e522a719ff9d4b8"
+    },
+    "src/core/innovation_memory.py": {
+      "sha256": "6e82ca529896de10e5b18bdc166597577018d30aa1c2ec81173920a999087244"
+    },
+    "src/core/predictive_memory.py": {
+      "sha256": "041ae4802059af87d7b1a99bdc9bbaad564543424c4ea55f6e0f33ad23695625"
+    }
+  },
+  "canonical_raw_schema": [
+    "bh_id",
+    "category",
+    "external_split",
+    "final_mass_class",
+    "lambda_bh_t",
+    "log10_mbh_final",
+    "mass_t",
+    "mdot_t",
+    "t"
+  ],
+  "required_raw_columns": [
+    "bh_id",
+    "category",
+    "external_split",
+    "final_mass_class",
+    "lambda_bh_t",
+    "t"
+  ],
+  "administrative_label_columns_read": [
+    "bh_id",
+    "external_split"
+  ],
+  "scientific_value_columns_read_by_freezer": [],
+  "selected_track_counts": {
+    "train": 400,
+    "validation": 400,
+    "test": 400
+  },
+  "raw_split_column": "external_split",
+  "raw_ordering": "stable_ascending_t",
+  "pooling_semantics": "global_tau_from_sum_of_within_track_training_pair_SSE_with_zero_cross_track_pairs",
+  "scientific_design_changed": false,
+  "scientific_generator4_outcome_read": false,
+  "generator4_screen_execution_authorized": true,
+  "generator4_confirmation_2000_authorized": false,
+  "hrsm_M_status": "externally_replicated_self_history_candidate_not_admitted",
+  "claim_cap": "canonical_G4_wiring_and_schema_freeze_no_outcome"
+}
